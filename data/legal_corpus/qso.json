@@ -1,0 +1,118 @@
+[
+  {
+    "id": "QSO-ART-164",
+    "act_code": "QSO",
+    "act_title": "Qanun-e-Shahadat Order (President's Order No. 10 of 1984)",
+    "section_number": "Article 164",
+    "section_title": "Production of evidence that has become available because of modern devices, etc.",
+    "chapter": "Part III, Chapter IX: Of the Examination of Witnesses",
+    "jurisdiction": "Federal (Applicable across all Pakistan Courts)",
+    "category": "Law of Evidence / Digital & Forensic Evidence",
+    "cognizable": "N/A (Evidentiary Rule)",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Judicial admissibility of electronic records, video recordings, audio recordings, CCTV, and mobile data.",
+    "summary_plain": "Enables Pakistani courts to admit modern electronic and digital evidence, including mobile phone audio/video recordings, CCTV footage, WhatsApp chats, emails, electronic signatures, and forensic phone extractions, provided their chain of custody, authenticity, and lack of tampering are established.",
+    "summary_urdu": "جدید ٹیکنالوجی اور ڈیجیٹل شواہد کی قبولیت (آرٹیکل 164)۔ آڈیو / ویڈیو ریکارڈنگ، سی سی ٹی وی، واٹس ایپ پیغامات اور موبائل فرانزک رپورٹ کو عدالت میں بطور ثبوت پیش کرنے کا قانونی جواز۔",
+    "statutory_text": "In such cases as the Court may consider appropriate, the Court may allow to be produced any evidence that may have become available because of modern devices or techniques: Provided that the Court shall ensure that the device or technique used is genuine and capable of producing accurate results.",
+    "evidence_required": [
+      "Original recording device (smartphone, DVR, memory card, hard drive)",
+      "Chain of custody certificate and forensic integrity report (e.g. Punjab Forensic Science Agency - PFSA report)",
+      "Affidavit of the person who recorded or extracted the electronic evidence",
+      "Transcript of audio/video recording with date, time, and participant identification"
+    ],
+    "forum_court": "All Criminal, Civil, and Family Courts in Pakistan",
+    "practical_steps": [
+      "Never edit, crop, or filter the original audio or video recording.",
+      "Keep the original smartphone or storage device intact; take hash values if possible.",
+      "File an application under Article 164 QSO before the trial court requesting permission to produce modern device evidence.",
+      "Request the court to send the device to Punjab Forensic Science Agency (PFSA) or government forensic laboratory for voice matching and tampering analysis."
+    ]
+  },
+  {
+    "id": "QSO-ART-117-118",
+    "act_code": "QSO",
+    "act_title": "Qanun-e-Shahadat Order (President's Order No. 10 of 1984)",
+    "section_number": "Articles 117 & 118",
+    "section_title": "Burden of proof",
+    "chapter": "Part III, Chapter VII: Of the Burden of Proof",
+    "jurisdiction": "Federal (Applicable across all Pakistan Courts)",
+    "category": "Law of Evidence / Legal Standards",
+    "cognizable": "N/A (Evidentiary Rule)",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "A party that fails to discharge its burden of proof loses the lawsuit or criminal charge.",
+    "summary_plain": "The foundational rule of evidence: 'He who asserts must prove.' In criminal cases, the prosecution bears the heavy burden of proving guilt beyond reasonable doubt. In civil cases, the plaintiff must prove their case on a preponderance of probabilities.",
+    "summary_urdu": "بارِ ثبوت (برڈن آف پروف)۔ جو شخص کسی حق یا جرم کا دعویٰ کرے گا، اسی پر عدالت کے روبرو ٹھوس ثبوت پیش کرنے کی قانونی ذمہ داری ہوگی۔ ملزم شک کے فائدے کا حقدار ہوتا ہے۔",
+    "statutory_text": "Article 117: Whoever desires any Court to give judgment as to any legal right or liability dependent on the existence of facts which he asserts, must prove that those facts exist. When a person is bound to prove the existence of any fact, it is said that the burden of proof lies on that person. Article 118: The burden of proof in a suit or proceeding lies on that person who would fail if no evidence at all were given on either side.",
+    "evidence_required": [
+      "Primary original documents whenever available",
+      "Reliable witness testimony corroborating material assertions",
+      "Public documents, certified official copies, and revenue extracts"
+    ],
+    "forum_court": "All Courts of Pakistan",
+    "practical_steps": [
+      "Identify exactly which party holds the legal burden for each specific issue framed by the court.",
+      "Ensure all essential facts are supported by admissible oral and documentary proof.",
+      "Capitalize on contradictions in the opponent's case to demonstrate failure of proof."
+    ]
+  },
+  {
+    "id": "QSO-ART-38-39",
+    "act_code": "QSO",
+    "act_title": "Qanun-e-Shahadat Order (President's Order No. 10 of 1984)",
+    "section_number": "Articles 38 & 39",
+    "section_title": "Confession to police officer not to be proved",
+    "chapter": "Part II, Chapter III: Admissions and Confessions",
+    "jurisdiction": "Federal Courts",
+    "category": "Law of Evidence / Protection Against Police Torture",
+    "cognizable": "Evidentiary Inadmissibility",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Any statement or confession extracted while in police custody is completely inadmissible in evidence against the accused.",
+    "summary_plain": "Under Pakistani law, any confession made to a police officer, or made while in police custody (unless made in the immediate presence of a Judicial Magistrate under Section 164 CrPC), is strictly inadmissible in court. This protects citizens against coerced confessions obtained through police torture or custodial pressure.",
+    "summary_urdu": "پولیس کے سامنے اعترافِ جرم کی عدم قبولیت۔ پولیس کے سامنے یا پولیس حراست میں دیا گیا کوئی بھی بیان یا اقبالِ جرم عدالت میں قابلِ قبول ثبوت نہیں ہے، تاوقتیکہ وہ مجسٹریٹ کے روبرو دفعہ 164 کے تحت نہ ہو۔",
+    "statutory_text": "Article 38: No confession made to a police officer shall be proved as against a person accused of any offence. Article 39: Subject to Article 40, no confession made by any person whilst he is in the custody of a police officer, unless it be made in the immediate presence of a Magistrate, shall be proved as against such person.",
+    "evidence_required": [
+      "Proof that the statement was made to or recorded by a police officer or while in custody",
+      "Absence of voluntary judicial certificate by Magistrate under Section 164 CrPC",
+      "Medical evidence of custodial torture / bruising if applicable"
+    ],
+    "forum_court": "All Criminal Courts (Magistrate, Sessions, High Court, Supreme Court)",
+    "practical_steps": [
+      "Advocate must object to any attempt by prosecution to introduce alleged police station admissions.",
+      "If forced to sign blank papers in police lockup, immediately inform the Magistrate when produced for physical remand.",
+      "Demand immediate Medico-Legal examination if subjected to custodial abuse."
+    ]
+  },
+  {
+    "id": "QSO-ART-17",
+    "act_code": "QSO",
+    "act_title": "Qanun-e-Shahadat Order (President's Order No. 10 of 1984)",
+    "section_number": "Article 17",
+    "section_title": "Competence and number of witnesses",
+    "chapter": "Part I, Chapter II: Of Witnesses",
+    "jurisdiction": "Federal Courts",
+    "category": "Law of Evidence / Witness Testimony & Proof",
+    "cognizable": "N/A (Evidentiary Rule)",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "A criminal conviction cannot stand if the sole witness is uncorroborated, interested, or fails the test of credibility.",
+    "summary_plain": "Under Article 17 of the Qanun-e-Shahadat Order, while the law generally states that no particular number of witnesses is required for the proof of any fact, in serious criminal allegations the courts mandate extraordinary caution when evaluating a solitary witness. A single uncorroborated oral witness, especially in charges involving verbal remarks overheard by a single person, is subject to strict judicial scrutiny and must be corroborated by independent evidence to establish guilt beyond reasonable doubt.",
+    "summary_urdu": "گواہوں کی اہلیت اور تعداد (آرٹیکل 17)۔ قانون شہادت کے تحت کسی بھی معاملے میں گواہوں کی کوئی خاص تعداد لازمی نہیں ہے، لیکن سنگین فوجداری الزامات میں محض ایک ہی گواہ کی سنی سنائی بات پر سزا نہیں دی جا سکتی۔ عدالت ایسے واحد گواہ کے بیان کی سخت چھان بین اور آزادانہ تائیدی ثبوت کا مطالبہ کرتی ہے۔",
+    "statutory_text": "Article 17: (1) The competence of a person to testify, and the number of witnesses required in any case, shall be determined in accordance with the injunctions of Islam as laid down in the Holy Quran and Sunnah: (2) Unless otherwise provided in any law relating to the enforcement of Hudood or any other special law: (a) In matters pertaining to financial or future obligations, if reduced to writing, the instrument shall be attested by two men, or one man and two women, so that one may remind the other; and (b) in all other matters, the Court may accept, or act on, the testimony of one man or one woman or such other evidence as the circumstances of the case may warrant.",
+    "evidence_required": [
+      "Proof of motive, background enmity, or grudge of the solitary witness",
+      "Material contradictions between initial complaint and court statement",
+      "Absence of independent corroborative evidence or audio/recording",
+      "Proof of location and physical impossibility of overhearing"
+    ],
+    "forum_court": "All Criminal and Civil Courts in Pakistan",
+    "practical_steps": [
+      "Cross-examine the sole prosecution witness extensively on their exact position, distance, background noise, and prior relationship with the parties.",
+      "Demonstrate any prior hostility, disputes, or affiliations between the witness and the complainant.",
+      "Highlight the complete lack of independent corroboration by neutral neighbors or bystanders.",
+      "Rely on established Superior Court precedents holding that solitary overheard evidence without corroboration cannot justify criminal conviction."
+    ]
+  }
+]

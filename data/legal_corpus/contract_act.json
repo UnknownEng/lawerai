@@ -1,0 +1,60 @@
+[
+  {
+    "id": "CONTRACT-SEC-73-74",
+    "act_code": "CONTRACT",
+    "act_title": "Contract Act (Act IX of 1872)",
+    "section_number": "Sections 73 & 74",
+    "section_title": "Compensation for loss or damage caused by breach of contract",
+    "chapter": "Chapter VI: Of the Consequences of Breach of Contract",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Civil Law / Commercial Contracts",
+    "cognizable": "Civil Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Decree for compensation, general damages, and restitution of benefits.",
+    "summary_plain": "When a contract is broken, the injured party is entitled to receive compensation from the defaulting party for any direct loss or damage that naturally arose in the usual course of things, or which both parties knew would likely result from the breach. Speculative or remote damages are not granted.",
+    "summary_urdu": "معاہدے کی خلاف ورزی پر ہرجانے / نقصان کا دعویٰ (دفعات 73 اور 74)۔ جب کوئی فریق طے شدہ معاہدے سے پھر جائے تو متاثرہ فریق اس کی وجہ سے ہونے والے حقیقی مالی نقصان کا دعویٰ سول کورٹ میں کر سکتا ہے۔",
+    "statutory_text": "Section 73: When a contract has been broken, the party who suffers by such breach is entitled to receive, from the party who has broken the contract, compensation for any loss or damage caused to him thereby, which naturally arose in the usual course of things from such breach, or which the parties knew, when they made the contract, to be likely to result from the breach of it. Such compensation is not to be given for any remote and indirect loss or damage sustained by reason of the breach.",
+    "evidence_required": [
+      "Original signed agreement / contract with terms clearly defining obligations and deadlines",
+      "Notice of breach dispatched to defaulting party with TCS / courier receipts",
+      "Documentary proof of actual financial loss incurred (invoices, replacement purchase receipts, ledger entries, bank debits)",
+      "Proof that plaintiff was ready and willing to perform their own side of the contract"
+    ],
+    "forum_court": "Court of Civil Judge / Senior Civil Judge / Commercial Court",
+    "practical_steps": [
+      "Issue a formal Legal Notice through an Advocate pointing out specific contractual defaults and calling upon the party to perform within 15 days.",
+      "Calculate actual liquidated and direct losses substantiated by receipts.",
+      "File a Civil Suit for Recovery of Damages and Breach of Contract before the competent Civil Court.",
+      "Seek attachment before judgment under Order XXXVIII Rule 5 CPC if defendant is attempting to siphon off assets."
+    ]
+  },
+  {
+    "id": "CONTRACT-SEC-10-19",
+    "act_code": "CONTRACT",
+    "act_title": "Contract Act (Act IX of 1872)",
+    "section_number": "Sections 10, 14 & 19",
+    "section_title": "Essential elements of valid contract and voidability of agreements without free consent",
+    "chapter": "Chapter II: Of Contracts, Voidable Contracts and Void Agreements",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Civil Law / Commercial Contracts",
+    "cognizable": "Civil Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Rescission of contract, cancellation of instruments, and restitution of money paid.",
+    "summary_plain": "All agreements are contracts if made by free consent of competent parties for lawful consideration and object. If consent was obtained by coercion, fraud, or misrepresentation, the contract is voidable at the option of the defrauded/coerced party.",
+    "summary_urdu": "معاہدے کا جواز اور جبر و دھوکہ دہی کی بنیاد پر منسوخی۔ اگر کوئی معاہدہ زبردستی، فریب یا غلط بیانی سے کروایا گیا ہو تو متاثرہ شخص اسے عدالت کے ذریعے منسوخ کروا سکتا ہے۔",
+    "statutory_text": "Section 10: All agreements are contracts if they are made by the free consent of parties competent to contract, for a lawful consideration and with a lawful object, and are not hereby expressly declared to be void. Section 19: When consent to an agreement is caused by coercion, fraud or misrepresentation, the agreement is a contract voidable at the option of the party whose consent was so caused.",
+    "evidence_required": [
+      "Agreement draft showing unconscionable or unfair clauses",
+      "Proof of misrepresentation, concealment of material facts, or threats",
+      "Medical records or police reports showing coercion or undue pressure at the time of signing"
+    ],
+    "forum_court": "Court of Civil Judge",
+    "practical_steps": [
+      "Issue immediate notice rescinding the contract due to fraud / misrepresentation.",
+      "File a Civil Suit for Cancellation of Document under Section 39 Specific Relief Act read with Section 19 Contract Act.",
+      "Seek interim injunction restraining the other party from acting upon or enforcing the fraudulent deed."
+    ]
+  }
+]

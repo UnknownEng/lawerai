@@ -1,0 +1,336 @@
+[
+  {
+    "id": "PPC-420",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "420",
+    "section_title": "Cheating and dishonestly inducing delivery of property",
+    "chapter": "Chapter XVII: Of Offences Against Property",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Property",
+    "cognizable": "Cognizable (Police can arrest without warrant)",
+    "bailable": "Non-bailable (Bail is at the discretion of the Court)",
+    "compoundable": "Compoundable with permission of the Court",
+    "punishment": "Imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine.",
+    "summary_plain": "Applies when someone dishonestly deceives you into giving them money, funds, or property through fraudulent misrepresentations, contractor scams, false promises, or trickery (e.g. taking cash/rupees or advance payment and turning off phone or disappearing).",
+    "summary_urdu": "دھوکہ دہی اور بے ایمانی سے جائیداد یا رقم حاصل کرنا۔ جب کوئی شخص جھوٹے وعدوں، فراڈ یا فریب کے ذریعے آپ کو رقم یا ایڈوانس دینے پر آمادہ کر کے مکر جائے یا غائب ہو جائے۔",
+    "statutory_text": "Whoever cheats and thereby dishonestly induces the person deceived to deliver any property to any person, or to make, alter or destroy the whole or any part of a valuable security, or anything which is signed or sealed, and which is capable of being converted into a valuable security, shall be punished with imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine.",
+    "evidence_required": [
+      "Bank transfer receipts, deposit slips, or financial transaction logs",
+      "Written agreements, MOUs, or receipts showing commitment",
+      "Text messages, emails, WhatsApp conversations proving deceitful intent from the inception",
+      "Witness testimony of persons present during negotiations or handover of funds/property"
+    ],
+    "forum_court": "Court of Judicial Magistrate 1st Class / Court of Sessions",
+    "practical_steps": [
+      "Gather all proof of payment (bank statements, cheques, receipts) and written communications.",
+      "Send a formal legal notice through an Advocate demanding return of money/property within 14 days.",
+      "Lodge a written complaint under Section 154 CrPC at the relevant Police Station for FIR registration.",
+      "If the Station House Officer (SHO) refuses to register an FIR, file a petition under Section 22-A / 22-B CrPC before the Ex-Officio Justice of Peace (Sessions Court) seeking a direction for FIR registration."
+    ]
+  },
+  {
+    "id": "PPC-489F",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "489-F",
+    "section_title": "Dishonestly issuing a cheque",
+    "chapter": "Chapter XVIII: Of Offences Relating to Documents and to Property Marks",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Commercial Fraud",
+    "cognizable": "Cognizable",
+    "bailable": "Bailable (subject to court discretion depending on amount and conduct)",
+    "compoundable": "Compoundable",
+    "punishment": "Imprisonment of either description for a term which may extend to three years, or with fine, or with both, unless the drawer can prove that he made arrangements with his bank to ensure the cheque would be honoured and that the bank was at fault.",
+    "summary_plain": "Applies when someone issues a bank cheque dishonestly towards repayment of a loan or fulfillment of an obligation, and the cheque bounces/dishonours upon presentation due to insufficient funds.",
+    "summary_urdu": "بدنیتی سے ایسا بینک چیک جاری کرنا جو کھاتے میں ناکافی رقم کی وجہ سے باؤنس (مسترد) ہو جائے۔ یہ قابلِ دست اندازی پولیس جرم ہے۔",
+    "statutory_text": "Whoever dishonestly issues a cheque towards re-payment of a loan or fulfillment of an obligation which is dishonoured on presentation, shall be punished with imprisonment which may extend to three years, or with fine, or with both, unless he can establish, for which burden of proof shall rest on him, that he had made arrangements with his bank to ensure that the cheque would be honoured and that the bank was at fault in not honouring the cheque.",
+    "evidence_required": [
+      "Original bounced cheque",
+      "Bank Return Memo / Dishonour Slip showing reason (e.g., 'Funds Insufficient' or 'Account Closed')",
+      "Proof of underlying consideration/obligation (agreement, invoice, ledger, loan receipt)",
+      "Copy of written Legal Notice served on the drawer demanding payment, with postal courier receipts/TCS tracking"
+    ],
+    "forum_court": "Court of Judicial Magistrate 1st Class having territorial jurisdiction over the bank branch or area where the cheque was presented/issued",
+    "practical_steps": [
+      "Obtain the original cheque and bank return memo from your bank immediately.",
+      "Engage an Advocate to dispatch a statutory Legal Demand Notice to the issuer within a reasonable period giving 7-14 days to clear the debt.",
+      "Submit an application to the local Police Station within whose jurisdiction the bank branch is situated to register an FIR under Section 489-F PPC.",
+      "If the police delay or refuse, file an application under Section 22-A / 22-B CrPC before the Sessions Judge / Justice of Peace."
+    ]
+  },
+  {
+    "id": "PPC-405-406",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "405 & 406",
+    "section_title": "Criminal breach of trust and punishment",
+    "chapter": "Chapter XVII: Of Offences Against Property",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Property",
+    "cognizable": "Cognizable",
+    "bailable": "Non-bailable",
+    "compoundable": "Compoundable with permission of the Court",
+    "punishment": "Imprisonment of either description for a term which may extend to seven years, or with fine, or with both under Section 406 PPC.",
+    "summary_plain": "Applies when money, property, or company funds are entrusted to someone (such as a business partner, director, employee, agent, trustee, custodian, or borrower), and that person dishonestly misappropriates it, uses company accounts for personal expenses, converts funds to personal use without authorization, or disposes of it in violation of law or agreement.",
+    "summary_urdu": "امانت میں خیانت (دفعہ 405 و 406 تعزیرات پاکستان)۔ جب کوئی بزنس پارٹنر، ملازم یا ٹرسٹی کمپنی کے فنڈز یا امانت میں رکھی گئی رقم کو اپنے ذاتی خرچ یا ذاتی فائدے کے لیے غیر قانونی طور پر استعمال کرے تو یہ سنگین فوجداری جرم ہے۔",
+    "statutory_text": "Section 405: Whoever, being in any manner entrusted with property, or with any dominion over property, dishonestly misappropriates or converts to his own use that property, or dishonestly uses or disposes of that property in violation of any direction of law prescribing the mode in which such trust is to be discharged... commits criminal breach of trust. Section 406: Whoever commits criminal breach of trust shall be punished with imprisonment of either description for a term which may extend to seven years, or with fine, or with both.",
+    "evidence_required": [
+      "Documentary proof of entrustment, partnership deed, business agreement, or employment contract",
+      "Company bank account statements showing unauthorized transfers or withdrawals for personal expenses",
+      "Financial audit report, transaction receipts, or account ledgers demonstrating misappropriation of funds",
+      "Written demand notice requesting accounting and reimbursement of company funds with proof of dispatch",
+      "Witness testimony, communication records, or partner resolutions regarding fund usage"
+    ],
+    "forum_court": "Court of Judicial Magistrate 1st Class / Court of Sessions",
+    "practical_steps": [
+      "Issue a formal written legal notice demanding full financial reconciliation and restitution of misused company funds within 14 days.",
+      "Gather certified bank account records, partnership deeds, and audit evidence proving unauthorized diversion of business funds for personal expenses.",
+      "Lodge a formal written complaint with the local police station under Section 154 CrPC for registration of an FIR under Section 406 PPC.",
+      "If police fail or refuse to register the case, file a private criminal complaint (Istighasa) under Section 200 CrPC before the Judicial Magistrate or petition under Section 22-A CrPC.",
+      "Consider initiating civil recovery proceedings or a suit for dissolution of partnership and rendition of accounts in parallel."
+    ]
+  },
+  {
+    "id": "PPC-441-447-448",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "441, 447 & 448",
+    "section_title": "Criminal trespass and house-trespass",
+    "chapter": "Chapter XVII: Of Offences Against Property",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Property",
+    "cognizable": "Cognizable",
+    "bailable": "Bailable",
+    "compoundable": "Compoundable",
+    "punishment": "Section 447 (Criminal Trespass): Imprisonment up to 3 months, or fine up to 1,500 rupees, or both. Section 448 (House-Trespass): Imprisonment up to 1 year, or fine up to 3,000 rupees, or both.",
+    "summary_plain": "Applies when someone enters another person's land, house, or property without permission with intent to commit an offence, or to intimidate, insult, or annoy the lawful possessor, or unlawfully remains there.",
+    "summary_urdu": "غیر قانونی دخل اندازی اور مکان میں زبردستی گھسنا۔ بغیر اجازت کسی کی اراضی یا رہائش گاہ میں قبضہ کرنے یا دھمکانے کی غرض سے داخل ہونا۔",
+    "statutory_text": "Section 441: Whoever enters into or upon property in the possession of another with intent to commit an offence or to intimidate, insult or annoy any person in possession of such property, or having lawfully entered, unlawfully remains there with intent thereby to intimidate, insult or annoy any such person, or with intent to commit an offence, is said to commit criminal trespass. Section 447 & 448 provide punishments therefor.",
+    "evidence_required": [
+      "Proof of lawful possession (fard malkiat, registered deed, utility bills in possessor's name)",
+      "Photographs, CCTV footage, or eyewitness statements of unauthorized entry",
+      "Police 15 emergency call record or complaint log",
+      "Proof of intimidation or refusal to vacate"
+    ],
+    "forum_court": "Court of Judicial Magistrate / Illegal Dispossession Act 2005 Special Court (Sessions Court)",
+    "practical_steps": [
+      "Call Police Emergency 15 immediately to record prompt police response and Roznamcha entry.",
+      "File written complaint under Section 154 CrPC for FIR under 448/447 PPC.",
+      "If forcibly dispossessed by land grabbers (qabza mafia), file a complaint under Section 3 of the Illegal Dispossession Act 2005 before the Court of Sessions.",
+      "File an application under Section 145 CrPC before the Magistrate for sealing or restoring possession to prevent breach of peace."
+    ]
+  },
+  {
+    "id": "PPC-503-506",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "503 & 506",
+    "section_title": "Criminal intimidation and punishment",
+    "chapter": "Chapter XXII: Of Criminal Intimidation, Insult and Annoyance",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Personal Security",
+    "cognizable": "Section 506 Part 1 is Non-cognizable; Section 506 Part 2 (threat to cause death/grievous hurt) is Cognizable in most provinces",
+    "bailable": "Bailable",
+    "compoundable": "Compoundable",
+    "punishment": "Part 1: Imprisonment up to 2 years or fine or both. Part 2 (threat to cause death or grievous hurt or destruction of property by fire): Imprisonment up to 7 years, or with fine, or with both.",
+    "summary_plain": "Applies when someone threatens you with injury to your person, reputation, or property (or to a loved one) with intent to cause alarm, or to force you to do something you are not legally bound to do.",
+    "summary_urdu": "مجرمانہ دھمکیاں دینا۔ جان، مال یا عزت کو نقصان پہنچانے کی دھمکی دینا تاکہ خوف پیدا کیا جائے یا کوئی کام زبردستی کروایا جائے۔",
+    "statutory_text": "Section 503: Whoever threatens another with any injury to his person, reputation or property, or to the person or reputation of any one in whom that person is interested, with intent to cause alarm to that person, or to cause that person to do any act which he is not legally bound to do... commits criminal intimidation. Section 506: Punishment for criminal intimidation...",
+    "evidence_required": [
+      "Audio recordings, voicemails, or call logs",
+      "SMS, WhatsApp messages, social media direct messages containing threats",
+      "CCTV footage of confrontational encounters",
+      "Eyewitness statements of threats uttered in public or in front of third parties"
+    ],
+    "forum_court": "Court of Judicial Magistrate",
+    "practical_steps": [
+      "Preserve all digital evidence: take screenshots, export WhatsApp chats with date/time stamps, preserve call logs.",
+      "Call Police 15 to register emergency report if under immediate threat.",
+      "Submit written complaint to the local Police Station detailing exact words of threat, date, and witnesses.",
+      "If threat involves death or grievous injury, demand registration of FIR under Section 506 Part 2 PPC."
+    ]
+  },
+  {
+    "id": "PPC-509",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "509",
+    "section_title": "Word, gesture or act intended to insult the modesty of a woman or harassment",
+    "chapter": "Chapter XXII: Of Criminal Intimidation, Insult and Annoyance",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Women Protection",
+    "cognizable": "Cognizable",
+    "bailable": "Bailable",
+    "compoundable": "Compoundable with permission of the woman insulted",
+    "punishment": "Imprisonment for a term which may extend to three years, or with fine up to five hundred thousand rupees, or with both.",
+    "summary_plain": "Protects women against public harassment, stalking, indecent gestures, intrusive words, or exhibition of any object intending that such word or gesture shall be heard or seen by a woman to insult her modesty.",
+    "summary_urdu": "خواتین کو ہراساں کرنا، غیر اخلاقی اشارے یا الفاظ استعمال کرنا۔ عوامی جگہوں، گلیوں، یا کام کی جگہ پر عورت کی عزت و وقار مجروح کرنے کے خلاف قانونی تحفظ۔",
+    "statutory_text": "Whoever, intending to insult the modesty of any woman, utters any word, makes any sound or gesture, or exhibits any object, intending that such word or sound shall be heard, or that such gesture or object shall be seen, by such woman, or intrudes upon the privacy of such woman, shall be punished with imprisonment which may extend to three years, or with fine up to five hundred thousand rupees, or with both.",
+    "evidence_required": [
+      "CCTV footage or mobile video recordings",
+      "Witness testimony of bystanders or colleagues",
+      "Digital messages, photos, or stalking logs",
+      "Police complaint copy / 15 call detail"
+    ],
+    "forum_court": "Court of Judicial Magistrate / Federal/Provincial Ombudsperson for Protection Against Harassment at the Workplace",
+    "practical_steps": [
+      "Report immediately to Punjab/Sindh/KP Police Women Protection Helpline (e.g. 1043 in Punjab or 15).",
+      "Lodge written complaint at the local Police Station for FIR under Section 509 PPC.",
+      "If harassment occurs at the workplace, file a simultaneous complaint with the Workplace Inquiry Committee or directly to the Provincial/Federal Ombudsperson for Workplace Harassment under the 2010 Act."
+    ]
+  },
+  {
+    "id": "PPC-498A-498B",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "498-A & 498-B",
+    "section_title": "Prohibition of depriving woman from inheriting property and forced marriage",
+    "chapter": "Chapter XX-A: Of Offences Against Women",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Women Protection",
+    "cognizable": "Cognizable",
+    "bailable": "Non-bailable",
+    "compoundable": "Non-compoundable",
+    "punishment": "Section 498-A (Depriving of inheritance): Imprisonment up to 10 years and not less than 5 years, or fine of one million rupees, or both. Section 498-B (Forced marriage): Imprisonment up to 7 years and not less than 3 years, and fine of five hundred thousand rupees.",
+    "summary_plain": "Prohibits depriving any woman of her lawful inheritance through deceit, coercion, or fraud. Also strictly criminalizes forcing a woman into marriage without her free and valid consent.",
+    "summary_urdu": "عورت کو جائیداد کے وراثتی حق سے محروم کرنے اور زبردستی شادی کروانے کے خلاف سخت قانونی سزا (پانچ سے دس سال قید)۔",
+    "statutory_text": "Section 498-A: Whoever by deceitful or illegal means deprives any woman from acquiring any property at the time of opening of succession shall be punished with imprisonment which may extend to ten years but not less than five years or with fine of one million rupees or both. Section 498-B: Whoever coerces or compels a woman to enter into marriage shall be punished with imprisonment up to seven years.",
+    "evidence_required": [
+      "Inheritance pedigree / Family Registration Certificate (FRC) from NADRA",
+      "Revenue records (fard, mutation/intiqal) showing alienation of inherited land",
+      "Proof of deceit, forged relinquish deeds (Tamleek / Dastbardari nama)",
+      "Affidavit of the victim confirming lack of consent"
+    ],
+    "forum_court": "Court of Sessions",
+    "practical_steps": [
+      "Obtain NADRA FRC and revenue mutation documents showing how the deceased's inheritance was distributed.",
+      "File complaint before Sessions Court or Police for registration of FIR under Section 498-A/498-B PPC.",
+      "Apply to the Revenue Officer/Assistant Commissioner to challenge and cancel the fraudulent inheritance mutation.",
+      "File a declaratory suit in Civil Court under Section 42 Specific Relief Act challenging any forged relinquishment deed."
+    ]
+  },
+  {
+    "id": "PPC-324",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "324",
+    "section_title": "Attempt to commit Qatl-i-Amd (Attempted Murder)",
+    "chapter": "Chapter XVI: Of Offences Affecting the Human Body",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Offenses Against Person",
+    "cognizable": "Cognizable",
+    "bailable": "Non-bailable",
+    "compoundable": "Compoundable with permission of the Court",
+    "punishment": "Imprisonment of either description for a term which may extend to ten years, and shall also be liable to fine; and if hurt is caused to any person, punishment provided for hurt caused.",
+    "summary_plain": "Applies when an accused person does any act with intention or knowledge that such act could cause death, but death does not occur (e.g. firing at someone with a firearm, stabbing, or violent physical attack).",
+    "summary_urdu": "اقدامِ قتل۔ جان بوجھ کر کسی پر جان لیوا حملہ کرنا جس سے موت واقع نہ ہوئی ہو لیکن موت واقع ہونے کا پورا خدشہ ہو۔",
+    "statutory_text": "Whoever does any act with such intention or knowledge, and under such circumstances, that, if he by that act caused death, he would be guilty of qatl-i-amd, shall be punished with imprisonment of either description for a term which may extend to ten years, and shall also be liable to fine...",
+    "evidence_required": [
+      "Medico-Legal Certificate (MLC) from Government Hospital showing nature of injuries",
+      "Recovery of weapon of offence (firearm, knife, vehicle) and ballistic / forensic report",
+      "Crime scene recovery memos (empty cartridges, blood-stained earth, damaged clothes)",
+      "Eyewitness statements under Section 161 CrPC"
+    ],
+    "forum_court": "Court of Sessions / Additional Sessions Judge",
+    "practical_steps": [
+      "Immediately take injured person to a Government DHQ/THQ Hospital for emergency medical treatment and Medico-Legal Examination (MLC).",
+      "Inform Police immediately at hospital emergency or call 15 for police docket.",
+      "Lodge formal FIR under Section 154 CrPC at Police Station mentioning weapon, motive, and names of attackers.",
+      "Engage an Advocate to monitor police investigation and ensure recovery of crime weapon."
+    ]
+  },
+  {
+    "id": "PPC-392-393",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "Sections 392, 393 & 397",
+    "section_title": "Robbery, attempted robbery, and armed robbery with deadly weapons",
+    "chapter": "Chapter XVII: Of Offences Against Property",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Violent Property Crimes",
+    "cognizable": "Cognizable (Police must register FIR immediately)",
+    "bailable": "Non-bailable",
+    "compoundable": "Non-Compoundable",
+    "punishment": "Section 392: Rigorous imprisonment up to 10 years (14 years if on highway between sunset and sunrise) and fine. Section 393: Attempted robbery is punishable with rigorous imprisonment up to 7 years and fine. Section 397: Armed robbery/attempt with deadly weapon carries mandatory minimum 7 years imprisonment.",
+    "summary_plain": "Under Section 392 PPC, robbery is committed when theft or extortion is accompanied by causing or attempting to cause death, hurt, or wrongful restraint, or fear of instant hurt. Under Section 393 PPC, even if no money, cash, medicine, or goods were successfully stolen (such as an attempted armed robbery at a pharmacy, shop, or home where the culprits were scared off, resisted, or fled), the mere attempt to commit robbery is a severe non-bailable cognizable crime punishable by up to 7 years rigorous imprisonment. Section 397 mandates minimum 7-year imprisonment if a deadly weapon (gun, pistol) is used.",
+    "summary_urdu": "ڈکیتی، رہزنی اور اقدامِ ڈکیتی (دفعات 392، 393 و 397)۔ اگر مسلح افراد دکان، میڈیکل اسٹور یا گھر میں گن پوائنٹ پر لوٹ مار کی کوشش کریں لیکن کچھ لوٹ نہ سکیں، تب بھی اقدامِ ڈکیتی (دفعہ 393) کے تحت 7 سال تک قیدِ بامشقت کی سزا ہوتی ہے اور اسلحہ لہرانے پر دفعہ 397 کے تحت کم از کم 7 سال قید لازمی ہے۔",
+    "statutory_text": "Section 392: Whoever commits robbery shall be punished with rigorous imprisonment for a term which may extend to ten years, and shall also be liable to fine; and, if the robbery be committed on the highway between sunset and sunrise, the imprisonment may be extended to fourteen years. Section 393: Whoever attempts to commit robbery shall be punished with rigorous imprisonment for a term which may extend to seven years, and shall also be liable to fine. Section 397: If, at the time of committing robbery or dacoity, the offender uses any deadly weapon, or causes grievous hurt to any person, or attempts to cause death or grievous hurt to any person, the imprisonment with which such offender shall be punished shall not be less than seven years.",
+    "evidence_required": [
+      "CCTV footage from inside and outside the premises showing armed culprits",
+      "Immediate 15 police emergency call record and dispatch log",
+      "Eyewitness statements of shopkeeper, staff, or bystanders",
+      "Empty bullet casings, discarded weapons, or vehicle license plates noted",
+      "Medico-Legal Certificate (MLC) if any physical scuffle or injury occurred"
+    ],
+    "forum_court": "Court of Sessions / Additional Sessions Judge",
+    "practical_steps": [
+      "Immediately dial Police Emergency 15 to log the incident and ensure police visit the crime scene.",
+      "Preserve and download CCTV camera footage showing armed perpetrators and weapons.",
+      "Visit the local police station and submit a written application for immediate registration of FIR under Sections 393/397/34 PPC.",
+      "If the SHO refuses to lodge an FIR, file a petition under Section 22-A & 22-B CrPC before the Sessions Judge / Ex-Officio Justice of Peace.",
+      "Attend the identification parade before a Judicial Magistrate if police arrest suspects."
+    ]
+  },
+  {
+    "id": "PPC-279-337G",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "Sections 279 & 337-G",
+    "section_title": "Rash driving on public way and hurt caused by rash or negligent driving (Road Accidents)",
+    "chapter": "Chapter XIV & XVI: Offences Affecting the Public Health, Safety & Human Body",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Traffic & Vehicular Accidents",
+    "cognizable": "Cognizable",
+    "bailable": "Bailable",
+    "compoundable": "Compoundable with permission of the Court",
+    "punishment": "Section 279: Imprisonment up to 2 years, or fine up to 3,000 rupees, or both. Section 337-G: Arsh or Daman (monetary compensation) specified for the injury, and imprisonment up to 5 years as Ta'zir.",
+    "summary_plain": "Under Section 279 PPC, driving any vehicle on a public way so rashly or negligently as to endanger human life or safety is a criminal offence. If physical hurt or injury is caused to any person by such rash or negligent driving, Section 337-G PPC applies, holding the driver criminally liable to pay Daman/Arsh (compensation) and undergo imprisonment up to 5 years. In addition, claims for vehicular damage and third-party insurance compensation can be brought before the Motor Accident Claims Tribunal (MACT) or civil courts.",
+    "summary_urdu": "تیز رفتاری اور غفلت سے گاڑی چلانے پر حادثہ اور چوٹ (دفعات 279 اور 337-جی)۔ سڑک پر تیز رفتاری یا لاپرواہی سے گاڑی چلا کر حادثہ کرنے پر 2 سال تک قید اور چوٹ پہنچنے پر دیت/ارش/ضمان اور 5 سال تک قید کی سزا ہو سکتی ہے۔ اس کے علاوہ موٹر ایکسیڈنٹ ٹربیونل سے مالی معاوضہ طلب کیا جا سکتا ہے۔",
+    "statutory_text": "Section 279: Whoever drives any vehicle, or rides, on any public way in a manner so rash or negligent as to endanger human life, or to be likely to cause hurt or injury to any other person, shall be punished with imprisonment of either description for a term which may extend to two years, or with fine which may extend to three thousand rupees, or with both. Section 337-G: Whoever causes hurt by rash or negligent driving shall be liable to the arsh or daman specified for the kind of hurt caused and may also be punished with imprisonment of either description for a term which may extend to five years as ta'zir.",
+    "evidence_required": [
+      "Police 15 emergency call and First Information Report (FIR) under 279/337-G",
+      "Medico-Legal Certificate (MLC) from Government Hospital detailing injuries",
+      "Motor Vehicle Examiner (MVE) inspection report of both vehicles",
+      "Photographs and video of accident spot, skid marks, and vehicular damage"
+    ],
+    "forum_court": "Court of Judicial Magistrate / Motor Accident Claims Tribunal (MACT)",
+    "practical_steps": [
+      "Ensure immediate medical assistance and obtain a Medico-Legal Certificate (MLC) from a government hospital.",
+      "Call Police 15 and register an FIR under Section 279 and 337-G PPC at the local police station.",
+      "Obtain an official mechanical inspection report from the Motor Vehicle Examiner (MVE).",
+      "File a claim for vehicular damage and injury compensation before the Motor Accident Claims Tribunal (MACT) or Insurance Tribunal."
+    ]
+  },
+  {
+    "id": "PPC-379-380",
+    "act_code": "PPC",
+    "act_title": "Pakistan Penal Code (Act XLV of 1860)",
+    "section_number": "Sections 378, 379 & 380",
+    "section_title": "Theft and Theft in Dwelling House or Building",
+    "chapter": "Chapter XVII: Of Offences Against Property",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Law / Property Offenses",
+    "cognizable": "Cognizable",
+    "bailable": "Non-Bailable",
+    "compoundable": "Compoundable with permission of the Court and consent of owner",
+    "punishment": "Section 379: Imprisonment of either description for a term which may extend to three years, or with fine, or with both. Section 380: Imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine.",
+    "summary_plain": "Under Section 378 and 379 PPC, whoever intends to take dishonestly any movable property out of the possession of any person without that person's consent commits theft, punishable with up to 3 years imprisonment. If the theft is committed in any building, tent, or vessel used as a human dwelling or for custody of property (such as stealing cash, jewelry, or valuables from a home or bedroom drawer), Section 380 PPC applies, carrying an enhanced punishment of up to 7 years imprisonment and fine. The offense is cognizable, requiring the local police to register an FIR upon complaint.",
+    "summary_urdu": "چوری اور گھر یا عمارت سے چوری (دفعات 378، 379 اور 380)۔ کسی کی اجازت کے بغیر اس کی رقم، نقدی، زیورات یا سامان چرانا جرم ہے۔ عام چوری پر 3 سال قید اور گھر یا کمرے سے چوری (دفعہ 380) پر 7 سال تک قید اور جرمانہ ہے۔ یہ ایک قابلِ دست اندازی پولیس جرم ہے جس پر فوری ایف آئی آر درج کی جاتی ہے۔",
+    "statutory_text": "Section 378: Whoever, intending to take dishonestly any movable property out of the possession of any person without that person's consent, moves that property in order to such taking, is said to commit theft. Section 379: Whoever commits theft shall be punished with imprisonment of either description for a term which may extend to three years, or with fine, or with both. Section 380: Whoever commits theft in any building, tent or vessel, which building, tent or vessel is used as a human dwelling, or used for the custody of property, shall be punished with imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine.",
+    "evidence_required": [
+      "Prompt emergency call to Police 15 and First Information Report (FIR) under Section 380 PPC",
+      "List, inventory, and purchase receipts or proofs of stolen cash, jewelry, or electronics",
+      "CCTV footage, mobile phone records, or eyewitness testimony showing unauthorized entry or departure",
+      "Crime scene inspection memo and forensic fingerprint lifting by police investigation team"
+    ],
+    "forum_court": "Court of Judicial Magistrate 1st Class",
+    "practical_steps": [
+      "Immediately dial Police 15 to report the theft and secure the crime scene.",
+      "Visit the local police station with a written application detailing the stolen items and suspects to register an FIR under Section 380 PPC.",
+      "Provide police with an inventory memo of stolen items, serial numbers, CCTV footage, or eyewitness details.",
+      "If the SHO refuses to lodge the FIR, file an application before the Ex-Officio Justice of the Peace / Sessions Court under Section 22-A CrPC.",
+      "Upon arrest and recovery of stolen property, file a superdari application under Section 516-A CrPC to obtain temporary custody of recovered cash or items."
+    ]
+  }
+]

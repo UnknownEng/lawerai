@@ -1,0 +1,152 @@
+[
+  {
+    "id": "PRPA-SEC-15",
+    "act_code": "PRPA",
+    "act_title": "Punjab Rented Premises Act (Act VII of 2009)",
+    "section_number": "Section 15",
+    "section_title": "Application for eviction / ejectment of tenant",
+    "chapter": "Eviction Proceedings",
+    "jurisdiction": "Provincial (Punjab Province)",
+    "category": "Property Law / Tenancy",
+    "cognizable": "Special Statutory Tribunal Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Warrant of eviction executed through police force if tenant does not vacate within 30 days of final order.",
+    "summary_plain": "In Punjab, a landlord can file an eviction application before the Special Rent Tribunal on statutory grounds: (a) expiry of tenancy period; (b) tenant's failure to pay rent within the agreed date or within 30 days after due date; (c) breach of tenancy agreement terms; (d) tenant subletting without written consent; (e) tenant causing damage to premises; or (f) landlord's bona fide personal need.",
+    "summary_urdu": "پنجاب میں کرایہ دار کی بے دخلی کا طریقہ کار (دفعہ 15)۔ کرایہ ادا نہ کرنے، کرایہ داری کی مدت ختم ہونے، یا مالک مکان کی ذاتی ضرورت کی بنیاد پر رینٹ ٹربیونل سے فوری بے دخلی کا حکم حاصل کیا جا سکتا ہے۔",
+    "statutory_text": "Section 15: A landlord may apply for the eviction of a tenant if: (a) the period of tenancy has expired; (b) the tenant has failed to pay or tender rent within the agreed period, or in the absence of an agreement, within thirty days from the due date; (c) the tenant has committed breach of a term or condition of the tenancy agreement; (d) the tenant has committed an act likely to impair the material value or utility of the premises; (e) the tenant has used the premises for a purpose other than that for which it was let out; (f) the tenant has sub-let the premises without written consent; or (g) the landlord requires the premises in good faith for his own use or for the use of any of his children.",
+    "evidence_required": [
+      "Registered Tenancy Agreement or tenancy recorded with Rent Registrar",
+      "Notice of eviction or default served on tenant with proof of dispatch",
+      "Bank statements or rent receipt book showing non-payment or default",
+      "Proof of personal bona fide need (if claimed on ground of personal use)"
+    ],
+    "forum_court": "Court of Special Rent Tribunal / Rent Controller (Punjab)",
+    "practical_steps": [
+      "Ensure tenancy agreement is registered with the local Rent Registrar (otherwise pay 5-10% fine under Section 5).",
+      "Serve formal notice to tenant demanding arrears of rent or surrender of vacant possession.",
+      "File Eviction Application under Section 15 PRPA before the Special Rent Tribunal.",
+      "Under Section 19 PRPA, tenant must obtain 'Leave to Contest' within 10 days of service, failing which eviction order is passed automatically.",
+      "Execute eviction through Rent Tribunal's bailiff with police assistance."
+    ]
+  },
+  {
+    "id": "SRPO-SEC-15",
+    "act_code": "SRPO",
+    "act_title": "Sindh Rented Premises Ordinance (Ordinance XVII of 1979)",
+    "section_number": "Section 15",
+    "section_title": "Application to Controller for eviction of tenant",
+    "chapter": "Eviction Proceedings",
+    "jurisdiction": "Provincial (Sindh Province - Karachi, Hyderabad, Sukkur, etc.)",
+    "category": "Property Law / Tenancy",
+    "cognizable": "Special Statutory Controller Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Eviction order executable as civil decree by Rent Controller.",
+    "summary_plain": "In Sindh, a landlord cannot evict a tenant except by applying to the Rent Controller on grounds such as: (a) default in rent payment exceeding 60 days from the due date; (b) subletting premises without landlord's written consent; (c) acts causing nuisance or impairing building value; (d) bona fide personal requirement of landlord or spouse/children.",
+    "summary_urdu": "سندھ میں کرایہ دار کے خلاف بے دخلی کی کارروائی (دفعہ 15)۔ 60 دن سے زائد کرایہ ادا نہ کرنے، بلا اجازت ذیلی کرایہ دار رکھنے، یا مالک کی ذاتی ضرورت پر رینٹ کنٹرولر سے رجوع کیا جاتا ہے۔",
+    "statutory_text": "Section 15(2): The Controller may, on an application by the landlord, make an order directing the tenant to put the landlord in possession of the premises if he is satisfied that: (i) the tenant has failed to pay or tender the rent within sixty days; (ii) the tenant has handed over possession to another person without consent; (iii) the tenant has committed acts likely to impair the utility of the premises; (vii) the landlord requires the premises in good faith for his own occupation or use of spouse or children.",
+    "evidence_required": [
+      "Tenancy agreement signed by both parties",
+      "Bank deposit slips / money order receipts showing default",
+      "Notice of demand and postal courier slips",
+      "Proof of bona fide personal need"
+    ],
+    "forum_court": "Court of Rent Controller (Civil Judge exercising Rent Controller powers in Sindh)",
+    "practical_steps": [
+      "Send a legal notice via registered mail specifying default of over 60 days.",
+      "File Eviction Case under Section 15 SRPO before the Rent Controller having territorial jurisdiction.",
+      "Rent Controller directs tenant to deposit tentative rent arrears under Section 16 SRPO.",
+      "If tenant fails to deposit rent on the court's date, tenant's defense is struck off and immediate eviction is ordered."
+    ]
+  },
+  {
+    "id": "IRRO-SEC-17",
+    "act_code": "IRRO",
+    "act_title": "Islamabad Rent Restriction Ordinance (Ordinance IV of 2001)",
+    "section_number": "Section 17",
+    "section_title": "Eviction of tenant in Islamabad Capital Territory (ICT)",
+    "chapter": "Eviction Proceedings",
+    "jurisdiction": "Federal (Islamabad Capital Territory - ICT)",
+    "category": "Property Law / Tenancy",
+    "cognizable": "Special Statutory Controller Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Eviction order executable as a decree of the civil court through the Bailiff of Islamabad Civil Courts.",
+    "summary_plain": "In Islamabad Capital Territory (ICT), eviction of a tenant is governed exclusively by the Islamabad Rent Restriction Ordinance 2001, NOT Punjab or Sindh rent laws. A landlord must apply to the Rent Controller, Islamabad, on statutory grounds: (a) default in rent payment for more than 15 days after due date; (b) expiry of agreed lease period; (c) subletting without landlord's written consent; (d) damage to premises or nuisance; or (e) personal bona fide need of landlord or family. Landlords in Islamabad cannot forcefully evict or change locks without an order from the Rent Controller.",
+    "summary_urdu": "اسلام آباد میں کرایہ دار کی بے دخلی کا قانون (اسلام آباد رینٹ ریسٹرکشن آرڈیننس 2001 دفعہ 17)۔ وفاقی دارالحکومت اسلام آباد میں پنجاب یا سندھ کا قانون لاگو نہیں ہوتا۔ رینٹ کنٹرولر اسلام آباد کی عدالت سے 15 دن سے زائد کرایہ ادا نہ کرنے یا مدت ختم ہونے پر بے دخلی کا حکم لیا جاتا ہے۔",
+    "statutory_text": "Section 17: A landlord who seeks to evict his tenant shall apply to the Controller for a direction in that behalf. The Controller may make an order directing the tenant to put the landlord in possession if satisfied that: (i) the tenant has not paid or tendered rent within fifteen days after due date; (ii) the tenant has transferred his right under the lease or sub-let the building without written permission; (iii) the tenant has committed acts likely to impair the utility of the building; (iv) the landlord requires it in good faith for his own occupation or that of his children.",
+    "evidence_required": [
+      "Tenancy agreement registered or executed in Islamabad",
+      "Rent payment bank receipts or cash vouchers",
+      "Notice of demand or default served in Islamabad",
+      "Allotment letter or CDA ownership record in Islamabad sectors"
+    ],
+    "forum_court": "Court of Rent Controller, Islamabad (Civil Courts, Islamabad Capital Territory)",
+    "practical_steps": [
+      "Confirm jurisdiction lies before the Rent Controller Islamabad (Civil Courts ICT, G-10 or F-8).",
+      "Serve formal notice to tenant under Islamabad Rent Restriction Ordinance 2001.",
+      "File Eviction Petition under Section 17 IRRO 2001 before the Rent Controller Islamabad.",
+      "Rent Controller determines tentative rent under Section 18 IRRO 2001.",
+      "Execute final eviction order through Court Bailiff of Islamabad Civil Courts."
+    ]
+  },
+  {
+    "id": "PRPA-SEC-13",
+    "act_code": "PRPA",
+    "act_title": "Punjab Rented Premises Act (Act VII of 2009)",
+    "section_number": "Section 13",
+    "section_title": "Refund of advance rent and security deposit upon vacation of premises",
+    "chapter": "Obligations of Landlord and Rights of Tenant",
+    "jurisdiction": "Provincial (Punjab Province)",
+    "category": "Property Law / Tenancy",
+    "cognizable": "Special Statutory Tribunal Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Order directing landlord to refund the security deposit with costs; executable as a civil decree by the Rent Tribunal.",
+    "summary_plain": "Under Section 13 of the Punjab Rented Premises Act 2009, a landlord is legally required to refund the tenant the security deposit or advance rent within thirty days of the date on which the tenant vacates the premises, after deducting any proven arrears of rent or utility bills. If the landlord fails or refuses to return the security deposit, the tenant has the statutory right to file an application before the Rent Tribunal for the recovery of the deposit amount.",
+    "summary_urdu": "سیکیورٹی ڈپازٹ اور ایڈوانس کرایہ کی واپسی (پنجاب رینٹڈ پریمسز ایکٹ 2009 دفعہ 13)۔ مکان یا دکان خالی کرنے کے 30 دن کے اندر مالک مکان پر سیکیورٹی ڈپازٹ واپس کرنا قانونی طور پر لازم ہے۔ انکار کی صورت میں کرایہ دار رینٹ ٹربیونل میں وصولی کی درخواست دائر کر سکتا ہے۔",
+    "statutory_text": "Section 13: (1) A landlord shall refund to the tenant the advance rent or the security deposit within thirty days of the date on which the tenant vacates the premises after deducting any arrears of rent or utility bills or cost of damage caused to the premises. (2) If the landlord fails to refund the advance rent or security deposit, the tenant may file an application before the Rent Tribunal for the recovery of the amount.",
+    "evidence_required": [
+      "Tenancy agreement showing amount of security deposit paid",
+      "Bank deposit slip, cheque, or receipt acknowledging receipt of security deposit by landlord",
+      "Proof of handing over vacant possession (keys handover memo, written notice, or witness statements)",
+      "Clearance certificates / receipts showing all utility bills and rent up to vacation date are cleared"
+    ],
+    "forum_court": "Court of Special Rent Tribunal / Rent Controller (Punjab)",
+    "practical_steps": [
+      "Serve a written notice on the landlord demanding refund of the security deposit within 30 days of vacating.",
+      "Gather receipts showing all rent arrears and utility bills have been fully paid.",
+      "If the landlord refuses or delays beyond 30 days, file an application under Section 13 PRPA before the Special Rent Tribunal.",
+      "Execute the refund order through the Rent Tribunal under Section 22 PRPA."
+    ]
+  },
+  {
+    "id": "SRPO-SEC-7",
+    "act_code": "SRPO",
+    "act_title": "Sindh Rented Premises Ordinance (Ordinance XVII of 1979)",
+    "section_number": "Section 7",
+    "section_title": "Prohibition of fine, premium, or unlawful retention of security deposit",
+    "chapter": "Rents and Security Deposits",
+    "jurisdiction": "Provincial (Sindh Province)",
+    "category": "Property Law / Tenancy",
+    "cognizable": "Special Statutory Controller Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Order of Rent Controller directing refund of security deposit; civil suit for recovery and damages under Contract Act.",
+    "summary_plain": "Under Sindh rent laws and the law of contract, a landlord cannot unlawfully withhold or forfeit a tenant's security deposit after the tenant has vacated the premises and cleared all dues. The tenant can file an application before the Rent Controller or a civil suit for recovery of money and unjust enrichment under Section 70 and 73 of the Contract Act 1872.",
+    "summary_urdu": "سندھ میں سیکیورٹی ڈپازٹ کی واپسی اور ناجائز کٹوتی کے خلاف تدارک۔ کرایہ داری ختم ہونے پر مالک مکان سیکیورٹی کی رقم روک نہیں سکتا۔ کرایہ دار رینٹ کنٹرولر یا سول کورٹ سے رقم کی واپسی کا قانونی دعویٰ دائر کر سکتا ہے۔",
+    "statutory_text": "Section 7: No landlord shall claim or receive any premium or other like sum in addition to fair rent or unlawfully retain any security deposit beyond adjustment of lawful dues upon surrender of possession.",
+    "evidence_required": [
+      "Tenancy contract mentioning security deposit",
+      "Proof of vacation and utility clearance",
+      "Bank statements or payment receipts"
+    ],
+    "forum_court": "Court of Rent Controller / Civil Court (Sindh)",
+    "practical_steps": [
+      "Send formal demand notice to landlord requesting return of security deposit.",
+      "File claim before Rent Controller or Civil Suit for Recovery of Money under Contract Act 1872.",
+      "Attach proof of possession handover and bill clearances."
+    ]
+  }
+]

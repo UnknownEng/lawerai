@@ -1,0 +1,33 @@
+[
+  {
+    "id": "PWA-SEC-15",
+    "act_code": "PWA",
+    "act_title": "Payment of Wages Act (Act IV of 1936)",
+    "section_number": "Section 15",
+    "section_title": "Claims arising out of deductions from wages or delay in payment of wages (Unpaid Salary)",
+    "chapter": "Payment and Recovery of Wages",
+    "jurisdiction": "Federal / Provincial Labour Courts",
+    "category": "Labour Law / Employment Rights",
+    "cognizable": "Special Statutory Labour Authority Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Direction to pay unpaid wages and salary arrears along with statutory compensation up to 10 times the deducted amount; recovery as land revenue.",
+    "summary_plain": "Under Section 15 of the Payment of Wages Act 1936, where an employer has delayed, withheld, or refused to pay monthly wages/salary, or made unauthorized deductions, the employee can file a recovery claim before the Authority appointed under the Payment of Wages Act (Labour Court / Commissioner for Workmen's Compensation). The Authority has statutory powers to direct immediate payment of all unpaid salary arrears along with punitive compensation. If the employer still refuses to pay, the amount is recovered as arrears of land revenue by the District Collector.",
+    "summary_urdu": "تنخواہ کی عدم ادائیگی اور بقایاجات کی وصولی (پیمنٹ آف ویجز ایکٹ 1936 دفعہ 15)۔ اگر مالک یا کمپنی تنخواہ روک لے، تاخیر کرے یا بلا اجازت کٹوتی کرے، تو لیبر کورٹ / اتھارٹی کے روبرو تنخواہ مع ہرجانہ وصولی کا دعویٰ دائر کیا جاتا ہے۔",
+    "statutory_text": "Section 15: The Provincial Government may appoint an Authority to hear and decide all claims arising out of deductions from the wages, or delay in payment of the wages, of persons employed or paid in that area. The Authority may direct the refund to the employed person of the amount deducted, or the payment of the delayed wages, together with the payment of such compensation as the Authority may think fit, not exceeding ten times the amount deducted.",
+    "evidence_required": [
+      "Appointment letter, employment contract, or employee ID card",
+      "Bank statements showing past salary credits and subsequent non-payment",
+      "Attendance register records, emails, or WhatsApp messages confirming performance of duties",
+      "Written grievance notice or demand letter delivered to the employer"
+    ],
+    "forum_court": "Authority under Payment of Wages Act / Labour Court having territorial jurisdiction",
+    "practical_steps": [
+      "Serve a formal written demand notice on the employer demanding release of unpaid salary arrears within 7 days.",
+      "Calculate limitation period from the date wages fell into arrears.",
+      "Engage an Advocate or Labour Representative to file an Application under Section 15 Payment of Wages Act before the Authority.",
+      "Request the Authority to summon employer records and attendance/payroll registers.",
+      "Upon order, execute recovery through the District Collector as arrears of land revenue."
+    ]
+  }
+]

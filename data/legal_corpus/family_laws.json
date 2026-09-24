@@ -1,0 +1,178 @@
+[
+  {
+    "id": "FCA-SEC-5",
+    "act_code": "FCA",
+    "act_title": "Family Courts Act (Act XXXV of 1964)",
+    "section_number": "Section 5 & Schedule",
+    "section_title": "Jurisdiction of Family Courts",
+    "chapter": "Family Courts Jurisdiction and Procedure",
+    "jurisdiction": "Federal / Provincial (Applied in all Family Courts)",
+    "category": "Family Law",
+    "cognizable": "Civil / Family Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Exclusive judicial jurisdiction to grant decrees of Khula, dower, maintenance, and child custody.",
+    "summary_plain": "Establishes that the Family Court has exclusive jurisdiction to hear and decide family matters: 1. Dissolution of marriage (including Khula); 2. Dower (Mehr); 3. Maintenance of wives and children; 4. Restitution of conjugal rights; 5. Custody of children and visitation rights; 6. Guardianship; 7. Recovery of dowry articles (Jahez).",
+    "summary_urdu": "فیملی کورٹ کا دائرہ اختیار۔ خلع، حق مہر، خرچہ نان و نفقہ (بیوی اور بچوں کا)، جہیز کا سامان، اور بچوں کی کسٹڈی / ملاقات کے تمام مقدمات صرف فیملی کورٹ میں سنے جاتے ہیں۔",
+    "statutory_text": "Section 5: Subject to the provisions of the Muslim Family Laws Ordinance, 1961, and the Conciliation Courts Ordinance, 1961, the Family Courts shall have exclusive jurisdiction to entertain, hear and adjudicate upon matters specified in Part I of the Schedule: 1. Dissolution of marriage (including Khula); 2. Dower; 3. Maintenance; 4. Restitution of conjugal rights; 5. Custody of children and the visitation rights of parents to meet them; 6. Guardianship; 7. Jactitation of marriage; 8. Dowry; 9. Personal property and belongings of a wife.",
+    "evidence_required": [
+      "Original Nikahnama (Marriage Contract) or NADRA Marriage Registration Certificate",
+      "NADRA Child Registration Certificate (B-Form) for minor children",
+      "List of dowry articles (Jahez fard) with purchase invoices and photographs",
+      "Proof of husband's income/financial standing (salary slip, bank statement, property ownership, tax return)"
+    ],
+    "forum_court": "Court of Judge Family Court (situated at District / Tehsil Headquarters)",
+    "practical_steps": [
+      "Obtain attested copy of Nikahnama from local Union Council or NADRA.",
+      "Engage a Family Lawyer to draft a comprehensive Plaint (combining Khula, Mehr, Maintenance, and Dowry recovery).",
+      "File plaint before the Family Judge where the wife ordinarily resides (special territorial privilege for women).",
+      "Court summons the husband and conducts mandatory pre-trial reconciliation."
+    ]
+  },
+  {
+    "id": "FCA-SEC-10",
+    "act_code": "FCA",
+    "act_title": "Family Courts Act (Act XXXV of 1964)",
+    "section_number": "Section 10",
+    "section_title": "Pre-trial reconciliation and Decree of Khula",
+    "chapter": "Pre-trial Proceedings",
+    "jurisdiction": "Federal / Provincial Family Courts",
+    "category": "Family Law / Dissolution of Marriage",
+    "cognizable": "Family Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Judicial dissolution of Muslim marriage on ground of Khula.",
+    "summary_plain": "Under Pakistani law, a Muslim wife has an absolute legal and Islamic right to obtain Khula if she cannot live with her husband within the limits ordained by Allah. If pre-trial reconciliation fails and the wife refuses to reconcile, the Family Court is legally bound to grant a decree for dissolution of marriage immediately, subject to returning 25% to 50% of the prompt dower (or surrendering unpaid dower).",
+    "summary_urdu": "خلع کا حصول۔ اگر بیوی شوہر کے ساتھ گزارہ نہ کر سکے تو عدالت خلع کی ڈگری جاری کرتی ہے۔ مفاہمت ناکام ہونے کی صورت میں عدالت حق مہر کے تصفیے کے ساتھ فوری خلع منظور کرتی ہے۔",
+    "statutory_text": "Section 10(4): If the reconciliation fails, the Family Court shall immediately pass a decree for dissolution of marriage: Provided that where the decree for dissolution of marriage is on the ground of Khula, the Court may direct the wife to surrender up to fifty percent of her deferred dower or up to twenty-five percent of her admitted prompt dower to the husband.",
+    "evidence_required": [
+      "Plaint stating clear, unequivocal aversion and inability to live with the husband within Islamic limits",
+      "Copy of Nikahnama showing dower details (prompt / deferred / paid / unpaid)",
+      "Statement of the wife before the Family Judge during pre-trial reconciliation affirming firm decision"
+    ],
+    "forum_court": "Court of Judge Family Court",
+    "practical_steps": [
+      "File suit for Dissolution of Marriage on grounds of Khula before the Family Court.",
+      "Attend the pre-trial reconciliation hearing before the Judge.",
+      "If the wife stands firm that reconciliation is impossible, the Court passes a preliminary Khula decree.",
+      "The Family Court transmits a copy of the decree to the relevant Union Council Chairman for 90-day statutory notice under Section 7 MFLO."
+    ]
+  },
+  {
+    "id": "MFLO-SEC-7",
+    "act_code": "MFLO",
+    "act_title": "Muslim Family Laws Ordinance (Ordinance VIII of 1961)",
+    "section_number": "Section 7",
+    "section_title": "Talaq (Divorce) procedure and notice to Union Council",
+    "chapter": "Divorce Proceedings and Effectiveness",
+    "jurisdiction": "Federal (Applicable to all Muslim citizens of Pakistan)",
+    "category": "Family Law / Divorce Procedure",
+    "cognizable": "Non-cognizable / Quasi-penal for failure to notify",
+    "bailable": "Bailable",
+    "compoundable": "Compoundable",
+    "punishment": "Failure to deliver notice to Chairman is punishable with simple imprisonment up to 1 year or fine up to 5,000 rupees.",
+    "summary_plain": "Any husband pronouncing Talaq must immediately give written notice to the Chairman of the local Union Council / Arbitration Council and provide a copy to the wife. Talaq does not become legally effective until 90 days have expired from the date the notice was delivered to the Chairman, during which the Arbitration Council must attempt reconciliation.",
+    "summary_urdu": "طلاق کا قانونی طریقہ کار اور یونین کونسل نوٹس۔ طلاق دینے کے بعد چیئرمین یونین کونسل کو تحریری نوٹس دینا لازمی ہے۔ 90 دن کی عدت/مفاہمتی مدت پوری ہونے کے بعد طلاق کا موثر سرٹیفکیٹ جاری ہوتا ہے۔",
+    "statutory_text": "Any man who wishes to divorce his wife shall, as soon as may be after the pronouncement of Talaq in any form whatsoever, give the Chairman notice in writing of his having done so, and shall supply a copy thereof to the wife... Save as provided in subsection (5), a Talaq, unless revoked earlier, expressly or otherwise, shall not be effective until the expiration of ninety days from the day on which notice under subsection (1) is delivered to the Chairman.",
+    "evidence_required": [
+      "Written Talaq-Nama signed by husband and attested by witnesses",
+      "TCS/Postal registry receipt of notice dispatched to the Union Council Chairman and to the wife",
+      "Attested receiving stamp from the Union Council / Arbitration Council"
+    ],
+    "forum_court": "Arbitration Council / Office of the Chairman Union Council / Family Court",
+    "practical_steps": [
+      "Execute written Talaq-nama with two male Muslim witnesses.",
+      "Send formal statutory notice to the Chairman Union Council where the marriage took place or where the wife resides, along with a copy to the wife via registered mail.",
+      "Participate in the 3 reconciliation sessions convened by the Arbitration Council.",
+      "Upon completion of 90 days without revocation, obtain the official 'Divorce Effectiveness Certificate' (Talaq Certificate) from the Union Council/NADRA."
+    ]
+  },
+  {
+    "id": "MFLO-SEC-9",
+    "act_code": "MFLO",
+    "act_title": "Muslim Family Laws Ordinance (Ordinance VIII of 1961)",
+    "section_number": "Section 9",
+    "section_title": "Maintenance of wife and minor children",
+    "chapter": "Maintenance Rights",
+    "jurisdiction": "Federal / Provincial Family Courts",
+    "category": "Family Law / Maintenance",
+    "cognizable": "Family Remedy / Executable as land revenue arrears",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Non-payment results in attachment of bank accounts, salary deduction, property auction, or civil imprisonment.",
+    "summary_plain": "A Muslim husband and father is under an absolute legal and religious obligation to maintain his wife during the subsistence of marriage (and during iddat) and his minor children (sons until adulthood, daughters until marriage). If he fails, the Family Court awards monthly maintenance and past maintenance arrears.",
+    "summary_urdu": "بیوی اور بچوں کا ماہانہ خرچہ (نان و نفقہ)۔ باپ اور شوہر پر قانونی فرض ہے کہ وہ بیوی اور بچوں کا مناسب خوراک، رہائش، تعلیم اور علاج کا خرچ ادا کرے۔ عدم ادائیگی پر قید ہو سکتی ہے۔",
+    "statutory_text": "If any husband fails to maintain his wife adequately, or where there are more wives than one, fails to maintain them equitably, the wife, or all or any of the wives, may in addition to seeking any other legal remedy available apply to the Chairman who shall constitute an Arbitration Council to determine the matter... Family Courts also hold jurisdiction under Family Courts Act 1964 Section 5 to award interim and final maintenance.",
+    "evidence_required": [
+      "Proof of marriage and birth certificates / NADRA B-Form of children",
+      "Documented monthly expenses of children (school tuition fee receipts, medical bills, utility bills)",
+      "Proof of father's financial capacity (company salary slip, income tax returns, vehicle registration, business accounts, lifestyle proof)"
+    ],
+    "forum_court": "Court of Judge Family Court / Arbitration Council",
+    "practical_steps": [
+      "File suit for recovery of past and future monthly maintenance before the Family Court.",
+      "File an application for Interim Maintenance (Section 17-A Family Courts Act) to obtain urgent monthly support pending trial.",
+      "If the husband defaults in paying court-fixed maintenance, the Court strikes off his defense and issues arrest warrants / execution decree under Order XXI CPC."
+    ]
+  },
+  {
+    "id": "GWA-SEC-17-25",
+    "act_code": "GWA",
+    "act_title": "Guardian and Wards Act (Act VIII of 1890) & Family Courts Act 1964",
+    "section_number": "Sections 17 & 25",
+    "section_title": "Appointment of guardian and custody of minors (Welfare of the Minor)",
+    "chapter": "Appointment and Custody",
+    "jurisdiction": "Federal / Provincial Family Courts",
+    "category": "Family Law / Child Custody",
+    "cognizable": "Family Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Court determines physical custody and weekly/monthly visitation schedule based exclusively on the child's welfare.",
+    "summary_plain": "The paramount and supreme consideration in custody disputes under Pakistani law is the 'Welfare of the Minor' (health, education, moral upbringing, emotional bond). While mothers traditionally have custody (Hizanat) during tender years, the court evaluates what best serves the child's long-term future, while granting the non-custodial parent regular visitation rights.",
+    "summary_urdu": "بچوں کی کسٹڈی (حضانت) اور والدین سے ملاقات۔ کسٹڈی کا فیصلہ کرتے وقت عدالت کا واحد اور بنیادی معیار 'بچے کی بہترین فلاح و بہبود' ہوتا ہے۔ غیر نگران والد/والدہ کو عدالتی ملاقات کے حقوق حاصل ہوتے ہیں۔",
+    "statutory_text": "Section 17: In appointing or declaring the guardian of a minor, the Court shall, subject to the provisions of this section, be guided by what, consistently with the law to which the minor is subject, appears in the circumstances to be for the welfare of the minor. Section 25: Title of guardian to custody of ward.",
+    "evidence_required": [
+      "School report cards, medical records, and daily living environment proof",
+      "Character and financial stability proof of the custodial claimant",
+      "Age and personal preference of minor (if capable of forming intelligent preference)",
+      "Proof of neglect, abuse, or alienation by either parent (if alleged)"
+    ],
+    "forum_court": "Court of Senior Civil Judge / Family Judge functioning as Guardian Judge",
+    "practical_steps": [
+      "File petition for custody under Section 25 Guardian and Wards Act read with Section 5 Family Courts Act.",
+      "File urgent interim custody application or visitation application to meet the child at least twice a month or weekly.",
+      "Guardian Judge meets the child in chamber to ascertain preference if of sufficient discernment.",
+      "Final decree establishes custody along with a comprehensive visitation schedule (weekends, Eid holidays, summer vacations)."
+    ]
+  },
+  {
+    "id": "FCA-DOWRY-ARTICLES",
+    "act_code": "FCA",
+    "act_title": "Family Courts Act (Act XXXV of 1964) & Dowry Laws",
+    "section_number": "Section 5, Schedule Entry 7",
+    "section_title": "Recovery of dowry articles, bridal gifts, and personal jewelry (Saman-e-Jahez & Zewar)",
+    "chapter": "Exclusive Jurisdiction of Family Courts",
+    "jurisdiction": "Federal / Provincial Family Courts",
+    "category": "Family Law / Matrimonial Property",
+    "cognizable": "Family Court Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Decree directing return of specific gold jewelry and dowry items or payment of current market value; enforceable through arrest and property attachment.",
+    "summary_plain": "Under Section 5 read with the First Schedule (Entry 7) of the Family Courts Act 1964 and dowry legislation, bridal jewelry (gold/zewar), clothes, and dowry articles (Saman-e-Jahez) are the absolute personal property of the woman. If her husband, father-in-law, or in-laws withhold or refuse to return her jewelry or dowry items, she has the legal right to file a Suit for Recovery of Dowry Articles or the alternate market value thereof before the Family Court. Misappropriation of entrusted jewelry also constitutes criminal breach of trust.",
+    "summary_urdu": "سامانِ جہیز اور زیورات کی واپسی (فیملی کورٹس ایکٹ دفعہ 5)۔ شادی پر دیے گئے سونے کے زیورات اور سامانِ جہیز بیوی کی ذاتی ملکیت ہیں۔ اگر شوہر یا سسر زیور واپس کرنے سے انکار کریں تو فیملی کورٹ سے زیورات یا ان کی موجودہ مارکیٹ قیمت کی وصولی کا دعویٰ دائر کیا جاتا ہے۔",
+    "statutory_text": "Family Courts Act 1964, Section 5 & Schedule Entry 7: The Family Courts shall have exclusive jurisdiction to entertain, hear and adjudicate upon matters specified in the Schedule, including: Entry 7: Dowry and bridal gifts or the alternate value thereof. Under Dowry and Bridal Gifts (Restriction) Act 1976 Section 3, all property given as bridal gifts or dowry vests absolutely in the bride.",
+    "evidence_required": [
+      "Itemized list of dowry articles and bridal jewelry prepared at the time of marriage (signed or witnessed)",
+      "Original goldsmith purchase receipts or valuation certificates",
+      "Photographs or wedding video showing bride wearing the jewelry at Rukhsati",
+      "Entries in Nikahnama regarding bridal gifts and jewelry (Columns 16-17)"
+    ],
+    "forum_court": "Court of Judge Family Court having territorial jurisdiction",
+    "practical_steps": [
+      "Prepare an itemized list of all gold jewelry, bridal gifts, and dowry articles with estimated current market value.",
+      "Engage an Advocate to file a Plaint for Recovery of Dowry Articles or Alternate Market Value under Section 5 Family Courts Act.",
+      "File an application for preservation and deposit of jewelry if danger of sale/misappropriation exists.",
+      "Execute decree through Family Court powers under Section 13 Family Courts Act (attachment of property or detention in civil jail)."
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "em-1",
+    "name": "Police Emergency Response",
+    "short_code": "15",
+    "phone": "15",
+    "category": "Immediate Police Assistance",
+    "hours": "24/7",
+    "description": "Immediate dispatch of police mobile squad for physical threats, violence in progress, robbery, or home invasion anywhere in Pakistan."
+  },
+  {
+    "id": "em-2",
+    "name": "Rescue 1122 Emergency Medical & Fire Service",
+    "short_code": "1122",
+    "phone": "1122",
+    "category": "Medical Emergency & Rescue",
+    "hours": "24/7",
+    "description": "Paramedic ambulance, fire rescue, and disaster emergency response across Punjab, KP, and key cities."
+  },
+  {
+    "id": "em-3",
+    "name": "National Human Rights & Legal Helpline (Ministry of Human Rights)",
+    "short_code": "1099",
+    "phone": "1099 (Toll Free)",
+    "category": "Human Rights & Legal Protection",
+    "hours": "24/7",
+    "description": "Government of Pakistan toll-free helpline providing legal advice, emergency shelter coordination, and relief for human rights violations and domestic abuse."
+  },
+  {
+    "id": "em-4",
+    "name": "Rozan Women & Youth Counseling Helpline",
+    "short_code": "0800-22444",
+    "phone": "0800-22444",
+    "category": "Domestic Violence & Crisis Intervention",
+    "hours": "Monday - Saturday: 9:00 AM - 5:00 PM",
+    "description": "Confidential psychosocial counseling, crisis intervention, and legal referrals for survivors of emotional, physical, and domestic abuse."
+  },
+  {
+    "id": "em-5",
+    "name": "Edhi Foundation Emergency & Ambulance",
+    "short_code": "115",
+    "phone": "115",
+    "category": "Emergency Medical & Shelter",
+    "hours": "24/7",
+    "description": "Nationwide emergency ambulance, orphanages, women shelter homes (Edhi Home / Apna Ghar), and relief services."
+  },
+  {
+    "id": "em-6",
+    "name": "Digital Rights Foundation (DRF) Cyber Harassment Helpline",
+    "short_code": "0800-39393",
+    "phone": "0800-39393",
+    "category": "Cyber Harassment & Blackmail Support",
+    "hours": "Monday - Friday: 9:00 AM - 5:00 PM",
+    "description": "Dedicated confidential helpline for women and marginalized individuals facing online blackmail, non-consensual image sharing, and cyberstalking."
+  },
+  {
+    "id": "em-7",
+    "name": "FIA Cyber Crime Reporting & Helpline",
+    "short_code": "1991",
+    "phone": "1991 / complaint.fia.gov.pk",
+    "category": "Federal Cyber Crime Investigation",
+    "hours": "24/7",
+    "description": "Official federal law enforcement helpline for registering formal complaints against cyber crimes, identity theft, and online extortion."
+  },
+  {
+    "id": "em-8",
+    "name": "Punjab Police Women Safety App & Helpline",
+    "short_code": "1043",
+    "phone": "1043 / 15",
+    "category": "Women Safety & Harassment Prevention",
+    "hours": "24/7",
+    "description": "Dedicated Punjab Police helpline and mobile alert system for female travelers, workplace harassment, or street stalking."
+  }
+]

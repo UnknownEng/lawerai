@@ -1,0 +1,65 @@
+[
+  {
+    "id": "NEPRA-CONSUMER-BILLING",
+    "act_code": "NEPRA",
+    "act_title": "Regulation of Generation, Transmission and Distribution of Electric Power Act 1997 & NEPRA Regulations",
+    "section_number": "Section 39 & NEPRA Complaint Handling Regulations",
+    "section_title": "Redressal of electricity billing complaints, excessive billing, and WAPDA/DISCO disputes",
+    "chapter": "Consumer Protection and Complaint Handling",
+    "jurisdiction": "Federal (Applicable across all DISCOs: LESCO, IESCO, K-Electric, GEPCO, FESCO, MEPCO, PESCO, HESCO, QESCO)",
+    "category": "Administrative Law / Utility & Consumer Protection",
+    "cognizable": "Special Administrative Regulatory Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Rectification of inflated bill, cancellation of illegal detection bill, restoration of electricity supply, and compensation.",
+    "summary_plain": "Under Section 39 of the NEPRA Act 1997 and the NEPRA Consumer Service Manual, any electricity consumer facing inflated or excessive electricity bills, arbitrary detection bills, defective meter reading, or tariff overbilling by distribution companies (DISCOs/WAPDA/IESCO/LESCO/KE) can file a formal complaint. The consumer can challenge the inflated bill before: (1) The Customer Services Center of the concerned DISCO; (2) The Provincial Electric Inspector under Section 26(6) of the Electricity Act 1910; (3) The NEPRA Consumer Affairs Division; or (4) The District Consumer Court under provincial Consumer Protection Acts. A consumer is entitled to stay of disconnection while a genuine billing dispute is under adjudication.",
+    "summary_urdu": "واپڈا اور بجلی کے زائد بلوں کے خلاف شکایت (نیپرا ایکٹ دفعہ 39 و کنزیومر پروٹیکشن)۔ اگر دکان یا گھر کا بجلی کا بل بہت زیادہ آئے، غلط ریڈنگ ہو یا ناجائز ڈٹیکشن بل ڈالا جائے، تو ایس ڈی او، پروونشل الیکٹرک انسپکٹر، نیپرا کنزیومر افیئرز اور کنزیومر کورٹ میں چیلنج کیا جا سکتا ہے اور کنکشن کٹنے سے حکمِ امتناعی لیا جا سکتا ہے۔",
+    "statutory_text": "Section 39: Any interested person, including an electric power consumer, may file a complaint with the Authority regarding any violation of this Act, rules, regulations, or terms of a licence. The Authority or designated officer shall investigate and pass appropriate orders, including rectification of incorrect billing, setting aside unjustified detection bills, and compensation.",
+    "evidence_required": [
+      "Copies of disputed electricity bills showing excessive units or detection charges",
+      "Previous 12 months electricity bills showing normal consumption pattern",
+      "Photographs of current electricity meter reading display showing discrepancy",
+      "Written complaint submitted to SDO/XEN with courier receipt or diary number"
+    ],
+    "forum_court": "Office of Provincial Electric Inspector / NEPRA Consumer Affairs Division / District Consumer Court",
+    "practical_steps": [
+      "Take a clear timestamped photograph of the electric meter display to verify actual meter reading against the units billed.",
+      "Submit a written complaint to the local Sub-Divisional Officer (SDO) or XEN of the electric distribution company demanding billing correction.",
+      "If DISCO fails to rectify within 15 days, lodge an online or physical complaint before the NEPRA Consumer Affairs Division (CAD).",
+      "Simultaneously apply to the Provincial Electric Inspector under Section 26(6) of Electricity Act 1910 for testing of meter and stay of disconnection.",
+      "Alternatively, file a consumer complaint before the District Consumer Protection Court seeking damages and cancellation of arbitrary billing."
+    ]
+  },
+  {
+    "id": "PCPA-SEC-13-15",
+    "act_code": "PCPA",
+    "act_title": "Punjab Consumer Protection Act (Act II of 2005)",
+    "section_number": "Sections 4, 13, 15 & 28",
+    "section_title": "Liability for Defective Products, Faulty Goods, and Consumer Court Redressal",
+    "chapter": "Part II: Liability Arising from Defective Products and Part IV: Redress of Grievance",
+    "jurisdiction": "Provincial (Punjab Consumer Courts: Lahore, Rawalpindi, Faisalabad, Multan, Gujranwala, Sialkot)",
+    "category": "Consumer Protection / Product Liability",
+    "cognizable": "Special Consumer Judicial Remedy",
+    "bailable": "N/A",
+    "compoundable": "Compoundable before Consumer Court",
+    "punishment": "Order for return of purchase price (refund), replacement of defective product, compensation, and penalty fine up to Rs. 50,000.",
+    "summary_plain": "Under Sections 4, 13, and 15 of the Punjab Consumer Protection Act 2005, a manufacturer or seller is strictly liable for selling defective goods, broken products, or items not conforming to standard or warranty. Before filing a claim in the District Consumer Court, the buyer MUST send a formal written 15-day legal notice under Section 28(1) demanding repair, replacement, or refund. If the seller or shopkeeper fails or refuses to resolve the dispute within 15 days of receiving the notice, the consumer must file a claim before the District Consumer Court within 30 days from the cause of action. The Consumer Court can order a full refund, product replacement, and damages for financial loss and mental distress.",
+    "summary_urdu": "ناقص یا خراب اشیاء کے خلاف صارف عدالت (پنجاب کنزیومر پروٹیکشن ایکٹ 2005 دفعہ 4، 13، 15 و 28)۔ اگر خریدا گیا لیپ ٹاپ، موبائل یا سامان خراب نکلے اور دکاندار وارنٹی، مرمت یا رقم واپسی سے انکار کرے، تو پہلے 15 دن کا قانونی نوٹس بھیجا جاتا ہے۔ اس کے بعد ڈسٹرکٹ کنزیومر کورٹ میں دعویٰ دائر کر کے رقم واپسی، سامان کی تبدیلی اور ہرجانہ طلب کیا جا سکتا ہے۔",
+    "statutory_text": "Section 4: The manufacturer or seller shall be liable to a consumer for damages caused by the characteristic of the product that renders the product defective. Section 13: A product is defective if it does not conform to the standard, specification, or warranty. Section 15: The seller is liable if he fails to repair or replace the defective product within a reasonable time. Section 28: A consumer who has suffered damage, or was delivered defective product, may submit a claim to the Consumer Court after serving a fifteen days written notice to the manufacturer or provider.",
+    "evidence_required": [
+      "Original purchase receipt, invoice, or payment slip showing seller details and date",
+      "Warranty card or guarantee certificate if provided",
+      "Written 15-day legal notice sent to the shopkeeper/manufacturer via registered post or courier",
+      "Courier tracking receipt and delivery confirmation slip of the 15-day notice",
+      "Photographs or technical expert inspection report documenting the defect"
+    ],
+    "forum_court": "District Consumer Protection Court (Presided by District & Sessions Judge)",
+    "practical_steps": [
+      "Preserve the original purchase invoice, retail receipt, and warranty card.",
+      "Draft and serve a formal 15-day written legal notice under Section 28(1) PCPA to the shopkeeper demanding refund, repair, or replacement.",
+      "Send the legal notice via UMS / TCS registered courier with delivery acknowledgment.",
+      "If the shopkeeper does not reply or refund within 15 days, prepare a Consumer Claim with affidavit.",
+      "File the claim before the District Consumer Court within 30 days of the date of cause of action (no court fee required)."
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "id": "SRA-SEC-8-9",
+    "act_code": "SRA",
+    "act_title": "Specific Relief Act (Act I of 1877)",
+    "section_number": "Sections 8 & 9",
+    "section_title": "Recovery of possession of specific immovable property",
+    "chapter": "Part II, Chapter I: Of Recovering Possession of Property",
+    "jurisdiction": "Federal / Provincial Civil Courts",
+    "category": "Civil Law / Property Rights",
+    "cognizable": "Civil Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Decree restoring actual physical possession of land, house, or commercial shop to dispossessed lawful occupant.",
+    "summary_plain": "Under Section 9, if anyone is dispossessed of immovable property without their consent otherwise than in due course of law, they can file a suit to recover possession within 6 months, even without proving their title or ownership. Section 8 provides recovery based on title/ownership.",
+    "summary_urdu": "غیر قانونی بے دخلی پر جائیداد کا قبضہ واپس حاصل کرنا (دفعات 8 اور 9)۔ اگر کسی کو زبردستی بغیر قانونی کارروائی بے دخل کیا جائے تو وہ 6 ماہ کے اندر اندر بغیر ملکیت ثابت کیے صرف سابقہ قبضے کی بنیاد پر قبضہ بحال کروا سکتا ہے۔",
+    "statutory_text": "Section 9: If any person is dispossessed without his consent of immovable property otherwise than in due course of law, he or any person claiming through him may, by suit, recover possession thereof, notwithstanding any other title that may be set up in such suit. Nothing in this section shall bar any person from suing to establish his title to such property and to recover possession thereof. Suit must be filed within 6 months from date of dispossession.",
+    "evidence_required": [
+      "Proof of prior peaceful physical possession (utility bills, receipts, tenancy deed, tax chalan)",
+      "Proof of forcible dispossession without court decree",
+      "Police report or 15 emergency call log recorded at the time of illegal dispossession"
+    ],
+    "forum_court": "Court of Civil Judge having territorial jurisdiction over the property",
+    "practical_steps": [
+      "Calculate 6-month limitation strictly from the exact date of dispossession.",
+      "Engage an Advocate to file a Suit for Possession under Section 9 Specific Relief Act.",
+      "Obtain ad-interim restraining order preventing the illegal possessor from creating third-party interest or altering the structure.",
+      "Upon decree, execute possession through Court Bailiff under Order XXI Rule 35 CPC."
+    ]
+  },
+  {
+    "id": "SRA-SEC-42",
+    "act_code": "SRA",
+    "act_title": "Specific Relief Act (Act I of 1877)",
+    "section_number": "Section 42",
+    "section_title": "Discretion of Court as to declaration of status or right (Suit for Declaration)",
+    "chapter": "Part II, Chapter VI: Of Declaratory Decrees",
+    "jurisdiction": "Federal / Provincial Civil Courts",
+    "category": "Civil Law / Title & Rights",
+    "cognizable": "Civil Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Binding judicial declaration settling disputed ownership, legal character, or inheritance rights.",
+    "summary_plain": "Used when someone denies or is interested in denying your legal character or right to any property (e.g. disputing your ownership, claiming forged inheritance, or asserting a fraudulent sale deed). The plaintiff asks the civil court to formally declare their rightful title.",
+    "summary_urdu": "استقرارِ حق کا دعویٰ (ڈیکلریشن آف ٹائٹل - دفعہ 42)۔ جب کوئی مخالف فریق آپ کی جائیداد کی ملکیت سے انکار کرے یا جعلی دستاویزات بنا لے، تو سول کورٹ سے اصل مالکانہ حقوق کا حتمی عدالتی اعلان حاصل کرنا۔",
+    "statutory_text": "Any person entitled to any legal character, or to any right as to any property, may institute a suit against any person denying, or interested to deny, his title to such character or right, and the Court may in its discretion make therein a declaration that he is so entitled, and the plaintiff need not in such suit ask for any further relief: Provided that no Court shall make any such declaration where the plaintiff, being able to seek further relief than a mere declaration of title, omits to do so.",
+    "evidence_required": [
+      "Registered Sale Deed, Gift Deed (Hiba-nama), or Revenue Mutation (Intiqal)",
+      "NADRA Family Registration Certificate (FRC) for inheritance disputes",
+      "Revenue Fard Malkiat (Record of Rights) from Land Revenue Authority",
+      "Proof of defendant's denial or competing bogus claim"
+    ],
+    "forum_court": "Court of Senior Civil Judge / Civil Judge",
+    "practical_steps": [
+      "Draft Plaint for Declaration with Consequential Relief (Injunction under Sec 54 and/or Possession).",
+      "Attach attested copies of title deeds and revenue record.",
+      "Obtain temporary injunction under Order 39 Rules 1 & 2 CPC restraining alienation during suit.",
+      "Produce revenue patwari and sub-registrar as official witnesses during evidence stage."
+    ]
+  }
+]

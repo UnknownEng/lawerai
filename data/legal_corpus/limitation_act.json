@@ -1,0 +1,32 @@
+[
+  {
+    "id": "LIMITATION-ACT-1908",
+    "act_code": "LIMA",
+    "act_title": "Limitation Act (Act IX of 1908)",
+    "section_number": "Sections 3, 18 & First Schedule",
+    "section_title": "Statutory limitation periods, effect of fraud, and dismissal of time-barred claims",
+    "chapter": "Part II: Limitation of Suits, Appeals and Applications",
+    "jurisdiction": "Federal / Provincial (Applied across all Pakistani Civil Courts)",
+    "category": "Civil Law / Procedural Limitation",
+    "cognizable": "Statutory Bar to Legal Proceedings",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Mandatory dismissal of time-barred suits and applications under Section 3 Limitation Act.",
+    "summary_plain": "Under Section 3 of the Limitation Act 1908, every lawsuit filed after the expiry of the prescribed limitation period must be dismissed by the civil court, even if the opposing party does not raise the objection. For immovable property and inheritance claims, the general limitation for possession is 12 years (Articles 142/144), 6 years for declaration of rights (Article 120), and 3 years for setting aside fraudulent transfers (Article 95). However, under Section 18 of the Limitation Act, if a party has been kept from knowledge of their right or fraudulent transaction through fraud, limitation begins only from the date when the fraud was first discovered.",
+    "summary_urdu": "قانونِ میعاد سماعت (لمیٹیشن ایکٹ 1908 - دفعات 3 اور 18)۔ اگر کوئی مقدمہ قانونی میعاد گزرنے کے بعد دائر کیا جائے تو عدالت اسے لازمی خارج کر دیتی ہے۔ تاہم دفعہ 18 کے تحت اگر مخالف فریق نے دھوکہ دہی سے وراثت یا جائیداد کا انتقال خفیہ رکھا ہو، تو میعاد کا شمار اس دن سے ہوتا ہے جس دن فراڈ کا علم ہوا۔",
+    "statutory_text": "Section 3: Subject to the provisions contained in sections 4 to 25 (inclusive), every suit instituted, appeal preferred, and application made, after the period of limitation prescribed therefor by the first schedule shall be dismissed, although limitation has not been set up as a defence. Section 18: Where any person having a right to institute a suit or make an application has, by means of fraud, been kept from the knowledge of such right or of the title on which it is founded... the time limited for instituting a suit or making an application against the person guilty of the fraud or accessory thereto... shall be computed from the time when the fraud first became known to the person injuriously affected thereby.",
+    "evidence_required": [
+      "Exact date of cause of action and date when fraud was first discovered",
+      "Documentary proof establishing active concealment of the fraudulent transfer",
+      "Revenue mutation or registry record showing date of unauthorized transfer",
+      "NADRA Family Registration Certificate establishing status as legal heir"
+    ],
+    "forum_court": "Court of Civil Judge / Senior Civil Judge / High Court",
+    "practical_steps": [
+      "Evaluate whether the claim falls within the 6-year or 12-year statutory period under the First Schedule of Limitation Act 1908.",
+      "If filing after a long delay (such as 10 or 12 years), specifically plead Section 18 of the Limitation Act in the plaint, demonstrating that the fraudulent mutation was concealed and discovered recently.",
+      "Anticipate and prepare counter-arguments against the defendant's preliminary objection under Order VII Rule 11 CPC regarding limitation.",
+      "File Suit for Declaration (Section 42 Specific Relief Act) and cancellation of fraudulent mutation with express prayer on limitation discovery."
+    ]
+  }
+]

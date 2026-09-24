@@ -1,0 +1,62 @@
+[
+  {
+    "id": "PECA-SEC-20-21",
+    "act_code": "PECA",
+    "act_title": "Prevention of Electronic Crimes Act (Act XL of 2016)",
+    "section_number": "Sections 20 & 21",
+    "section_title": "Offences against dignity of natural person and cyber-stalking / blackmailing",
+    "chapter": "Chapter II: Offences and Penalties",
+    "jurisdiction": "Federal (Federal Investigation Agency - FIA)",
+    "category": "Cyber Crime / Online Harassment",
+    "cognizable": "Cognizable by FIA Cyber Crime Wing",
+    "bailable": "Bailable / Non-bailable depending on whether child or non-consensual sexually explicit content is involved",
+    "compoundable": "Compoundable with victim's consent",
+    "punishment": "Section 20: Imprisonment up to 3 years or fine up to 1 million rupees or both. Section 21 (Cyber-stalking / sharing intimate pictures): Imprisonment up to 3 years or fine up to 1 million rupees, and up to 5 years if victim is a minor.",
+    "summary_plain": "Protects individuals from online defamation, blackmailing, harassment on WhatsApp/Facebook/Instagram, cyber-stalking, morphing photos, and non-consensual sharing of private pictures or videos.",
+    "summary_urdu": "سائبر کرائم، آن لائن بلیک میلنگ اور ہراسانی (دفعات 20 اور 21)۔ سوشل میڈیا یا واٹس ایپ پر تصاویر وائرل کرنے کی دھمکی، نازیبا پیغامات، جعلی اکاؤنٹس اور بلیک میلنگ کے خلاف ایف آئی اے سائبر کرائم کا سخت ایکشن۔",
+    "statutory_text": "Section 20: Whoever intentionally and publicly exhibits or displays or transmits any information through any information system, which he knows to be false, and intimidates or harms the reputation or privacy of a natural person, shall be punished with imprisonment up to three years or with fine. Section 21: A person commits cyber-stalking if with intent to coerce or intimidate or harass any person, he uses information system or electronic device to follow, contact, spy on, or distribute pictures/videos without consent.",
+    "evidence_required": [
+      "Screenshots of harassing messages, profiles, phone numbers, or social media links (URL)",
+      "Uncompressed exported chat logs (.txt) and media files",
+      "Details of extortion demands (bank accounts, easy paisa / jazz cash accounts requested)",
+      "Digital device with original messages intact for FIA forensic extraction"
+    ],
+    "forum_court": "FIA Cyber Crime Reporting Center (CCRC) / Special Court (PECA)",
+    "practical_steps": [
+      "DO NOT delete the chat or block the stalker immediately before backing up the evidence.",
+      "Take full-screen screenshots showing user handles, phone numbers, dates, and timestamps.",
+      "Lodge an official online complaint at the FIA Cyber Crime Portal (complaint.fia.gov.pk) or call FIA Helpline 1991.",
+      "Visit the local FIA Cyber Crime Reporting Center with your CNIC and phone for forensic verification and lodging of FIR.",
+      "Seek emergency takedown of content through PTA (Pakistan Telecommunication Authority)."
+    ]
+  },
+  {
+    "id": "PECA-SEC-14",
+    "act_code": "PECA",
+    "act_title": "Prevention of Electronic Crimes Act (Act XL of 2016)",
+    "section_number": "Section 14",
+    "section_title": "Unauthorized use of identity information (Identity theft / fake profiles)",
+    "chapter": "Chapter II: Offences and Penalties",
+    "jurisdiction": "Federal (FIA)",
+    "category": "Cyber Crime / Fraud",
+    "cognizable": "Cognizable by FIA",
+    "bailable": "Bailable",
+    "compoundable": "Compoundable",
+    "punishment": "Imprisonment for a term which may extend to three years, or with fine up to five million rupees, or with both.",
+    "summary_plain": "Criminalizes creating fake social media profiles or using another person's CNIC, name, photograph, or biometric identity without authorization to defraud or impersonate them.",
+    "summary_urdu": "شناخت کا غیر قانونی استعمال اور جعلی پروفائل بنانا (دفعہ 14)۔ کسی کے شناختی کارڈ، تصویر یا نام کا غلط استعمال کر کے فیک اکاؤنٹ بنانا یا دھوکہ دینا قابلِ سزا جرم ہے۔",
+    "statutory_text": "Whoever obtains, sells, possesses, transmits or uses another person's identity information without authorization shall be punished with imprisonment for a term which may extend to three years or with fine which may extend to five million rupees or with both.",
+    "evidence_required": [
+      "Link (URL) and screenshots of the impersonating profile",
+      "Complainant's original CNIC and proof of identity",
+      "Proof that the profile was created without consent and is deceiving the public"
+    ],
+    "forum_court": "FIA Cyber Crime Wing / Special Court PECA",
+    "practical_steps": [
+      "Report the profile directly to the social media platform (Meta, X, TikTok) for impersonation.",
+      "File complaint at FIA Cybercrime portal (complaint.fia.gov.pk).",
+      "Request PTA to block the malicious link.",
+      "FIA traces IP address and phone IMEI used to create the fake profile."
+    ]
+  }
+]

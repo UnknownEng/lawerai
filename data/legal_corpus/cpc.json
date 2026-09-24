@@ -1,0 +1,150 @@
+[
+  {
+    "id": "CPC-O39-R1-2",
+    "act_code": "CPC",
+    "act_title": "Code of Civil Procedure (Act V of 1908)",
+    "section_number": "Order XXXIX, Rules 1 & 2",
+    "section_title": "Temporary Injunctions and Interlocutory Orders (Stay Order)",
+    "chapter": "First Schedule: Orders and Rules",
+    "jurisdiction": "Federal / Provincial (Applied uniformly in Civil Courts)",
+    "category": "Civil Procedure / Interim Relief",
+    "cognizable": "Civil Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Violation constitutes contempt of court and attachment of property / civil prison under Order XXXIX Rule 2(3).",
+    "summary_plain": "Allows a civil litigant to obtain an immediate temporary stay order (injunction) preventing the opposing party from illegal construction, building a wall, encroaching on a plot, selling, altering, demolishing, or taking unlawful possession of property while the main lawsuit is being decided.",
+    "summary_urdu": "حکمِ امتناعی (سٹے آرڈر)۔ پلاٹ یا اراضی پر غیر قانونی تعمیرات، دیوار بنانے، فروخت، یا مسماری کو فوری روکنے کے لیے عدالت سے عبوری حکم (حکمِ امتناعی) حاصل کرنا تاکہ تنازع کے دوران جائیداد کی اصل حیثیت برقرار رہے۔",
+    "statutory_text": "Order XXXIX Rule 1: Where in any suit it is proved by affidavit or otherwise: (a) that any property in dispute in a suit is in danger of being wasted, damaged, or alienated by any party to the suit, or wrongfully sold in execution of a decree; or (b) that the defendant threatens, or intends, to remove or dispose of his property with a view to defraud his creditors; the Court may by order grant a temporary injunction to restrain such act. Rule 2 applies to restraining repetition or continuance of breach of contract or injury.",
+    "evidence_required": [
+      "Plaint of the main civil suit establishing a 'Prima Facie Case' (strong arguable case)",
+      "Affidavit of the petitioner demonstrating 'Balance of Convenience' lies in their favour",
+      "Proof of 'Irreparable Loss' that monetary compensation cannot repair if stay is refused",
+      "Title deeds, revenue records, sale agreements, or possession evidence"
+    ],
+    "forum_court": "Court of Civil Judge / Senior Civil Judge / High Court",
+    "practical_steps": [
+      "File a Plaint along with a separate application under Order 39 Rules 1 & 2 CPC and supporting affidavit.",
+      "Seek Ad-interim Ex-parte Stay on the very first date of motion if extreme urgency exists.",
+      "Serve notices with copy of plaint and stay application upon the defendant.",
+      "Argue confirmation of stay order after defendant submits their reply."
+    ]
+  },
+  {
+    "id": "CPC-O7-R11",
+    "act_code": "CPC",
+    "act_title": "Code of Civil Procedure (Act V of 1908)",
+    "section_number": "Order VII, Rule 11",
+    "section_title": "Rejection of Plaint",
+    "chapter": "First Schedule: Order VII - Plaint",
+    "jurisdiction": "Federal / Provincial Civil Courts",
+    "category": "Civil Procedure / Defense",
+    "cognizable": "Civil Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Dismissal of a frivolous, barred, or non-maintainable suit at the threshold.",
+    "summary_plain": "Empowers the defendant to request dismissal of the plaintiff's lawsuit right at the start without having to undergo a lengthy trial, if the plaint discloses no real cause of action, is barred by limitation/statute, or is improperly valued.",
+    "summary_urdu": "دعویٰ خارج کرنے کی درخواست (ریجیکشن آف پلینٹ)۔ جب مخالف فریق کا مقدمہ بلا جواز، قانون کی رو سے ممنوع یا میعاد گزرنے کے بعد دائر کیا گیا ہو تو اسے شروع میں ہی خارج کروایا جا سکتا ہے۔",
+    "statutory_text": "The plaint shall be rejected in the following cases: (a) where it does not disclose a cause of action; (b) where the relief claimed is undervalued, and the plaintiff, on being required by the Court to correct the valuation within a time to be fixed by the Court, fails to do so; (c) where the relief claimed is properly valued, but the plaint is written upon paper insufficiently stamped; (d) where the suit appears from the statement in the plaint to be barred by any law.",
+    "evidence_required": [
+      "Application under Order 7 Rule 11 CPC highlighting defects in the plaintiff's plaint",
+      "Statutory bar evidence (e.g. Limitation Act schedule, bar under specific tenancy/arbitration law)",
+      "Proof that no legal cause of action is disclosed on the face of the plaint"
+    ],
+    "forum_court": "Court of Civil Judge trying the suit",
+    "practical_steps": [
+      "Before filing a full written statement, file an application under Order VII Rule 11 CPC.",
+      "Pinpoint legal defects: limitation expiry, lack of cause of action, or lack of court jurisdiction.",
+      "If the court agrees, the plaint is rejected and the litigation ends without full evidence trial."
+    ]
+  },
+  {
+    "id": "CPC-SEC-115",
+    "act_code": "CPC",
+    "act_title": "Code of Civil Procedure (Act V of 1908)",
+    "section_number": "Section 115",
+    "section_title": "Revision jurisdiction",
+    "chapter": "Part VIII: Reference, Review and Revision",
+    "jurisdiction": "High Court / District Court",
+    "category": "Civil Procedure / Appeals & Review",
+    "cognizable": "Civil Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Correction of jurisdictional error, illegality, or material irregularity committed by subordinate court.",
+    "summary_plain": "Provides a remedy before the High Court (or District Court) against non-appealable orders of subordinate civil courts where the subordinate judge exercised jurisdiction not vested in it, failed to exercise jurisdiction, or acted with material irregularity.",
+    "summary_urdu": "نگرانی (ریویژن)۔ ماتحت عدالت کے غیر قانونی حکم یا دائرہ اختیار سے تجاوز کے خلاف ہائی کورٹ یا ڈسٹرکٹ کورٹ میں دائر کی جانے والی درخواست۔",
+    "statutory_text": "The High Court may call for the record of any case which has been decided by any Court subordinate to such High Court and in which no appeal lies thereto, and if such subordinate Court appears: (a) to have exercised a jurisdiction not vested in it by law, or (b) to have failed to exercise a jurisdiction so vested, or (c) to have acted in the exercise of its jurisdiction illegally or with material irregularity, the High Court may make such order in the case as it thinks fit.",
+    "evidence_required": [
+      "Certified copies of the impugned order and subordinate court record",
+      "Grounds of Revision demonstrating jurisdictional defect or illegality",
+      "Affidavit and power of attorney (Wakalatnama)"
+    ],
+    "forum_court": "High Court (or District Judge depending on order type)",
+    "practical_steps": [
+      "Obtain certified copies of the trial court's order within the limitation period (90 days).",
+      "Engage an Advocate of the High Court to draft Civil Revision petition.",
+      "File petition in High Court Civil Registry; argue admission and seek suspension of impugned order."
+    ]
+  },
+  {
+    "id": "CPC-O21-EXEC",
+    "act_code": "CPC",
+    "act_title": "Code of Civil Procedure (Act V of 1908)",
+    "section_number": "Order XXI & Section 48",
+    "section_title": "Execution of Decrees and Orders (Recovery of decretal amount and property possession)",
+    "chapter": "Part II (Execution) and First Schedule: Order XXI",
+    "jurisdiction": "Federal / Provincial Civil Courts",
+    "category": "Civil Procedure / Execution of Decrees",
+    "cognizable": "Civil Judicial Execution Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Enforcement of decree by attachment and sale of debtor's property, attachment of bank accounts, and arrest/detention in civil prison.",
+    "summary_plain": "When a litigant wins a civil court case and obtains a final decree, but the opposing party (judgment-debtor) fails or refuses to pay the decree amount or hand over property, the decree-holder must NOT file a fresh suit. Instead, they must file an Execution Petition under Order XXI of the CPC before the executing court. The court has coercive statutory powers to enforce satisfaction through: (a) attachment and auction sale of the debtor's properties; (b) attachment of bank accounts; and (c) arrest and civil jail detention of the debtor under Order 21 Rule 37/38. Under Section 48 CPC, limitation for fresh execution applications is up to 6 years.",
+    "summary_urdu": "ڈگری کا اجراء (ایگزیکیوشن آف ڈگری - آرڈر 21 و دفعہ 48 ضابطہ دیوانی)۔ جب عدالت سے کیس جیت جانے کے بعد مخالف فریق ڈگری کی رقم ادا نہ کرے، تو نیا مقدمہ دائر نہیں کیا جاتا بلکہ اسی عدالت میں 'درخواستِ اجراء' دائر کی جاتی ہے۔ عدالت مقروض کے بینک اکاؤنٹس، جائیداد قرق اور نیلام کروا سکتی ہے اور گرفتاری کا وارنٹ جاری کرتی ہے۔",
+    "statutory_text": "Section 38: A decree may be executed either by the Court which passed it, or by the Court to which it is sent for execution. Order XXI Rule 10: Where the holder of a decree desires to execute it, he shall apply to the Court which passed the decree. Section 51: Subject to such conditions and limitations as may be prescribed, the Court may, on the application of the decree-holder, order execution of the decree: (a) by delivery of any property specifically decreed; (b) by attachment and sale or by sale without attachment of any property; (c) by arrest and detention in prison; (d) by appointing a receiver. Section 48: Execution barred in certain cases after six years.",
+    "evidence_required": [
+      "Certified copy of the judgment and decree sheet",
+      "Calculation memo of outstanding decretal amount including statutory markup",
+      "List and schedule of judgment-debtor's assets, bank accounts, or immovable properties",
+      "Certificate of non-satisfaction from the trial court"
+    ],
+    "forum_court": "Court of Civil Judge / Senior Civil Judge (Executing Court that passed the decree)",
+    "practical_steps": [
+      "Obtain certified copy of the decree sheet from the copying branch.",
+      "Calculate the limitation period (first execution within 3 years under Article 182 Limitation Act, subject to Section 48 CPC maximum 6 years).",
+      "File Execution Application under Order XXI Rule 10 & 11 CPC before the executing court.",
+      "File an application for attachment of judgment-debtor's bank accounts, vehicles, and immovable property under Order XXI Rule 43 and Rule 54 CPC.",
+      "If the judgment-debtor evades payment, apply for arrest warrant and detention in civil prison under Order XXI Rules 37 & 38 CPC."
+    ]
+  },
+  {
+    "id": "CPC-O5-O8-SUMMONS",
+    "act_code": "CPC",
+    "act_title": "Code of Civil Procedure (Act V of 1908)",
+    "section_number": "Order V & Order VIII, Rule 1",
+    "section_title": "Court Summons, Inspection of Case Plaint, and Written Statement",
+    "chapter": "First Schedule: Order V & Order VIII",
+    "jurisdiction": "Federal / Provincial Civil Courts",
+    "category": "Civil Procedure / Court Practice",
+    "cognizable": "Civil Judicial Procedure",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Failure to appear may result in ex-parte proceedings and an ex-parte decree under Order IX Rule 6 CPC.",
+    "summary_plain": "When a person receives a court notice or summons (such as giving 7 or 14 days to respond) without knowing what the case is about, they must NOT ignore it. The recipient or their appointed advocate must appear before the court on the scheduled hearing date, inspect the court file, and obtain a certified copy of the plaint (daawa) and annexed documents from the copying branch. Under Order VIII Rule 1 CPC, the defendant is entitled to request time (ordinarily 30 days) to submit a formal Written Statement (jawab-e-daawa) contesting the suit.",
+    "summary_urdu": "عدالتی سمن یا نوٹس ملنے پر قانونی طریقہ کار (آرڈر 5 و آرڈر 8 ضابطہ دیوانی)۔ جب عدالت سے نوٹس موصول ہو تو اسے نظر انداز نہ کریں ورنہ یکطرفہ کارروائی ہو سکتی ہے۔ مدعا علیہ یا ان کا وکیل مقررہ تاریخ پر عدالت میں پیش ہو کر دعوے اور نقول کا معائنہ کرے اور جواب دعویٰ داخل کرنے کے لیے وقت طلب کرے۔",
+    "statutory_text": "Order V Rule 1: When a suit has been duly instituted, a summons may be issued to the defendant to appear and answer the claim on a day to be therein specified. Order VIII Rule 1: The defendant may, and if so required by the Court shall, at or before the first hearing or within such time as the Court may permit, present a written statement of his defence.",
+    "evidence_required": [
+      "Original court notice or summons received with envelope showing diary/suit number and court stamp",
+      "Power of Attorney (Wakalatnama) executed in favour of an enrolled Advocate",
+      "Certified copy of the plaint (daawa) and all annexures obtained from the court copying branch",
+      "Any defense documents, receipts, or agreements contradicting the plaintiff's claim"
+    ],
+    "forum_court": "Court of Civil Judge / Senior Civil Judge / Family Court (as indicated on the notice)",
+    "practical_steps": [
+      "Examine the court notice to identify the specific court, judge, suit title, and the fixed hearing date.",
+      "Do not ignore the notice; failure to appear will cause the court to initiate ex-parte proceedings under Order IX Rule 6 CPC.",
+      "Engage an advocate to appear on the designated date and submit a Memo of Appearance or Wakalatnama.",
+      "Apply to the court reader or copying branch for an urgent copy of the plaint and all attached documents to understand the allegations.",
+      "Seek time under Order VIII Rule 1 CPC to file a formal Written Statement (jawab-e-daawa) addressing each paragraph of the plaint."
+    ]
+  }
+]

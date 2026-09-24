@@ -1,0 +1,89 @@
+[
+  {
+    "id": "CONST-ART-199",
+    "act_code": "CONST",
+    "act_title": "Constitution of the Islamic Republic of Pakistan (1973)",
+    "section_number": "Article 199",
+    "section_title": "Jurisdiction of High Court (Constitutional Writ Petitions)",
+    "chapter": "Part VII, Chapter 3: The High Courts",
+    "jurisdiction": "Constitutional / Federal & Provincial",
+    "category": "Constitutional Law / Fundamental Rights",
+    "cognizable": "Constitutional Remedy",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Judicial review orders: Writs of Habeas Corpus, Mandamus, Certiorari, Prohibition, and Quo Warranto.",
+    "summary_plain": "Provides direct constitutional access to the High Court when a person's fundamental rights are violated, or when an administrative official or state authority acts without lawful authority or fails to perform a legal duty. Also used for Habeas Corpus to recover missing or unlawfully detained persons from police custody.",
+    "summary_urdu": "ہائی کورٹ کا رٹ دائرہ اختیار (آرٹیکل 199)۔ بنیادی حقوق کے تحفظ، سرکاری افسران کی غیر قانونی کارروائیوں کو کالعدم قرار دینے، اور حبسِ بے جا (غیر قانونی پولیس حراست سے بازیابی) کے لیے آئینی درخواست۔",
+    "statutory_text": "Article 199(1): Subject to the Constitution, a High Court may, if it is satisfied that no other adequate remedy is provided by law: (a) on the application of any aggrieved party, make an order: (i) directing a person performing within territorial jurisdiction functions in connection with the affairs of the Federation, a Province or a local authority, to refrain from doing that which he is not permitted by law to do, or to do that which he is required by law to do; or (ii) declaring that any act done or proceeding taken has been done without lawful authority and is of no legal effect; (b) make an order directing that a person in custody within the territorial jurisdiction be brought before it so that the Court may satisfy itself that he is not being held in custody without lawful authority (Habeas Corpus)...",
+    "evidence_required": [
+      "Proof that no other adequate, efficacious alternate legal remedy exists under normal statute",
+      "Documentary proof of unlawful government action, notification, or omission",
+      "Affidavit of the petitioner affirming bona fides and personal aggrievement",
+      "For Habeas Corpus: Details of date, time, and police personnel involved in unlawful detention"
+    ],
+    "forum_court": "High Court (Lahore High Court, Sindh High Court, Peshawar High Court, Balochistan High Court, Islamabad High Court)",
+    "practical_steps": [
+      "Engage an Advocate of the High Court to draft a Constitutional Writ Petition under Article 199.",
+      "Attach attested copies of representations made to authorities and proof of their refusal or inaction.",
+      "For missing/illegally detained persons, file Urgent Habeas Corpus petition; Court appoints a Bailiff to raid the police station immediately.",
+      "High Court issues notices and may grant interim stay against illegal executive actions."
+    ]
+  },
+  {
+    "id": "CONST-ART-10A",
+    "act_code": "CONST",
+    "act_title": "Constitution of the Islamic Republic of Pakistan (1973)",
+    "section_number": "Article 10A",
+    "section_title": "Right to fair trial and due process",
+    "chapter": "Part II, Chapter 1: Fundamental Rights",
+    "jurisdiction": "Federal / Supreme Law",
+    "category": "Constitutional Law / Human Rights",
+    "cognizable": "Fundamental Constitutional Right",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Any judicial or administrative order passed in violation of due process is unconstitutional, void ab initio, and nullity in the eyes of law.",
+    "summary_plain": "Guarantees every citizen the absolute fundamental right to a fair trial and due process of law in the determination of civil rights and obligations or in any criminal charge.",
+    "summary_urdu": "منصفانہ سماعت اور قانونی تقاضوں کی پابندی کا بنیادی حق (آرٹیکل 10-A)۔ ہر شہری کو صفائی کا موقع دیے بغیر یا جانبداری سے کیا گیا کوئی بھی فیصلہ غیر آئینی اور باطل ہوگا۔",
+    "statutory_text": "For the determination of his civil rights and obligations or in any criminal charge against him a person shall be entitled to a fair trial and due process.",
+    "evidence_required": [
+      "Proof of denial of hearing (e.g. ex-parte order passed without serving summons)",
+      "Proof of bias or conflict of interest of the adjudicator",
+      "Violation of natural justice principles (Audi Alteram Partem - no one should be condemned unheard)"
+    ],
+    "forum_court": "High Court / Supreme Court / Appellate Tribunals",
+    "practical_steps": [
+      "Invoke Article 10A in any appeal, revision, or writ petition where government or trial court violated natural justice.",
+      "Highlight lack of proper notice, denial of cross-examination, or denial of opportunity to present defense.",
+      "Seek setting aside of impugned order and remand for de novo fair hearing."
+    ]
+  },
+  {
+    "id": "CONST-ART-9-10",
+    "act_code": "CONST",
+    "act_title": "Constitution of the Islamic Republic of Pakistan (1973)",
+    "section_number": "Articles 9 & 10",
+    "section_title": "Security of person and safeguards as to arrest and detention",
+    "chapter": "Part II, Chapter 1: Fundamental Rights",
+    "jurisdiction": "Federal / Supreme Law",
+    "category": "Constitutional Law / Liberty",
+    "cognizable": "Fundamental Constitutional Right",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Unlawful detention renders police officers liable for illegal confinement (Section 342 PPC) and departmental disciplinary action.",
+    "summary_plain": "Protects every person's life and liberty. No one can be deprived of liberty except in accordance with law. Anyone arrested must be informed immediately of the grounds of arrest, has the right to consult and be defended by a lawyer of their choice, and must be produced before the nearest magistrate within 24 hours.",
+    "summary_urdu": "شخصی آزادی اور گرفتاری کے خلاف بنیادی تحفظات (آرٹیکل 9 اور 10)۔ گرفتاری کی وجوہات سے آگاہ کرنا، وکیل سے مشاورت کا حق، اور 24 گھنٹے کے اندر مجسٹریٹ کے سامنے پیش کرنا لازمی ہے۔",
+    "statutory_text": "Article 9: No person shall be deprived of life or liberty save in accordance with law. Article 10(1): No person who is arrested shall be detained in custody without being informed, as soon as may be, of the grounds for such arrest, nor shall he be denied the right to consult and be defended by a legal practitioner of his choice. Article 10(2): Every person who is arrested and detained in custody shall be produced before a Magistrate within a period of twenty-four hours of such arrest...",
+    "evidence_required": [
+      "Police Daily Diary (Roznamcha) record or lockup register",
+      "Witness testimony of relatives present during unannounced arrest/abduction",
+      "Proof of detention exceeding 24 hours without remand order from Magistrate"
+    ],
+    "forum_court": "Area Magistrate / Sessions Court / High Court (Article 199 Habeas Corpus)",
+    "practical_steps": [
+      "If someone is detained without formal arrest record, immediately send telegrams/urgent notices to Sessions Judge and High Court Chief Justice.",
+      "File Habeas Corpus petition under Section 491 CrPC in High Court or Sessions Court.",
+      "Court appoints a Court Bailiff to raid police station, inspect lockup registers, and produce detainee before the Judge.",
+      "If detention was without lawful warrant, detainee is discharged immediately."
+    ]
+  }
+]

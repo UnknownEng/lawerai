@@ -1,0 +1,210 @@
+[
+  {
+    "id": "CRPC-154",
+    "act_code": "CrPC",
+    "act_title": "Code of Criminal Procedure (Act V of 1898)",
+    "section_number": "154",
+    "section_title": "Information in cognizable cases (First Information Report - FIR)",
+    "chapter": "Chapter XIV: Information to the Police and their Powers to Investigate",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Procedure",
+    "cognizable": "Mandatory for Cognizable offences",
+    "bailable": "N/A (Procedural)",
+    "compoundable": "N/A",
+    "punishment": "Statutory duty of officer-in-charge of police station. Non-registration constitutes dereliction of duty.",
+    "summary_plain": "The foundational criminal law provision requiring police to immediately register an FIR whenever information is given about the commission of a cognizable offence. The police cannot refuse or delay registration to conduct preliminary inquiries when a cognizable offence is disclosed.",
+    "summary_urdu": "ابتدائی اطلاعی رپورٹ (ایف آئی آر) کا اندراج۔ پولیس کا قانونی فرض ہے کہ قابلِ دست اندازی جرم کی اطلاع ملتے ہی فوری طور پر مفت ایف آئی آر درج کرے اور اس کی ایک کاپی درخواست گزار کو فراہم کرے۔",
+    "statutory_text": "Every information relating to the commission of a cognizable offence, if given orally to an officer in charge of a police station, shall be reduced to writing by him or under his direction, and be read over to the informant; and every such information, whether given in writing or reduced to writing as aforesaid, shall be signed by the person giving it, and the substance thereof shall be entered in a book to be kept by such officer in such form as the Provincial Government may prescribe in this behalf.",
+    "evidence_required": [
+      "Written application/statement signed by the complainant detailing date, time, place, accused persons, and exact facts",
+      "Copy of CNIC of the complainant",
+      "Names and contact details of eyewitnesses",
+      "Any immediate physical or documentary evidence (MLC hospital slip, photographs, bounced cheque, etc.)"
+    ],
+    "forum_court": "Police Station having territorial jurisdiction / Ex-Officio Justice of Peace",
+    "practical_steps": [
+      "Draft a concise factual complaint stating date, exact time, location, names/descriptions of offenders, and sequence of events.",
+      "Submit the complaint in person to the Station House Officer (SHO) of the local police station.",
+      "Obtain a receiving stamp with Daily Diary (Roznamcha) number.",
+      "Receive a free official signed copy of the FIR upon registration.",
+      "If the police refuse or cause delay, immediately approach the Sessions Judge / Justice of Peace under Section 22-A / 22-B CrPC."
+    ]
+  },
+  {
+    "id": "CRPC-22A-22B",
+    "act_code": "CrPC",
+    "act_title": "Code of Criminal Procedure (Act V of 1898)",
+    "section_number": "22-A & 22-B",
+    "section_title": "Powers and duties of Ex-Officio Justice of the Peace",
+    "chapter": "Chapter II: Of the Constitution of Criminal Courts and Offices",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Procedure",
+    "cognizable": "N/A (Judicial Remedy)",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Judicial direction to police officers to register FIR, prevent police harassment, or transfer dishonest investigation.",
+    "summary_plain": "Provides a crucial legal remedy when local police refuse to register an FIR or harass citizens. The Sessions Judge or Additional Sessions Judge acts as Ex-Officio Justice of the Peace and can issue binding orders directing the SHO to register the FIR or act according to law.",
+    "summary_urdu": "جسٹس آف پیس (سیشن جج) کو درخواست۔ جب تھانہ پولیس ایف آئی آر درج کرنے سے انکار کرے یا ہراساں کرے، تو شہری سیشن کورٹ میں 22-A/22-B کے تحت رٹ دائر کر کے پولیس کو ایف آئی آر درج کرنے کا عدالتی حکم دلوا سکتے ہیں۔",
+    "statutory_text": "Section 22-A(6): An ex-officio Justice of the Peace may issue appropriate directions to the police authorities on a complaint, regarding: (a) non-registration of a criminal case; (b) transfer of investigation from one police officer to another; and (c) neglect, failure or excesses committed by a police authority in relation to its functions and duties.",
+    "evidence_required": [
+      "Copy of the original complaint submitted to the SHO with receiving/diary stamp or postal TCS receipt",
+      "Affidavit of the applicant confirming non-registration by police",
+      "Documentary proof of the cognizable offence (medical certificate, bounced cheque, bank slip, threat messages)"
+    ],
+    "forum_court": "Court of Sessions Judge / Additional Sessions Judge (Ex-Officio Justice of the Peace)",
+    "practical_steps": [
+      "Engage an Advocate to draft a Criminal Miscellaneous Petition under Section 22-A/22-B CrPC.",
+      "Attach the stamped police complaint, supporting evidence, and affidavit.",
+      "The Justice of Peace will issue notice and call for comments from the SHO.",
+      "Upon verifying that a cognizable offence is disclosed, the Justice of Peace issues a direction to register the FIR immediately."
+    ]
+  },
+  {
+    "id": "CRPC-496",
+    "act_code": "CrPC",
+    "act_title": "Code of Criminal Procedure (Act V of 1898)",
+    "section_number": "496",
+    "section_title": "In what cases bail to be taken (Bailable offences)",
+    "chapter": "Chapter XXXIX: Of Bail",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Procedure / Liberty",
+    "cognizable": "Applies when accused is arrested or appears before court",
+    "bailable": "Bailable as a statutory right",
+    "compoundable": "N/A",
+    "punishment": "Accused is entitled to bail as a matter of absolute legal right upon furnishing surety.",
+    "summary_plain": "For offences classified as 'bailable' under the CrPC Second Schedule, the grant of bail is an absolute statutory right. The police officer or magistrate cannot refuse bail once solvent surety or personal bond is furnished.",
+    "summary_urdu": "قابلِ ضمانت جرائم میں ضمانت۔ یہ ملزم کا بنیادی قانونی حق ہے۔ پولیس یا مجسٹریٹ مناسب مچلکہ / ضامن پیش کرنے پر ضمانت دینے سے انکار نہیں کر سکتے۔",
+    "statutory_text": "When any person other than a person accused of a non-bailable offence is arrested or detained without warrant by an officer in charge of a police station, or appears or is brought before a Court, and is prepared at any time while in the custody of such officer or at any stage of the proceedings before such Court to give bail, such person shall be released on bail.",
+    "evidence_required": [
+      "Bail application with certified copy of FIR",
+      "Surety bonds (Zamanat nama) by solvent local surety with CNIC and property document / fard",
+      "Affidavit of surety"
+    ],
+    "forum_court": "Police Station (SHO) or Court of Area Judicial Magistrate",
+    "practical_steps": [
+      "Obtain certified copy of FIR and remand paper.",
+      "File Bail Application under Section 496 CrPC before the Area Judicial Magistrate.",
+      "Produce local solvent surety with original CNIC and registry/fard of property.",
+      "Upon court satisfaction, Robkar (release order) is issued to the jail or investigating officer."
+    ]
+  },
+  {
+    "id": "CRPC-497",
+    "act_code": "CrPC",
+    "act_title": "Code of Criminal Procedure (Act V of 1898)",
+    "section_number": "497",
+    "section_title": "When bail may be taken in case of non-bailable offence (Post-arrest bail)",
+    "chapter": "Chapter XXXIX: Of Bail",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Procedure / Liberty",
+    "cognizable": "Applies after arrest in non-bailable cases",
+    "bailable": "Judicial Discretion",
+    "compoundable": "N/A",
+    "punishment": "Judicial discretion based on prohibitory clause, statutory delay, or case of further inquiry.",
+    "summary_plain": "Governs post-arrest bail in non-bailable offences. If the offence is not punishable with death, life imprisonment, or 10 years (non-prohibitory clause), bail is the rule and jail is an exception. Also provides statutory bail for women, minors, sick persons, or cases of unexplained delay.",
+    "summary_urdu": "بعد از گرفتاری ضمانت (پوسٹ اریسٹ بیل)۔ غیر قابلِ ضمانت جرائم میں سیشن یا ہائی کورٹ سے رہائی کے اصول، خاص طور پر خواتین، نابالغوں، بیمار افراد یا مزید تفتیش کے معاملات میں۔",
+    "statutory_text": "When any person accused of any non-bailable offence is arrested or detained without warrant... he may be released on bail, but he shall not be so released if there appear reasonable grounds for believing that he has been guilty of an offence punishable with death or imprisonment for life or imprisonment for ten years: Provided that the Court may direct that any person under the age of sixteen years or any woman or any sick or infirm person accused of such an offence be released on bail...",
+    "evidence_required": [
+      "Certified copy of FIR and police investigation diary excerpts",
+      "Medical records if seeking bail on grounds of sickness or infirmity",
+      "Proof of minority (NADRA B-form / birth certificate) if under 16 years",
+      "Evidence indicating lack of specific role or false implication"
+    ],
+    "forum_court": "Court of Judicial Magistrate / Sessions Court / High Court",
+    "practical_steps": [
+      "File Bail Application under Section 497 CrPC before Judicial Magistrate or Sessions Judge.",
+      "Demonstrate that either the offence falls outside the prohibitory clause, or there are reasonable grounds for further inquiry under subsection (2).",
+      "If dismissed by Sessions Court, file Criminal Bail Application before the High Court."
+    ]
+  },
+  {
+    "id": "CRPC-498",
+    "act_code": "CrPC",
+    "act_title": "Code of Criminal Procedure (Act V of 1898)",
+    "section_number": "498",
+    "section_title": "Power to direct admission to bail or reduction of bail (Pre-Arrest Bail / Bail Before Arrest)",
+    "chapter": "Chapter XXXIX: Of Bail",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Procedure / Protection Against Unlawful Arrest",
+    "cognizable": "Applies before police arrest",
+    "bailable": "Judicial Discretion",
+    "compoundable": "N/A",
+    "punishment": "Protection from police arrest to prevent humiliation, harassment, or unjustified detention.",
+    "summary_plain": "Pre-arrest bail protects an innocent person against imminent arrest, humiliation, and malicious prosecution by police or political opponents. The petitioner must demonstrate ulterior motives, mala fides, or lack of credible evidence.",
+    "summary_urdu": "قبل از گرفتاری ضمانت (پری اریسٹ بیل)۔ پولیس کی ناجائز گرفتاری، ذلت اور بدنیتی سے بچاؤ کے لیے سیشن یا ہائی کورٹ سے حفاظتی ضمانت لینا۔",
+    "statutory_text": "The amount of every bond executed under this Chapter shall be fixed with due regard to the circumstances of the case, and shall not be excessive; and the High Court or Court of Session may, in any case, whether there be an appeal on conviction or not, direct that any person be admitted to bail, or that the bail required by a police officer or Magistrate be reduced.",
+    "evidence_required": [
+      "Copy of FIR or proof of police raids / threat of arrest",
+      "Proof of mala fides / ulterior motives of complainant or police (past enmity, cross-complaints)",
+      "Applicant must appear in person before the Court",
+      "Affidavit affirming innocence and willingness to join police investigation"
+    ],
+    "forum_court": "Court of Sessions / High Court",
+    "practical_steps": [
+      "Petitioner must personally appear before the Sessions Court along with an Advocate.",
+      "File Pre-arrest Bail Application under Section 498 CrPC showing apprehension of arrest due to malice.",
+      "Court grants Ad-interim Pre-Arrest Bail and calls for police file.",
+      "Petitioner must join police investigation (Tafteesh) and mark presence.",
+      "On final date of hearing, Court confirms or recalls the pre-arrest bail."
+    ]
+  },
+  {
+    "id": "CRPC-145",
+    "act_code": "CrPC",
+    "act_title": "Code of Criminal Procedure (Act V of 1898)",
+    "section_number": "145",
+    "section_title": "Procedure where dispute concerning land, water, or boundaries is likely to cause breach of peace",
+    "chapter": "Chapter XII: Disputes as to Immovable Property",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Procedure / Property Disputes",
+    "cognizable": "Preventive Jurisdiction",
+    "bailable": "N/A",
+    "compoundable": "N/A",
+    "punishment": "Attachment of property, sealing of premises, or order restoring actual possession.",
+    "summary_plain": "Used when a property dispute threatens public peace or armed conflict. The Executive Magistrate / Court can seal the disputed property or determine who had actual physical possession on the date of the order, preventing violent dispossession while civil title is decided in civil court.",
+    "summary_urdu": "اراضی یا جائیداد کے تنازعات سے امنِ عامہ میں خلل روکنے کی کارروائی۔ مجسٹریٹ جائیداد کو سربمہر (سیل) کر سکتا ہے یا موجودہ قابض کے حق میں امن قائم رکھنے کا حکم دے سکتا ہے۔",
+    "statutory_text": "Whenever an Executive Magistrate is satisfied from a police-report or other information that a dispute likely to cause a breach of the peace exists concerning any land or water or the boundaries thereof... he shall make an order in writing, stating the grounds of his being so satisfied, and requiring the parties concerned in such dispute to attend his Court... and to put in written statements of their respective claims as respects the fact of actual possession of the subject of dispute.",
+    "evidence_required": [
+      "Police report or complaint confirming likelihood of armed clash or breach of peace",
+      "Utility bills, rent agreements, or possession receipts proving actual physical possession",
+      "Photographs or videos of dispute or security threat"
+    ],
+    "forum_court": "Court of Area Magistrate / Assistant Commissioner",
+    "practical_steps": [
+      "File an application under Section 145 CrPC before the Magistrate detailing threat of violence over property possession.",
+      "Magistrate issues preliminary order and calls for police report.",
+      "Magistrate may attach (seal) property pending inquiry if emergency exists.",
+      "Parties submit proof of possession; Magistrate restores or protects possession of party unlawfully evicted within 2 months."
+    ]
+  },
+  {
+    "id": "CRPC-408-410",
+    "act_code": "CrPC",
+    "act_title": "Code of Criminal Procedure (Act V of 1898)",
+    "section_number": "Sections 408 & 410",
+    "section_title": "Appeal from sentence of Judicial Magistrate or Court of Session",
+    "chapter": "Chapter XXXI: Of Appeals",
+    "jurisdiction": "Federal (Applicable across all Pakistan)",
+    "category": "Criminal Procedure / Appellate Remedies",
+    "cognizable": "N/A (Appellate Right)",
+    "bailable": "Bail pending appeal under Section 426 CrPC",
+    "compoundable": "N/A",
+    "punishment": "Power of Appellate Court to reverse conviction, acquit the accused, reduce sentence, or order a retrial.",
+    "summary_plain": "Under Sections 408 and 410 of the Code of Criminal Procedure, an accused person convicted by a lower court (such as a Judicial Magistrate or Sessions Judge) has an absolute statutory right of criminal appeal. The trial court's decision is not final. The appellate court re-examines both factual findings and legal evidence, can suspend the sentence and grant bail pending appeal under Section 426 CrPC, and will overturn an improper conviction to acquit the appellant if reasonable doubt exists.",
+    "summary_urdu": "ماتحت عدالت کی سزا کے خلاف اپیل کا حق (دفعات 408 اور 410)۔ مجسٹریٹ یا سیشن جج کی طرف سے سنائی گئی سزا کے خلاف ہر شہری کو سیشن کورٹ یا ہائی کورٹ میں اپیل دائر کرنے کا قانونی حق حاصل ہے۔ اپیل کے دوران دفعہ 426 کے تحت سزا معطل کروا کر ضمانت بھی حاصل کی جا سکتی ہے۔",
+    "statutory_text": "Section 408: Any person convicted on a trial held by an Assistant Sessions Judge, a District Magistrate or other Magistrate of the first class... may appeal to the Court of Session. Section 410: Any person convicted on a trial held by a Sessions Judge, or an Additional Sessions Judge, may appeal to the High Court.",
+    "evidence_required": [
+      "Certified copy of trial court judgment and conviction order",
+      "Certified copies of oral depositions and testimonies of prosecution witnesses (PWs)",
+      "Certified copies of exhibited documents and defense evidence",
+      "Memo of Appeal detailing grounds of challenge and misappreciation of evidence"
+    ],
+    "forum_court": "Court of Session (for Magistrate convictions) or High Court (for Sessions convictions)",
+    "practical_steps": [
+      "Obtain certified copies of the conviction judgment and trial court record immediately.",
+      "File Criminal Appeal within statutory limitation period (30 days to Sessions Court, 60 days to High Court).",
+      "File an application under Section 426 CrPC for suspension of sentence and release on bail pending final disposal of the appeal.",
+      "Argue grounds showing that the prosecution failed to prove guilt beyond reasonable doubt or relied on flawed, uncorroborated testimony."
+    ]
+  }
+]

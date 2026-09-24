@@ -1,0 +1,91 @@
+[
+  {
+    "id": "PMVO-SEC-115",
+    "act_code": "PMVO",
+    "act_title": "Provincial Motor Vehicles Ordinance (Ordinance XIX of 1965)",
+    "section_number": "115",
+    "section_title": "Power to detain vehicle used without certificate of registration or permit (Impoundment)",
+    "chapter": "Chapter IX: Offences, Penalties and Procedure",
+    "jurisdiction": "Provincial (Punjab, Sindh, KPK, Balochistan & ICT)",
+    "category": "Traffic & Motor Vehicle Law / Regulatory Offence",
+    "cognizable": "Cognizable / Special Police Enforcement Power",
+    "bailable": "Bailable on verification of genuine documentation and fine clearance",
+    "compoundable": "Compoundable by payment of prescribed challan / fine or Magistrate release order",
+    "punishment": "Detention and impounding of the motor vehicle in traffic police custody or impound yard until ownership, valid registration, and authorized number plates are formally verified.",
+    "summary_plain": "Under Section 115 of the Provincial Motor Vehicles Ordinance 1965, any police officer in uniform or authorized transport authority has the statutory power to seize, detain, and impound any motor vehicle (car, motorcycle, commercial vehicle) if it is being driven without a valid certificate of registration, with mismatched, fake, or non-standard number plates, or without a valid permit. The vehicle remains impounded at the traffic police station or impound lot until genuine ownership and registration documents are verified and relevant challan fines are cleared.",
+    "summary_urdu": "موٹر وہیکل آرڈیننس 1965 کی دفعہ 115 کے تحت پولیس یا ٹریفک وارڈن کو غیر رجسٹرڈ گاڑی، بغیر نمبر پلیٹ، یا غلط/غیر مماثل نمبر پلیٹ والی کار یا موٹر سائیکل کو موقع پر ضبط اور بند (امپاؤنڈ) کرنے کا قانونی اختیار ہے۔ قانونی دستاویزات کی جانچ اور چالان کلیئرنس کے بعد گاڑی واپس لی جا سکتی ہے۔",
+    "statutory_text": "Section 115: Any police officer authorized in this behalf or other person authorized in this behalf by the Provincial Government may, if he has reason to believe that a motor vehicle has been or is being used in contravention of the provisions of section 22, section 23, or section 39 or without the permit required by sub-section (1) of section 44, seize and detain the vehicle, and for this purpose take or cause to be taken any steps he may consider necessary for the temporary safe custody of the vehicle.",
+    "evidence_required": [
+      "Original Vehicle Registration Book or Smart Card issued by Excise and Taxation Department",
+      "Valid Computerized National Identity Card (CNIC) of registered owner",
+      "Official Traffic Police Impound Chit / Seizure Memo (Zabti Parwana / Challan)",
+      "Standard government-issued computerized registration plates matching engine and chassis numbers",
+      "Biometric transfer receipt or sale deed with authority letter if vehicle was recently purchased",
+      "Valid Driving Licence of the driver"
+    ],
+    "forum_court": "Traffic Police Station / Incharge Traffic Impound Yard / Judicial Magistrate (Traffic Court) / Motor Registration Authority",
+    "practical_steps": [
+      "Obtain the official Traffic Challan and Impound Receipt from the impounding officer showing the reason for detention and impound pound location.",
+      "Gather the original Excise Registration Smart Card/Book, valid CNIC, and proof of authorized computerized number plates.",
+      "If the number plate was mismatched due to registration delay or transfer, obtain a verification certificate from the Excise & Taxation Department.",
+      "Present the original registration documents and proof of payment of any fine to the Traffic Sector Incharge or designated Judicial Magistrate (Traffic).",
+      "Obtain formal release order (Robkar / Superdari under Section 115 PMVO / Section 516-A CrPC) and retrieve the vehicle from the impound lot."
+    ]
+  },
+  {
+    "id": "PMVO-SEC-114",
+    "act_code": "PMVO",
+    "act_title": "Provincial Motor Vehicles Ordinance (Ordinance XIX of 1965)",
+    "section_number": "114",
+    "section_title": "Power of police officer to impound / seize vehicle documents",
+    "chapter": "Chapter IX: Offences, Penalties and Procedure",
+    "jurisdiction": "Provincial (Punjab, Sindh, KPK, Balochistan & ICT)",
+    "category": "Traffic & Motor Vehicle Law / Regulatory Offence",
+    "cognizable": "Cognizable Enforcement Power",
+    "bailable": "N/A",
+    "compoundable": "Yes, on verification of genuine documents",
+    "punishment": "Seizure and retention of documents until authenticity is verified or proceedings conclude.",
+    "summary_plain": "Under Section 114 of the Provincial Motor Vehicles Ordinance 1965, any police officer or authorized transport officer may seize and impound any driving license, certificate of registration, fitness certificate, or permit produced before him if there is reasonable suspicion that the document is false, forged, altered, or unlawfully obtained. The officer must provide a temporary receipt for any document seized.",
+    "summary_urdu": "دفعہ 114 کے تحت پولیس کو گاڑی کی رجسٹریشن بک، ڈرائیونگ لائسنس یا پرمٹ کو موقع پر ضبط کرنے کا اختیار ہے اگر دستاویز جعلی، مشکوک یا غیر قانونی معلوم ہو۔ پولیس اس کی باضابطہ تحریری رسید فراہم کرنے کی پابند ہے۔",
+    "statutory_text": "Section 114: Any police officer or other person authorized in this behalf by the Provincial Government may seize and impound any document produced before him if he has reason to believe that it is a false document or has been procured by false representation.",
+    "evidence_required": [
+      "Original Driving License / Registration Book",
+      "Temporary Document Seizure Receipt issued by police officer",
+      "Excise database verification printout verifying genuine record"
+    ],
+    "forum_court": "Traffic Police Head Office / Judicial Magistrate (Traffic Court)",
+    "practical_steps": [
+      "Demand an official signed receipt specifying the seized document and the officer's badge number.",
+      "Verify the vehicle's computerized registration record through the official Excise online portal (MTMIS).",
+      "Present the online verification printout and original CNIC to the Traffic Licensing or Enforcement Officer to secure document release."
+    ]
+  },
+  {
+    "id": "PMVO-SEC-23",
+    "act_code": "PMVO",
+    "act_title": "Provincial Motor Vehicles Ordinance (Ordinance XIX of 1965)",
+    "section_number": "23",
+    "section_title": "Necessity for registration and display of registration marks (Number Plates)",
+    "chapter": "Chapter III: Registration of Motor Vehicles",
+    "jurisdiction": "Provincial (Punjab, Sindh, KPK, Balochistan & ICT)",
+    "category": "Traffic & Motor Vehicle Law / Regulatory Offence",
+    "cognizable": "Regulatory Offence / Special Police Enforcement",
+    "bailable": "Bailable",
+    "compoundable": "Compoundable via challan fine and plate regularization",
+    "punishment": "Fine under Section 112 and detention of vehicle under Section 115 until lawful display of authorized number plates.",
+    "summary_plain": "Under Section 23 of the Provincial Motor Vehicles Ordinance 1965, no person is permitted to drive any motor vehicle, and no owner may allow a vehicle to be driven in any public place, unless the vehicle is duly registered and displays the official registration mark and prescribed computerized number plates. Driving with unregistered vehicles, non-matching plates, fancy plates, or obscured plates violates Section 23 and empowers traffic police to issue challans and impound the vehicle.",
+    "summary_urdu": "دفعہ 23 کے تحت بغیر رجسٹریشن یا بغیر مجاز کمپیوٹرائزڈ نمبر پلیٹ کے کوئی بھی موٹر گاڑی یا موٹر سائیکل چلانا ممنوع ہے۔ غیر مماثل یا فینسی نمبر پلیٹ پر چالان اور دفعہ 115 کے تحت گاڑی بند ہو سکتی ہے۔",
+    "statutory_text": "Section 23: No person shall drive any motor vehicle and no owner of a motor vehicle shall cause or permit the vehicle to be driven in any public place or in any other place for the purpose of carrying passengers or goods, unless the vehicle is registered in accordance with this Chapter and the vehicle carries a registration mark displayed in the prescribed manner.",
+    "evidence_required": [
+      "Excise Registration Certificate showing assigned registration mark",
+      "Official excise-issued computerized number plates",
+      "Excise tax payment receipts"
+    ],
+    "forum_court": "Motor Registration Authority (Excise Department) / Traffic Police / Judicial Magistrate",
+    "practical_steps": [
+      "Apply immediately to the Motor Registration Authority for issuance of official computerized number plates.",
+      "Keep the official excise receipt and original registration card in the vehicle while awaiting original plates.",
+      "Replace any non-standard or temporary plate with authorized government plates to avoid seizure under Section 115."
+    ]
+  }
+]
