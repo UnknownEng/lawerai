@@ -5,6 +5,7 @@ Enforces strictly plain-text outputs with no emojis, no markdown bold, and no he
 """
 
 import os
+import re
 import json
 import logging
 from typing import Dict, Any, List, Optional
@@ -323,7 +324,7 @@ class LLMService:
 
         # Direct procedural answer check (e.g. Khula withdrawal / reconciliation)
         procedural_prefix = ""
-        if ("khula" in q_lower or "divorce" in q_lower) and ("withdr" in q_lower or "reconcil" in q_lower):
+        if "khula" in q_lower and any(w in q_lower for w in ["withdr", "withdrew", "withdrawn"]) and any(w in q_lower for w in ["reconcil", "again", "new case", "count against", "stop me", "second"]):
             procedural_prefix = (
                 "To answer your question directly: withdrawing a previous khula petition because you reconciled does NOT "
                 "count against you, and it does not stop you from filing a new case. Under Pakistani family law, trying to "
@@ -447,6 +448,35 @@ class LLMService:
         summary_plain = top_sec.get("summary_plain", "")
         summary_urdu = top_sec.get("summary_urdu", "")
 
+        # Directional role check for cheque matters: Drawer vs Payee
+        is_cheque_drawer = bool(
+            re.search(
+                r"\b(?:i\s*gave|i\s*issued|my\s*cheque|gave\s*(?:someone\s*)?a\s*cheque|issued\s*a\s*cheque|fearing\s*arrest|get\s*me\s*arrested|threaten\w*\s*(?:to\s*)?(?:cash|arrest)|deal\s*fell\s*through|deal\s*cancelled|drawer)\b",
+                q_lower
+            )
+        ) or (analyzed_issues and any("Failed Consideration Defense" in iss.get("issue_title", "") for iss in analyzed_issues))
+
+        has_489f = any("489" in str(s.get("section_number", "")) for s in retrieved_sections)
+
+        if is_cheque_drawer and has_489f:
+            simple_forum = "the sessions court (for Pre-Arrest Bail under Section 498 CrPC) and the local civil court (for cancellation of the cheque)"
+            punishment = "Under Section 489-F PPC, criminal liability requires dishonest intention at the time of issuance; if the cheque was issued for an underlying transaction that failed (failure of consideration), dishonest intention is negated, constituting a valid defense against conviction."
+            steps = [
+                "Issue written 'Stop Payment' instructions to your bank immediately, recording that the underlying commercial transaction fell through.",
+                "Dispatch a formal legal notice through an advocate demanding the return and cancellation of the cheque due to failure of consideration.",
+                "If police summon you or threaten an FIR under Section 489-F PPC, immediately apply for Pre-Arrest Bail under Section 498 CrPC before the Sessions Court.",
+                "File a civil suit for declaration and cancellation of instrument under Sections 39 & 42 of the Specific Relief Act 1877 before the Civil Court, with an application under Order XXXIX Rules 1 & 2 CPC to restrain encashment or prosecution."
+            ]
+            evidence = [
+                "Written agreement or correspondence proving the business deal fell through",
+                "Bank receipt or acknowledgement of Stop Payment instructions",
+                "Copy of legal notice served demanding return and cancellation of the cheque",
+                "Evidence establishing failure of consideration and absence of dishonest intention at inception"
+            ]
+        else:
+            steps = top_sec.get("practical_steps", [])
+            evidence = top_sec.get("evidence_required", [])
+
         if is_urdu:
             res_parts = []
             if procedural_prefix:
@@ -459,14 +489,12 @@ class LLMService:
             if punishment:
                 res_parts.append(f"قانون کے تحت تدارک یا سزا: {punishment}\n")
 
-            steps = top_sec.get("practical_steps", [])
             if steps:
                 res_parts.append("عملی اقدامات:")
                 for i, step in enumerate(steps, 1):
                     res_parts.append(f"{i}. {step}")
                 res_parts.append("")
 
-            evidence = top_sec.get("evidence_required", [])
             if evidence:
                 res_parts.append(f"ضروری ثبوت اور دستاویزات: {', '.join(evidence)}۔\n")
 
@@ -485,7 +513,13 @@ class LLMService:
                 rs = analyzed_issues[0].get("relief_sought", "")
                 title = analyzed_issues[0].get("issue_title", "")
                 if rs and rs != "Legal clarification" and title != "General Inquiry" and len(rs) > 80:
-                    res_parts.append(rs.strip() + "\n\n")
+                    is_contradictory = (
+                        ("signed" in q_lower or "written" in q_lower) and "verbal agreement" in rs.lower()
+                    ) or (
+                        not bool(re.search(r"\b(?:foreign|overseas|uk|upwork|fiverr)\b", q_lower)) and "extraterritorial" in rs.lower()
+                    )
+                    if not is_contradictory:
+                        res_parts.append(rs.strip() + "\n\n")
 
             if len(retrieved_sections) > 1:
                 sec2 = retrieved_sections[1]
@@ -507,14 +541,12 @@ class LLMService:
             if punishment:
                 res_parts.append(f"The legal remedy or penalty provided under the law is: {punishment}\n")
 
-            steps = top_sec.get("practical_steps", [])
             if steps:
                 res_parts.append("Here are the practical next steps you should consider:")
                 for i, step in enumerate(steps, 1):
                     res_parts.append(f"{i}. {step}")
                 res_parts.append("")
 
-            evidence = top_sec.get("evidence_required", [])
             if evidence:
                 res_parts.append(f"To support your position, the key documents and evidence you will need include: {', '.join(evidence)}.\n")
 

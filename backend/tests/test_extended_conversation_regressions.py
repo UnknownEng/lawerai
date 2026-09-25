@@ -775,3 +775,295 @@ def test_out_of_corpus_topics_zero_hallucinations():
                 assert len(citations) == 0, f"Expected 0 citations for out-of-corpus query '{q[:40]}...', got {citations}"
     asyncio.run(run())
 
+
+# ==============================================================================
+# BETA TEST REGRESSION TESTS: PRIORITIES 1 TO 6
+# ==============================================================================
+
+def test_priority_1a_verbal_talaq_no_khula_withdrawal_contamination():
+    """
+    Priority 1a: 'My husband gave me talaq verbally in anger... is the divorce final?'
+    Must answer MFLO Section 7 (not legally final without written notice to UC + 90 days).
+    Must NOT contain khula-withdrawal boilerplate.
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "Verbal Talaq Finality"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "My husband gave me talaq verbally in anger... is the divorce final?"
+            })).json()
+            content = r["assistant_message"]["content"]
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+
+            assert "withdrawing a previous khula" not in content.lower()
+            assert "khula" not in content.lower()
+            assert "MFLO-SEC-7" in citations
+            assert "not legally final" in content.lower() or "not final" in content.lower() or "union council" in content.lower()
+    asyncio.run(run())
+
+
+def test_priority_1b_signed_loan_no_verbal_agreement_boilerplate():
+    """
+    Priority 1b: 'Someone borrowed money from me with a signed agreement and refuses to pay'
+    Must cite Contract Act / summary suit for recovery of written debt.
+    Must NOT claim verbal agreements are valid or contain verbal agreement boilerplate.
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "Signed Loan Debt"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "Someone borrowed money from me with a signed agreement and refuses to pay"
+            })).json()
+            content = r["assistant_message"]["content"]
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+
+            assert "verbal agreements are legally valid" not in content.lower()
+            assert "oral promise" not in content.lower()
+            assert "CONTRACT-SEC-73-74" in citations
+            assert "contract act" in content.lower()
+    asyncio.run(run())
+
+
+def test_priority_2_cheque_drawer_directional_defense():
+    """
+    Priority 2: Cheque drawer on deal fell through fearing arrest.
+    Must identify user as issuer/drawer, provide failure of consideration defense,
+    pre-arrest bail (CrPC 498), stop payment, and NOT advise registering an FIR against drawer.
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "Cheque Drawer Defense"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "I gave someone a cheque for a business deal that fell through, and now they are threatening to cash it and get me arrested"
+            })).json()
+            content = r["assistant_message"]["content"]
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+
+            assert "PPC-489F" in citations
+            assert "CRPC-498" in citations
+            assert "consideration" in content.lower() or "dishonest intention" in content.lower() or "defense" in content.lower()
+            assert "stop payment" in content.lower()
+            assert "pre-arrest bail" in content.lower()
+            assert "register an fir under section 489-f" not in content.lower()
+    asyncio.run(run())
+
+
+def test_priority_3_freelance_invoice_no_foreign_hallucination():
+    """
+    Priority 3: General domestic freelance invoice query.
+    Must cite Contract Act Section 73 (civil debt recovery), NOT UK, Upwork, $2,500, or foreign gap.
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "Domestic Freelance Invoice"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "I did freelance work for a company and they are refusing to pay the final invoice"
+            })).json()
+            content = r["assistant_message"]["content"]
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+
+            assert "united kingdom" not in content.lower()
+            assert "upwork" not in content.lower()
+            assert "$2,500" not in content.lower()
+            assert "CONTRACT-SEC-73-74" in citations
+            assert "contract act" in content.lower()
+    asyncio.run(run())
+
+
+def test_priority_4_multi_issue_khula_and_maintenance():
+    """
+    Priority 4: Khula + unpaid maintenance multi-issue query.
+    Must address both issues under Issue 1 and Issue 2; zero dropped issues.
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "Khula and Maintenance"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "I want to file for khula. My husband has not paid maintenance in 6 months either."
+            })).json()
+            content = r["assistant_message"]["content"]
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+
+            assert "Issue 1" in content
+            assert "Issue 2" in content
+            assert "khula" in content.lower()
+            assert "maintenance" in content.lower()
+            assert any(c in citations for c in ["FCA-SEC-10", "FCA-SEC-5"])
+            assert any(c in citations for c in ["MFLO-SEC-9", "FCA-SEC-5"])
+    asyncio.run(run())
+
+
+def test_priority_5a_b2b_damaged_goods_not_consumer_protection():
+    """
+    Priority 5a: Commercial resale B2B supply of damaged goods.
+    Must NOT cite Consumer Protection Act (PCPA 2005 s. 2(c) exclusion).
+    Must cite Contract Act Section 73 / Sale of Goods Act.
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "B2B Damaged Goods"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "My supplier delivered damaged goods to my retail shop for resale"
+            })).json()
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+
+            assert "PCPA-SEC-13-15" not in citations
+            assert "CONTRACT-SEC-73-74" in citations
+    asyncio.run(run())
+
+
+def test_priority_5b_silent_partner_governance_not_criminal_breach_of_trust():
+    """
+    Priority 5b: Silent partner signing contracts and making decisions without consulting.
+    Must NOT cite Criminal Breach of Trust (PPC 405/406).
+    Must cite Partnership governance / Specific Relief Act s. 42 / CPC Order 39.
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "Partner Governance"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "My silent business partner is making major decisions and signing contracts without consulting me"
+            })).json()
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+
+            assert "PPC-405-406" not in citations
+            assert any(c in citations for c in ["SRA-SEC-42", "CPC-O39-R1-2"])
+    asyncio.run(run())
+
+
+def test_priority_6_substantive_answers_for_previously_gated_queries():
+    """
+    Priority 6: Queries previously returning 'not enough information' must receive substantive answers.
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            cases = [
+                ("My brother is denying me use of inherited family land that our father left us 10 years ago", ["SRA-SEC-42", "LIMITATION-ACT-1908", "SRA-SEC-8-9"]),
+                ("The buyer of my property is refusing to vacate after non-payment", ["CONTRACT-SEC-73-74", "SRA-SEC-8-9"]),
+                ("My ex-wife refuses to let me see my 5-year-old son; what are my custody and visitation rights?", ["GWA-SEC-17-25", "FCA-SEC-5"]),
+                ("My relatives are distributing my deceased father estate without giving me my inheritance share as a daughter", ["SRA-SEC-42"]),
+                ("I signed as a guarantor for a friend loan and now the bank is demanding I pay", ["CONTRACT-SEC-73-74", "CONTRACT-SEC-10-19"])
+            ]
+            for query, expected_citations in cases:
+                s = (await client.post("/api/chat/sessions", json={"title": "Priority 6 Substantive"})).json()["session_id"]
+                r = (await client.post(f"/api/chat/sessions/{s}/messages", json={"content": query})).json()
+                content = r["assistant_message"]["content"]
+                citations = [c["id"] for c in r["assistant_message"]["citations"]]
+
+                assert "not yet enough specific information" not in content.lower(), f"Over-conservative gate fired on '{query}'"
+                assert any(c in citations for c in expected_citations), f"Failed to retrieve expected citations for '{query}'. Got: {citations}"
+    asyncio.run(run())
+
+
+# ==============================================================================
+# 40-Case Verification Pass Regression Tests: Cases 7, 19, 22, and 31
+# ==============================================================================
+
+def test_case_7_defective_plot_title_not_consumer_court():
+    """
+    Case 7: 'I bought a house and later found out the seller didn't actually own the full plot.'
+    Must NOT cite Consumer Protection Act (PCPA-SEC-13-15).
+    Must route to Contract Act / Specific Relief Act (CONTRACT-SEC-73-74 / SRA-SEC-42).
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "Case 7 Test"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "I bought a house and later found out the seller didn't actually own the full plot."
+            })).json()
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+            content = r["assistant_message"]["content"]
+            case_summary = r.get("case_summary", {})
+
+            assert "PCPA-SEC-13-15" not in citations, f"Unexpected PCPA citation for real estate: {citations}"
+            assert any(c in citations for c in ["CONTRACT-SEC-73-74", "SRA-SEC-42"]), f"Missing property/contract citation: {citations}"
+            assert "nemo dat quod non habet" in content or "specific relief" in content.lower()
+            assert "buyer" in case_summary.get("parties", "").lower()
+    asyncio.run(run())
+
+
+def test_case_19_false_theft_accusation_crpc_498_not_ppc_380():
+    """
+    Case 19: 'I was falsely accused of theft by my employer and fired without any investigation.'
+    Must NOT cite PPC 379-380 (user is being falsely accused, not reporting theft).
+    Must route to Pre-Arrest Bail (CRPC-498) and Labour Remedies (PWA-SEC-15).
+    Must identify the employee as the aggrieved party.
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "Case 19 Test"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "I was falsely accused of theft by my employer and fired without any investigation."
+            })).json()
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+            content = r["assistant_message"]["content"]
+            case_summary = r.get("case_summary", {})
+
+            assert "PPC-379-380" not in citations, f"Unexpected PPC-379-380 citation for falsely accused employee: {citations}"
+            assert "CRPC-498" in citations, f"Missing CRPC-498 pre-arrest bail citation: {citations}"
+            assert "pre-arrest bail" in content.lower()
+            assert "182" in content or "211" in content
+            assert "employee" in case_summary.get("parties", "").lower()
+    asyncio.run(run())
+
+
+def test_case_22_business_rival_rumors_defamation_not_ppc_420():
+    """
+    Case 22: 'My business rival is spreading false rumors that I'm involved in fraud.'
+    Must NOT cite PPC 420 (cheating requires actual pecuniary deprivation/delivery of property).
+    Must route to Defamation (Defamation Ordinance 2002 / PPC 499-500).
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "Case 22 Test"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "My business rival is spreading false rumors that I'm involved in fraud."
+            })).json()
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+            content = r["assistant_message"]["content"]
+            case_summary = r.get("case_summary", {})
+
+            assert "PPC-420" not in citations, f"PPC-420 erroneously cited for rumor spreading: {citations}"
+            assert "defamation" in content.lower()
+            assert "defamation ordinance" in content.lower() or "ppc" in content.lower()
+            assert "defamation" in case_summary.get("issue_type", "").lower()
+    asyncio.run(run())
+
+
+def test_case_31_factory_machinery_warranty_commercial_not_pcpa():
+    """
+    Case 31: 'I bought machinery for my factory that turned out to be defective, and the seller won't honor the warranty.'
+    Must NOT cite Consumer Protection Act (factory/commercial equipment is excluded under s. 2(c)).
+    Must route to Sale of Goods Act 1930 / Contract Act s. 73 (CONTRACT-SEC-73-74).
+    """
+    async def run():
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            s = (await client.post("/api/chat/sessions", json={"title": "Case 31 Test"})).json()["session_id"]
+            r = (await client.post(f"/api/chat/sessions/{s}/messages", json={
+                "content": "I bought machinery for my factory that turned out to be defective, and the seller won't honor the warranty."
+            })).json()
+            citations = [c["id"] for c in r["assistant_message"]["citations"]]
+            content = r["assistant_message"]["content"]
+            case_summary = r.get("case_summary", {})
+
+            assert "PCPA-SEC-13-15" not in citations, f"Unexpected PCPA citation for factory machinery: {citations}"
+            assert "CONTRACT-SEC-73-74" in citations, f"Missing Contract Act citation: {citations}"
+            assert "sale of goods act" in content.lower()
+            assert "consumer protection act" in content.lower() and "excluded" in content.lower()
+            assert "factory" in case_summary.get("parties", "").lower() or "commercial" in case_summary.get("parties", "").lower()
+    asyncio.run(run())
+
+
+

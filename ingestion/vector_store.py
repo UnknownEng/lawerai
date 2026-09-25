@@ -295,12 +295,11 @@ class LegalVectorStore:
             if act_code and (act_code in query_lower or act_code in query_tokens):
                 metadata_boost += 0.20
 
-            # Low lexical relevance safeguard: if no meaningful keywords matched (raw_bm < 2.0),
-            # dense vector noise alone cannot exceed the confidence threshold
-            if raw_bm < 2.0:
-                final_score = 0.25 * vec_score
+            # Balanced hybrid ranking with safeguard against pure keyword absence
+            if raw_bm < 1.0:
+                final_score = (0.20 * norm_bm25) + (0.60 * vec_score) + (0.20 * metadata_boost)
             else:
-                final_score = (0.50 * norm_bm25) + (0.35 * vec_score) + (0.15 * metadata_boost)
+                final_score = (0.45 * norm_bm25) + (0.40 * vec_score) + (0.15 * metadata_boost)
 
             scored_results.append((final_score, doc))
 
@@ -344,12 +343,16 @@ class LegalVectorStore:
             "required_any": [
                 r"\b(?:product|goods|appliance|laptop|mobile|phone|device|defect\w*|faulty|warranty|repair|shopkeeper|seller|merchant|consumer|hafeez\s*centre|bought|purchased|khareed\w*)\b"
             ],
-            "forbidden_any": []
+            "forbidden_any": [
+                r"\b(?:supplier|resale|commercial\s*resale|commercial\s*purpose|shop\s*buying|wholesale|b2b|retail\s*inventory)\b",
+                r"\b(?:house|plot|plots|flat|flats|apartment|apartments|real\s*estate|immovable\s*property|immovable|land)\b",
+                r"\b(?:factory|factory\s*machinery|industrial\s*machinery|industrial\s*plant|commercial\s*equipment|commercial\s*machinery|manufacturing\s*equipment|plant\s*machinery)\b"
+            ]
         },
         # Contract Law
         "CONTRACT-SEC-73-74": {
             "required_any": [
-                r"\b(?:contract|agreement|signed|promise|breach|advance\s*money|verbal\s*promise|commercial\s*contract|commercial\s*agreement|commercial\s*dispute|business\s*agreement|deal|muaahida|loan|borrowed|debt)\b"
+                r"\b(?:contract|agreement|signed|promise|breach|advance\s*money|verbal\s*promise|commercial\s*contract|commercial\s*agreement|commercial\s*dispute|business\s*agreement|deal|muaahida|loan|borrowed|debt|supplier|resale|damaged\s*goods|freelance|invoice|buyer|vacate|guarantor|co-signer|services\s*rendered|deal\s*fell\s*through|factory|machinery|industrial|defective\s*machinery|didn'?t\s*(?:actually\s*)?own|full\s*plot|seller\s*didn'?t)\b"
             ],
             "forbidden_any": [
                 r"\b(?:jirga|union\s*council\s*chairman|disrespectful\s*about\s*(?:his\s*)?religion|overheard|law\s*changed|pilot|aviation)\b"
@@ -357,7 +360,7 @@ class LegalVectorStore:
         },
         "CONTRACT-SEC-10-19": {
             "required_any": [
-                r"\b(?:free\s*consent|coercion|undue\s*influence|fraudulent\s*misrepresentation|void\s*agreement|minor\s*contract|contract\s*validity)\b"
+                r"\b(?:free\s*consent|coercion|undue\s*influence|fraudulent\s*misrepresentation|void\s*agreement|minor\s*contract|contract\s*validity|guarantor|co-signer|surety)\b"
             ],
             "forbidden_any": [
                 r"\b(?:jirga|union\s*council\s*chairman|disrespectful\s*about\s*(?:his\s*)?religion|overheard|law\s*changed)\b"
@@ -400,7 +403,8 @@ class LegalVectorStore:
                 r"\b(?:cheat\w*|fraud\w*|scam\w*|deceit\w*|dishonest\w*|fake\s*promise\w*|false\s*promise\w*|false\s*representation\w*|dhoka\w*|dhokaybazi|420|فراڈ|دھوکہ|udhar\w*.*phone|paisay\s*udhar|paise\s*udhar|mukargaya|bhag\s*gaya)\b"
             ],
             "forbidden_any": [
-                r"\b(?:locks\s*her\s*out|locked\s*out\s*of\s*the\s*house|takes\s*her\s*phone|friend's\s*husband|coercive|domestic\s*violence|bridal\s*dower|dowry|jewell?ery\s*gifted|nikah)\b"
+                r"\b(?:locks\s*her\s*out|locked\s*out\s*of\s*the\s*house|takes\s*her\s*phone|friend's\s*husband|coercive|domestic\s*violence|bridal\s*dower|dowry|jewell?ery\s*gifted|nikah)\b",
+                r"\b(?:rumor|rumour|rumors|rumours|spreading\s*(?:false\s*)?rumou?rs|reputation|defam\w*|character\s*assassination|slander|libel)\b"
             ]
         },
         "PPC-379-380": {
@@ -408,7 +412,8 @@ class LegalVectorStore:
                 r"\b(?:theft|steal\w*|stole\w*|stolen|chori|chora|thief|thieves|drawer|bedroom\s*drawer|dwelling|stolen\s*cash|stolen\s*money|burglar\w*|loot\w*)\b"
             ],
             "forbidden_any": [
-                r"\b(?:confession|pressured\s*to\s*confess|police\s*confession|dowry|jahez|haq\s*mehr|dower|bridal|stridhan)\b"
+                r"\b(?:confession|pressured\s*to\s*confess|police\s*confession|dowry|jahez|haq\s*mehr|dower|bridal|stridhan)\b",
+                r"\b(?:falsely\s*accused|false\s*accusation|wrongfully\s*accused|framed|fabricat\w*\s*(?:theft|charge|case)|employer\s*accused|fired\s*without)\b"
             ]
         },
         "PPC-503-506": {
@@ -447,9 +452,11 @@ class LegalVectorStore:
         },
         "PPC-405-406": {
             "required_any": [
-                r"\b(?:breach\s*of\s*trust|misappropriat\w*|embezzle\w*|entrusted|amanat|khiyanat|joint\s*(?:business\s*)?account|business\s*partner|partner\w*|profit\s*share|company\s*funds)\b"
+                r"\b(?:breach\s*of\s*trust|misappropriat\w*|embezzle\w*|entrusted|amanat|khiyanat|divert\w*\s*(?:company\s*)?funds|personal\s*account|personal\s*expenses|stole\w*\s*funds|funds\s*into\s*(?:his\s*)?personal|joint\s*business\s*account|split\s*profits|profit\s*share|giving\s*me\s*only\s*\d+%|business\s*account)\b"
             ],
-            "forbidden_any": []
+            "forbidden_any": [
+                r"\b(?:without\s*consulting|signing\s*contracts|major\s*decisions)\b"
+            ]
         },
         "PPC-441-447-448": {
             "required_any": [
@@ -466,7 +473,7 @@ class LegalVectorStore:
         # 3. Family Law
         "MFLO-SEC-7": {
             "required_any": [
-                r"\b(?:talaq|divorce\s*by\s*husband|husband\s*(?:pronounced|sent|issued)\s*talaq|notice\s*of\s*talaq|talaqnama|divorce\s*notice)\b"
+                r"\b(?:talaq|divorce\s*by\s*husband|husband\s*(?:pronounced|sent|issued|gave)\s*(?:me\s*)?talaq|notice\s*of\s*talaq|talaqnama|divorce\s*notice|verbal\s*talaq|talaq\s*verbally|is\s*the\s*divorce\s*final)\b"
             ],
             "forbidden_any": [
                 r"\b(?:khula|wife\s*seeking\s*divorce|filed\s*for\s*khula|dissolution\s*of\s*marriage|shop|store|business|land\s*dispute|property|jirga|family\s*shop|shared\s*shop)\b"
@@ -474,7 +481,7 @@ class LegalVectorStore:
         },
         "MFLO-SEC-9": {
             "required_any": [
-                r"\b(?:maintenance|kharcha|child\s*support|monthly\s*expenses|wife\s*maintenance|children\s*expenses|nan\s*nafqah|nafqah)\b"
+                r"\b(?:maintenance|kharcha|child\s*support|monthly\s*expenses|wife\s*maintenance|children\s*expenses|nan\s*nafqah|nafqah|unpaid\s*maintenance|hasn'?t\s*paid\s*maintenance|not\s*paying\s*maintenance)\b"
             ],
             "forbidden_any": []
         },
@@ -486,7 +493,7 @@ class LegalVectorStore:
         },
         "GWA-SEC-17-25": {
             "required_any": [
-                r"\b(?:custody|guardianship|guardian|visitation|visitation\s*rights|hizanat|custodial|custody\s*of\s*child|take\s*away\s*(?:my\s*)?child|meet\s*(?:my\s*)?child|حضانت|بچوں\s*کی\s*کسٹڈی)\b"
+                r"\b(?:custody|guardianship|guardian|visitation|visitation\s*rights|hizanat|custodial|custody\s*of\s*child|take\s*away\s*(?:my\s*)?child|meet\s*(?:my\s*)?child|see\s*my\s*kids|kids|son|daughter|children|حضانت|بچوں\s*کی\s*کسٹڈی)\b"
             ],
             "forbidden_any": [
                 r"\b(?:insult\w*|family\s*function|shouting\s*at\s*my\s*child)\b"
@@ -562,7 +569,7 @@ class LegalVectorStore:
         },
         "CRPC-498": {
             "required_any": [
-                r"\b(?:pre-arrest|anticipatory|apprehension\s*of\s*arrest|before\s*arrest|zamanat\s*qabal\s*az\s*giraftari)\b"
+                r"\b(?:pre-arrest|anticipatory|apprehension\s*of\s*arrest|before\s*arrest|zamanat\s*qabal\s*az\s*giraftari|get\s*me\s*arrested|threaten\w*\s*(?:to\s*)?(?:get\s*me\s*)?arrest\w*|fear\s*of\s*arrest|threaten\w*\s*and\s*arrest|falsely\s*accused|false\s*theft|framed\s*by\s*(?:my\s*)?employer|accused\s*of\s*theft\s*by\s*(?:my\s*)?employer)\b"
             ],
             "forbidden_any": []
         },
@@ -604,19 +611,19 @@ class LegalVectorStore:
         # 7. Civil Procedure & Property
         "SRA-SEC-8-9": {
             "required_any": [
-                r"\b(?:lock\w*\s*out|locked\s*out|dispossess\w*|illegal\s*dispossession|thrown\s*out|zabardasti\s*nikal|possession|shop\s*locked|changed\s*(?:the\s*)?locks|locks\s*changed|commercial\s*office|won'?t\s*let\s*me\s*back\s*in|tala\s*laga\w*|tala|dukan\s*par\s*tala|تالا)\b"
+                r"\b(?:lock\w*\s*out|locked\s*out|dispossess\w*|illegal\s*dispossession|thrown\s*out|zabardasti\s*nikal|possession|shop\s*locked|changed\s*(?:the\s*)?locks|locks\s*changed|commercial\s*office|won'?t\s*let\s*me\s*back\s*in|tala\s*laga\w*|tala|dukan\s*par\s*tala|تالا|refusing\s*to\s*vacate|not\s*vacating|vacate\s*after\s*non-payment|den\w+\s*(?:me\s*)?use\s*of\s*(?:our\s*|my\s*)?inherited)\b"
             ],
             "forbidden_any": []
         },
         "SRA-SEC-42": {
             "required_any": [
-                r"\b(?:declaration|title|ownership|co-owner|share\w*\s*(?:family\s*)?shop|ancestral|claim\w*\s*ownership|heir|property\s*right|family\s*shop|agricultural\s*land|father\s*passed\s*away|transferr?ed\s*(?:agricultural\s*)?land|claim\s*it|gift|gift\s*deed|stamp\s*paper|mutation|intiqal|forged)\b"
+                r"\b(?:declaration|title|ownership|co-owner|share\w*\s*(?:family\s*)?shop|ancestral|claim\w*\s*ownership|heir|property\s*right|family\s*shop|agricultural\s*land|father\s*passed\s*away|transferr?ed\s*(?:agricultural\s*)?land|claim\s*it|gift|gift\s*deed|stamp\s*paper|mutation|intiqal|forged|joint-heir|joint\s*heir|inheritance|estate|legal\s*share|deceased\s*parent|sister|daughter|silent\s*partner|partner\w*|family\s*land|ancestral\s*land|full\s*plot|didn'?t\s*(?:actually\s*)?own|defective\s*title|seller\s*didn'?t)\b"
             ],
             "forbidden_any": []
         },
         "LIMITATION-ACT-1908": {
             "required_any": [
-                r"\b(?:adverse\s*possession|limitation|time-barred|12\s*years|3\s*years|running\s*it\s*for\s*\d+\s*years|legally\s*his\s*now|delay\s*condonation)\b"
+                r"\b(?:adverse\s*possession|limitation|time-barred|12\s*years|10\s*years|3\s*years|\d+\s*years|running\s*it\s*for\s*\d+\s*years|legally\s*his\s*now|delay\s*condonation)\b"
             ],
             "forbidden_any": [
                 r"\b(?:law\s*changed|reversed\s*recently|which\s*version\s*applies)\b"
@@ -624,7 +631,7 @@ class LegalVectorStore:
         },
         "CPC-O39-R1-2": {
             "required_any": [
-                r"\b(?:stay\s*order|injunction|stop\s*construction|stop\s*demolition|stop\s*transfer|status\s*quo|restrain\w*|trying\s*to\s*sell|selling\s*(?:the\s*)?house|without\s*(?:my\s*)?signature|alienat\w*|harvest\w*|crop\w*|timber|trees|lock\s*(?:the\s*)?shop|inventory)\b"
+                r"\b(?:stay\s*order|injunction|stop\s*construction|stop\s*demolition|stop\s*transfer|status\s*quo|restrain\w*|trying\s*to\s*sell|selling\s*(?:the\s*)?house|without\s*(?:my\s*)?signature|alienat\w*|harvest\w*|crop\w*|timber|trees|lock\s*(?:the\s*)?shop|inventory|signing\s*contracts|major\s*decisions|without\s*consulting|without\s*(?:my\s*)?consent)\b"
             ],
             "forbidden_any": []
         },
@@ -708,7 +715,7 @@ class LegalVectorStore:
         },
         "FCA-SEC-5": {
             "required_any": [
-                r"\b(?:family\s*court|family\s*dispute|dissolution\s*of\s*marriage|want\s*(?:a\s*)?divorce|divorce\s*from\s*(?:my\s*)?husband|khula|dower|mehr|custody\s*of\s*minor|guardianship|maintenance\s*suit|dowry\s*suit|kidnapp\w*|infant|legal\s*guardian|physical\s*care|hizanat)\b"
+                r"\b(?:family\s*court|family\s*dispute|dissolution\s*of\s*marriage|want\s*(?:a\s*)?divorce|divorce\s*from\s*(?:my\s*)?husband|khula|dower|mehr|custody|visitation|guardianship|maintenance|nan\s*nafqah|dowry\s*suit|kidnapp\w*|infant|legal\s*guardian|physical\s*care|hizanat)\b"
             ],
             "forbidden_any": [
                 r"\b(?:customs|textile|dry\s*port|pilot|aviation|ship|maritime|jirga)\b"

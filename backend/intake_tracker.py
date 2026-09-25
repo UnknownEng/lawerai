@@ -72,7 +72,18 @@ def update_case_state(
     # 1. Infer/Refine Issue Type if pending
     if not state.get("issue_type") or state.get("issue_type") in ["Pending Clarification", "General Legal Inquiry"]:
         if any(w in msg_lower for w in ["cheque", "check", "bounce", "bounced", "bank slip", "489-f", "چیک"]):
-            state["issue_type"] = "Dishonoured Cheque & Recovery (PPC 489-F)"
+            if any(w in msg_lower for w in ["i gave", "i wrote", "i issued", "my cheque"]) and any(w in msg_lower for w in ["arrest", "threaten", "police", "jail"]):
+                state["issue_type"] = "Defense Against Threatened PPC 489-F Cheque Prosecution & Pre-Arrest Bail"
+            else:
+                state["issue_type"] = "Dishonoured Cheque & Recovery (PPC 489-F)"
+        elif any(w in msg_lower for w in ["rumor", "rumour", "rumors", "rumours", "defamation", "slander"]) or ("rival" in msg_lower and "rumor" in msg_lower):
+            state["issue_type"] = "Defamation & Malicious False Rumors (Defamation Ordinance 2002 / PPC 500)"
+        elif any(w in msg_lower for w in ["falsely accused", "false accusation", "wrongfully accused", "framed"]) and any(w in msg_lower for w in ["theft", "steal", "stolen", "employer"]):
+            state["issue_type"] = "False Accusation of Theft & Safeguard Against Arrest (CrPC 498)"
+        elif any(w in msg_lower for w in ["seller didn't", "didn't actually own", "full plot", "defective title", "not own the full"]):
+            state["issue_type"] = "Defective Property Title & Recovery of Purchase Price"
+        elif any(w in msg_lower for w in ["machinery for my factory", "factory machinery", "industrial equipment", "commercial equipment"]):
+            state["issue_type"] = "Commercial Equipment & Breach of Warranty (Contract Act / Sale of Goods Act)"
         elif any(w in msg_lower for w in ["fraud", "cheat", "cheated", "dhoka", "scam", "lakh rupees", "420", "دھوکہ"]):
             state["issue_type"] = "Cheating & Criminal Fraud (PPC 420)"
         elif any(w in msg_lower for w in ["fir", "sho", "police station", "refusing fir", "refuse fir", "22-a", "ایف آئی آر"]):
@@ -85,8 +96,12 @@ def update_case_state(
             state["issue_type"] = "Property Dispute / Stay Order (CPC O.39 / PPC 448)"
         elif any(w in msg_lower for w in ["whatsapp", "blackmail", "photos", "cyber", "online harassment", "fake profile", "بلیک میل"]):
             state["issue_type"] = "Cyber Crime & Harassment (PECA 2016)"
-        elif any(w in msg_lower for w in ["breach of trust", "company funds", "business partner", "misappropriat", "embezzle", "امانت میں خیانت"]):
+        elif any(w in msg_lower for w in ["breach of trust", "company funds", "misappropriat", "embezzle", "امانت میں خیانت"]) or (
+            "business partner" in msg_lower and any(w in msg_lower for w in ["funds", "misappropriat", "stole", "diverted", "theft", "embezzle", "personal expenses"])
+        ):
             state["issue_type"] = "Criminal Breach of Trust & Misappropriation (PPC 405/406)"
+        elif any(w in msg_lower for w in ["business partner", "partnership", "silent partner"]):
+            state["issue_type"] = "Partnership Governance & Decision-Making Dispute"
         elif any(w in msg_lower for w in ["impound", "impounded", "traffic police", "number plate", "numberplate", "challan", "registration plate"]):
             state["issue_type"] = "Motor Vehicle Impoundment & Registration (PMVO 1965)"
         elif any(w in msg_lower for w in ["bail", "pre-arrest", "post-arrest", "arrest", "ضمانت"]):

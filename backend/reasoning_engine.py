@@ -586,44 +586,71 @@ class LegalReasoningEngine:
         # ----------------------------------------------------------------------
         # Grievance 4: Joint Business Account & Partnership Dispute / Profit Share
         # ----------------------------------------------------------------------
-        joint_biz_m = re.search(
-            r"\b(?:joint\s*business\s*account|joint\s*account|business\s*account|business\s*partner|company\s*funds|split\s*profits|our\s*business|partnership|sharakat)\b.*?"
-            r"\b(?:profit|share|profit\s*share|not\s*paying|funds|misappropriat|split|personal\s*(?:expenses|account)|transferred|withheld|giving\s*me\s*only|20%|50%)\b|"
-            r"\b(?:business\s*partner\s*not\s*paying\s*profit\s*share|partner\s*not\s*paying|joint\s*business\s*account)\b",
+        partner_gov_m = re.search(
+            r"\b(?:silent\s*partner|business\s*partner|partner)\b.*?\b(?:making\s*major\s*decisions|signing\s*contracts|without\s*consulting|without\s*(?:my\s*)?consent|excluding\s*me|unauthorized\s*decision)\b",
             text_lower
         )
-        is_pure_bounced_cheque = bool(re.search(r"\b(?:bounced|insufficient\s*funds|dishonour\w*)\b", text_lower)) and not bool(re.search(r"\b(?:profit|share|transferred|joint\s*account)\b", text_lower))
-        if joint_biz_m and not is_pure_bounced_cheque:
-            pos = joint_biz_m.start()
+        if partner_gov_m and not bool(re.search(r"\b(?:misappropriat|siphon|embezzle|stole|theft|divert\w*\s*funds|funds\s*into\s*personal)\b", text_lower)):
+            pos = partner_gov_m.start()
             detected.append((pos, LegalIssue(
                 issue_index=0,
-                issue_title="Commercial Partnership & Profit Share Dispute",
+                issue_title="Partnership Authority & Decision-Making Governance Dispute",
                 raw_text=text,
-                subject_matter="commercial partnership joint account funds misappropriation",
-                parties="Partner (Complainant) vs Business Partner (Wrongdoer)",
-                aggrieved_party="Partner",
-                wrongdoer="Business Partner",
-                action_taken="Dispute or unauthorized withdrawal/misuse of funds or withholding of profit share from joint business",
-                relief_sought="Criminal prosecution for Criminal Breach of Trust under Sections 405 & 406 PPC and civil suit for settlement of business accounts and profits under Partnership Act 1932",
-                search_query="dispute over joint business account partner funds misappropriation criminal breach of trust Section 405 406 Pakistan Penal Code PPC",
-                statute_hints=["PPC-405-406"],
-                category_hint="Criminal Law / Property Offenses"
+                subject_matter="partnership governance partner exceeding authority unauthorized contract signing Partnership Act 1932",
+                parties="Aggrieved Partner (Plaintiff) vs Co-Partner Acting Without Authority (Defendant)",
+                aggrieved_party="Aggrieved Partner",
+                wrongdoer="Co-Partner",
+                action_taken="Partner making major decisions and signing contracts without consultation or consent",
+                relief_sought=(
+                    "Under Sections 12 & 18-20 of the Partnership Act 1932, all partners have equal rights in management, and a partner cannot make fundamental decisions or bind the firm beyond agreed authority. "
+                    "Making unauthorized decisions without misappropriation is an internal governance dispute governed by partnership law, not a criminal breach of trust under PPC 405/406. "
+                    "Remedies include: (1) Issue a written notice of objection to the partner and inform third-party contractors that the partner lacks authority to bind the firm alone; "
+                    "(2) File a civil suit for declaration and permanent injunction under Sections 42 & 54 of the Specific Relief Act 1877 read with CPC Order XXXIX Rules 1 & 2 in the local Civil Court; or "
+                    "(3) Seek judicial dissolution of the partnership and rendition of accounts under Section 44 of the Partnership Act 1932."
+                ),
+                search_query="partnership authority dispute partner signing contracts without consulting injunction Section 42 Specific Relief Act CPC Order 39",
+                statute_hints=["SRA-SEC-42", "CPC-O39-R1-2"],
+                category_hint="Commercial Law / Partnership Governance"
             )))
+        else:
+            joint_biz_m = re.search(
+                r"\b(?:joint\s*business\s*account|joint\s*account|business\s*account|business\s*partner|company\s*funds|split\s*profits|our\s*business|partnership|sharakat)\b.*?"
+                r"\b(?:profit|share|profit\s*share|not\s*paying|funds|misappropriat|split|personal\s*(?:expenses|account)|transferred|withheld|giving\s*me\s*only|20%|50%)\b|"
+                r"\b(?:business\s*partner\s*not\s*paying\s*profit\s*share|partner\s*not\s*paying|joint\s*business\s*account)\b",
+                text_lower
+            )
+            is_pure_bounced_cheque = bool(re.search(r"\b(?:bounced|insufficient\s*funds|dishonour\w*)\b", text_lower)) and not bool(re.search(r"\b(?:profit|share|transferred|joint\s*account)\b", text_lower))
+            if joint_biz_m and not is_pure_bounced_cheque:
+                pos = joint_biz_m.start()
+                detected.append((pos, LegalIssue(
+                    issue_index=0,
+                    issue_title="Commercial Partnership & Profit Share Dispute",
+                    raw_text=text,
+                    subject_matter="commercial partnership joint account funds misappropriation",
+                    parties="Partner (Complainant) vs Business Partner (Wrongdoer)",
+                    aggrieved_party="Partner",
+                    wrongdoer="Business Partner",
+                    action_taken="Dispute or unauthorized withdrawal/misuse of funds or withholding of profit share from joint business",
+                    relief_sought="Criminal prosecution for Criminal Breach of Trust under Sections 405 & 406 PPC and civil suit for settlement of business accounts and profits under Partnership Act 1932",
+                    search_query="dispute over joint business account partner funds misappropriation criminal breach of trust Section 405 406 Pakistan Penal Code PPC",
+                    statute_hints=["PPC-405-406"],
+                    category_hint="Criminal Law / Property Offenses"
+                )))
 
         # ----------------------------------------------------------------------
         # Grievance 5: Matrimonial Khula (Wife-Initiated Dissolution of Marriage)
         # Exclusively Family Courts Act 1964; NEVER MFLO Section 7!
-        # Addresses procedural question on withdrawing for reconciliation.
+        # Addresses procedural question on withdrawing for reconciliation only when asked.
         # ----------------------------------------------------------------------
         khula_m = re.search(
             r"\b(?:khula|dissolution\s*of\s*marriage|filed\s*for\s*khula|wife\s*seeking\s*divorce|separate\s*from\s*husband|dissolve\s*(?:my\s*|our\s*)?marriage)\b|"
-            r"\b(?:i\s*want\s*a\s*divorce\s*from\s*my\s*husband)\b",
+            r"\b(?:i\s*want\s*a\s*divorce\s*from\s*my\s*husband|i\s*want\s*to\s*file\s*for\s*khula)\b",
             text_lower
         )
         if khula_m:
             pos = khula_m.start()
             procedural_note = ""
-            if "withdr" in text_lower or "reconcil" in text_lower:
+            if any(w in text_lower for w in ["withdr", "withdrew", "withdrawn"]) and any(w in text_lower for w in ["khula", "petition", "case"]):
                 procedural_note = (
                     "To answer your question directly: withdrawing a previous khula petition because you reconciled does NOT "
                     "count against you, and it does not stop you from filing a new case. Under Pakistani family law, trying to "
@@ -650,15 +677,48 @@ class LegalReasoningEngine:
             )))
 
         # ----------------------------------------------------------------------
+        # Grievance 5b: Matrimonial & Child Maintenance (MFLO Section 9 & FCA Section 5 / 17-A)
+        # Dedicated grievance to guarantee zero dropped maintenance issues.
+        # ----------------------------------------------------------------------
+        maint_m = re.search(
+            r"\b(?:hasn'?t\s*paid\s*maintenance|not\s*paying\s*maintenance|unpaid\s*maintenance|maintenance\s*in\s*\d+\s*months|pay\s*maintenance|kharcha|nan\s*nafqah|نان\s*نفقہ|child\s*support)\b|"
+            r"\b(?:maintenance)\b",
+            text_lower
+        )
+        if maint_m:
+            pos = maint_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="Recovery of Past and Future Maintenance",
+                raw_text=text,
+                subject_matter="matrimonial and child maintenance recovery Family Court Section 9 MFLO Section 17-A FCA",
+                parties="Wife / Children (Claimants) vs Husband / Father (Respondent)",
+                aggrieved_party="Wife / Children",
+                wrongdoer="Husband / Father",
+                action_taken="Husband failed to pay maintenance or defaulted on monthly financial support",
+                relief_sought="Recovery of past accrued maintenance arrears and future monthly maintenance under Section 9 Muslim Family Laws Ordinance 1961 read with Section 5 and Section 17-A of the Family Courts Act 1964 (mandatory interim maintenance on first appearance)",
+                search_query="recovery of unpaid maintenance arrears wife child support Section 9 Muslim Family Laws Ordinance Section 17-A Family Courts Act",
+                statute_hints=["MFLO-SEC-9", "FCA-SEC-5"],
+                category_hint="Family Law / Maintenance",
+                procedural_posture="Wife / Child Maintenance Suit"
+            )))
+
+        # ----------------------------------------------------------------------
         # Grievance 6: Matrimonial Talaq (Husband-Initiated Divorce Notice)
         # Exclusively MFLO Section 7; only when husband is initiating Talaq
         # ----------------------------------------------------------------------
         talaq_m = re.search(
-            r"\b(?:husband\s*pronounced\s*talaq|pronounced\s*talaq\s*last\s*week|notice\s*of\s*talaq|divorce\s*my\s*wife|pronounce\s*talaq)\b",
+            r"\b(?:husband\s*(?:pronounced|sent|issued|gave)\s*(?:me\s*)?talaq|pronounced\s*talaq|verbal\s*talaq|talaq\s*verbally|notice\s*of\s*talaq|divorce\s*my\s*wife|pronounce\s*talaq|is\s*the\s*divorce\s*final)\b",
             text_lower
         )
         if talaq_m and not khula_m:
             pos = talaq_m.start()
+            is_verbal_inquiry = bool(re.search(r"\b(?:verbal|verbally|anger|is\s*the\s*divorce\s*final)\b", text_lower))
+            talaq_relief = (
+                "To answer your question directly: Under Section 7 of the Muslim Family Laws Ordinance 1961, a verbal pronouncement of Talaq—even if uttered in anger—is NOT legally final or effective on its own. The husband is legally required to give written notice to the Chairman of the local Union Council / Arbitration Council and provide a copy to his wife. Talaq only becomes legally effective after 90 days from the date notice is delivered to the Chairman, during which the Arbitration Council must attempt reconciliation."
+                if is_verbal_inquiry else
+                "Statutory written notice to Chairman Union Council under Section 7 MFLO 1961, 90-day reconciliation period before Arbitration Council"
+            )
             detected.append((pos, LegalIssue(
                 issue_index=0,
                 issue_title="Talaq Notice & Union Council Procedure",
@@ -668,7 +728,7 @@ class LegalReasoningEngine:
                 aggrieved_party="Wife / Recipient",
                 wrongdoer="Husband",
                 action_taken="Husband pronounced Talaq and procedure under Muslim Family Laws Ordinance 1961 is required",
-                relief_sought="Statutory written notice to Chairman Union Council under Section 7 MFLO 1961, 90-day reconciliation period before Arbitration Council",
+                relief_sought=talaq_relief,
                 search_query="husband pronounced talaq notice to chairman union council Section 7 Muslim Family Laws Ordinance MFLO",
                 statute_hints=["MFLO-SEC-7"],
                 category_hint="Family Law / Divorce Procedure"
@@ -700,30 +760,48 @@ class LegalReasoningEngine:
             )))
 
         # ----------------------------------------------------------------------
-        # Grievance 8: Personal Loan / Verbal Debt Recovery (Brother/Relative took loan, verbal promise)
+        # Grievance 8: Personal Loan / Debt Recovery (Signed Agreement vs Verbal Debt)
         # Exclude if cheque bounce or fraud or premarital
         # ----------------------------------------------------------------------
         verbal_loan_m = re.search(
-            r"\b(?:brother|relative|cousin|friend|someone)\b.*?\b(?:took\s*(?:a\s*)?loan|borrowed\s*(?:money|cash)|verbal\s*promise|promised\s*to\s*return|udhar)\b|"
-            r"\b(?:loan\s*from\s*me.*?verbal\s*promise|verbal\s*promise\s*to\s*repay)\b",
+            r"\b(?:brother|relative|cousin|friend|someone)\b.*?\b(?:took\s*(?:a\s*)?loan|borrowed\s*(?:money|cash)|verbal\s*promise|promised\s*to\s*return|udhar|signed\s*an?\s*agreement|signed\s*agreement|written\s*agreement)\b|"
+            r"\b(?:loan\s*from\s*me.*?verbal\s*promise|verbal\s*promise\s*to\s*repay|borrowed\s*money\s*from\s*me)\b",
             text_lower
         )
         if verbal_loan_m and not premarital_debt_m and not re.search(r"\b(?:cheque|check|bounced|fraud|420)\b", text_lower):
             pos = verbal_loan_m.start()
-            detected.append((pos, LegalIssue(
-                issue_index=0,
-                issue_title="Recovery of Personal Loan & Verbal Debt",
-                raw_text=text,
-                subject_matter="recovery of personal loan verbal contract debt",
-                parties="Lender / Creditor (Complainant) vs Borrower (Debtor)",
-                aggrieved_party="Lender / Creditor",
-                wrongdoer="Borrower (Debtor)",
-                action_taken="Borrower took personal loan upon verbal promise or informal agreement and failed to repay",
-                relief_sought="Civil suit for recovery of money under Contract Act 1872. Under Pakistani law (Section 10 Contract Act), verbal agreements are legally valid and enforceable, though establishing proof requires corroborative evidence such as bank transfer receipts, text messages, or witness testimony",
-                search_query="recovery of loan borrowed money verbal promise debt suit for recovery Contract Act 1872",
-                statute_hints=["CONTRACT-SEC-73-74"],
-                category_hint="Civil Law / Debt Recovery"
-            )))
+            has_written_agr = bool(re.search(r"\b(?:signed|written|agreement|contract|stamp\s*paper|promissory\s*note)\b", text_lower))
+            has_verbal_explicit = bool(re.search(r"\b(?:verbal\s*promise|verbally\s*promised|informal\s*promise|no\s*agreement|just\s*a\s*verbal|oral\s*promise|actually\s*no|verbal)\b", text_lower))
+            if has_written_agr and not has_verbal_explicit:
+                detected.append((pos, LegalIssue(
+                    issue_index=0,
+                    issue_title="Debt Recovery under Signed Agreement / Contract",
+                    raw_text=text,
+                    subject_matter="recovery of personal loan debt under written signed agreement",
+                    parties="Lender / Creditor (Plaintiff) vs Borrower (Defendant)",
+                    aggrieved_party="Lender / Creditor",
+                    wrongdoer="Borrower (Defendant)",
+                    action_taken="Borrower took personal loan under written/signed agreement and defaulted on repayment",
+                    relief_sought="Civil suit for recovery of money under Sections 73 & 74 of the Contract Act 1872 or summary suit on negotiable instruments / written contracts under Order XXXVII of the Code of Civil Procedure 1908 in the local Civil Court",
+                    search_query="recovery of loan debt signed agreement breach of contract Section 73 Contract Act 1872 summary suit Order 37 CPC",
+                    statute_hints=["CONTRACT-SEC-73-74"],
+                    category_hint="Civil Law / Debt Recovery"
+                )))
+            else:
+                detected.append((pos, LegalIssue(
+                    issue_index=0,
+                    issue_title="Recovery of Personal Loan & Verbal Debt",
+                    raw_text=text,
+                    subject_matter="recovery of personal loan verbal contract debt",
+                    parties="Lender / Creditor (Complainant) vs Borrower (Debtor)",
+                    aggrieved_party="Lender / Creditor",
+                    wrongdoer="Borrower (Debtor)",
+                    action_taken="Borrower took personal loan upon verbal promise or informal agreement and failed to repay",
+                    relief_sought="Civil suit for recovery of money under Contract Act 1872. Under Pakistani law (Section 10 Contract Act), verbal agreements are legally valid and enforceable, though establishing proof requires corroborative evidence such as bank transfer receipts, text messages, or witness testimony",
+                    search_query="recovery of loan borrowed money verbal promise debt suit for recovery Contract Act 1872",
+                    statute_hints=["CONTRACT-SEC-73-74"],
+                    category_hint="Civil Law / Debt Recovery"
+                )))
 
         # ----------------------------------------------------------------------
         # Grievance 9: Withheld Bridal Jewelry / Dowry Articles
@@ -1022,14 +1100,47 @@ class LegalReasoningEngine:
             )))
 
         # ----------------------------------------------------------------------
-        # Grievance 20: Bounced Cheque (ONLY when cheque/bounce is factually present)
+        # Grievance 20: Cheque Dispute (Issuer Defense vs Payee Recovery)
         # ----------------------------------------------------------------------
-        cheque_m = re.search(
+        cheque_issuer_m = re.search(
+            r"\b(?:i\s*gave\s*(?:someone|them|him|her)?\s*(?:a\s*)?cheque|i\s*issued\s*(?:a\s*)?cheque|i\s*wrote\s*(?:a\s*)?cheque|my\s*cheque)\b.*?"
+            r"\b(?:deal\s*fell\s*through|deal\s*failed|deal\s*cancelled|deal|threaten\w*|cash\s*it|get\s*me\s*arrested|arrest\w*)\b|"
+            r"\b(?:cheque\s*for\s*a\s*business\s*deal)\b.*?\b(?:fell\s*through|failed|cancelled|arrest\w*|threaten\w*)\b",
+            text_lower
+        )
+        cheque_bounce_m = re.search(
             r"\b(?:cheque|check|489-f|چیک)\b.*?\b(?:bounce|bounced|dishonour|dishonored|insufficient|memo)\b",
             text_lower
         )
-        if cheque_m:
-            pos = cheque_m.start()
+        if cheque_issuer_m and any(w in text_lower for w in ["fell through", "failed", "cancelled", "arrest", "threaten"]):
+            pos = cheque_issuer_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="Threat of Cheque Dishonour Prosecution (PPC 489-F) & Failed Consideration Defense",
+                raw_text=text,
+                subject_matter="cheque issued for failed business transaction defense against Section 489-F PPC pre-arrest bail",
+                parties="Cheque Drawer / Issuer (User) vs Cheque Holder / Payee (Threatening Party)",
+                aggrieved_party="Cheque Drawer / Issuer",
+                wrongdoer="Cheque Holder / Payee",
+                action_taken="Counterparty threatening to cash cheque and register criminal FIR under Section 489-F PPC after underlying business deal fell through",
+                relief_sought=(
+                    "To answer your question directly: Under Pakistani law (Section 489-F Pakistan Penal Code), a failed underlying "
+                    "transaction or lack of consideration is a valid legal defense. Section 489-F requires dishonest intention to "
+                    "exist at the time the cheque was issued. If the cheque was issued for a business deal that subsequently fell through, "
+                    "dishonest intent at inception is negated, and criminal law cannot be used as an instrument of coercive debt collection. "
+                    "Recommended legal steps: (1) Issue immediate written 'Stop Payment' instructions to your bank noting the cancellation of the deal; "
+                    "(2) Dispatch a statutory legal notice demanding the immediate return and cancellation of the cheque; "
+                    "(3) If an FIR or arrest is threatened, petition for Pre-Arrest Bail under Section 498 CrPC before the Sessions Court; and "
+                    "(4) File a civil suit for cancellation of instrument and declaration under Sections 39 & 42 of the Specific Relief Act 1877 "
+                    "with temporary injunction under CPC Order XXXIX Rules 1 & 2 restraining encashment."
+                ),
+                search_query="dishonestly issuing cheque Section 489-F Pakistan Penal Code PPC Pre-Arrest Bail Section 498 CrPC failure of consideration",
+                statute_hints=["PPC-489F", "CRPC-498"],
+                category_hint="Criminal Law / Financial Defense",
+                procedural_posture="Accused / Drawer Safeguard Against 489-F Arrest"
+            )))
+        elif cheque_bounce_m:
+            pos = cheque_bounce_m.start()
             detected.append((pos, LegalIssue(
                 issue_index=0,
                 issue_title="Dishonoured Cheque & Financial Recovery",
@@ -1046,31 +1157,64 @@ class LegalReasoningEngine:
             )))
 
         # ----------------------------------------------------------------------
-        # Grievance 21: Cheating & Fraudulent Inducement (PPC 420, English & Roman Urdu)
-        # Strict condition: MUST involve fraud/dhoka/scam or absconding with money.
-        # Excludes verbal loans and excludes domestic lockouts.
         # ----------------------------------------------------------------------
-        cheat_m = re.search(
-            r"\b(?:fraud|cheat|cheated|dhoka|scam|420|false promise)\b|"
-            r"\b(?:mera dost|dost)\b.*?\b(?:udhar|paisay|paise).*?\b(?:phone hi nahi utha raha|mukargaya|bhag gaya)\b",
+        # Grievance 21: Cheating (PPC 420) vs Defamation / False Rumor Spreading
+        # Strict condition: MUST involve actual pecuniary deceit or absconding with money.
+        # Excludes verbal loans, domestic lockouts, and false rumors/reputational harm.
+        # ----------------------------------------------------------------------
+        defamation_rumor_m = re.search(
+            r"\b(?:spreading\s*(?:false\s*)?rumou?rs|spreading\s*lies|false\s*rumou?rs|ruining\s*my\s*reputation|defam\w*|character\s*assassination)\b|"
+            r"\b(?:business\s*rival|competitor|rival)\b.*?\b(?:rumou?rs|fraud|lies|smear)\b",
             text_lower
         )
-        if cheat_m and not verbal_loan_m and not re.search(r"\b(?:locks her out|friend's husband|husband|wife)\b", text_lower):
-            pos = cheat_m.start()
+        if defamation_rumor_m:
+            pos = defamation_rumor_m.start()
             detected.append((pos, LegalIssue(
                 issue_index=0,
-                issue_title="Cheating & Dishonest Inducement of Property (PPC 420)",
+                issue_title="Defamation & Malicious False Rumors Spread by Business Rival",
                 raw_text=text,
-                subject_matter="criminal fraud cheating borrowed money recovery",
-                parties="Complainant (Victim) vs Borrower / Accused (Wrongdoer)",
-                aggrieved_party="Complainant",
-                wrongdoer="Accused",
-                action_taken="Accused took money/funds under dishonest inducement and refused to return/absconded",
-                relief_sought="Registration of FIR and criminal trial under Section 420 Pakistan Penal Code",
-                search_query="mera dost mujhse paisay udhar le kar gaya tha ab wo phone hi nahi utha raha fraud cheating Section 420 Pakistan Penal Code PPC",
-                statute_hints=["PPC-420"],
-                category_hint="Criminal Law / Offenses Against Property"
+                subject_matter="defamation business rival spreading false rumors fraud reputation damage Defamation Ordinance 2002 PPC 500",
+                parties="Aggrieved Business Owner (Plaintiff) vs Business Rival (Defaming Wrongdoer)",
+                aggrieved_party="Aggrieved Business Owner",
+                wrongdoer="Business Rival",
+                action_taken="Business rival is spreading false rumors alleging involvement in fraud to damage commercial reputation",
+                relief_sought=(
+                    "Under Pakistani law, spreading false rumors to harm personal or commercial reputation constitutes actionable Defamation, "
+                    "NOT cheating (Section 420 PPC, which strictly requires dishonest inducement and delivery of property). "
+                    "Remedies include: (1) Civil Suit for Damages under Defamation Ordinance 2002: You must first serve a mandatory 14-day legal notice "
+                    "under Section 8 of the Defamation Ordinance 2002 demanding an unconditional apology and retraction; if the rival fails to comply, "
+                    "you can file a suit for general and special damages before the District Court; "
+                    "(2) Injunctive relief: Under Order XXXIX Rules 1 & 2 CPC and Section 54 Specific Relief Act 1877, you can seek a temporary and permanent injunction "
+                    "restraining the rival from publishing or uttering defamatory statements; and "
+                    "(3) Criminal Defamation under Sections 499 & 500 PPC: You may institute a private complaint (istighasa) before the Judicial Magistrate "
+                    "for criminal defamation punishable by imprisonment up to two years or fine."
+                ),
+                search_query="business rival spreading false rumors fraud defamation Defamation Ordinance 2002 Section 499 500 Pakistan Penal Code PPC",
+                statute_hints=[],
+                category_hint="Civil & Criminal Law / Defamation & Commercial Reputation"
             )))
+        else:
+            cheat_m = re.search(
+                r"\b(?:fraud|cheat|cheated|dhoka|scam|420|false promise)\b|"
+                r"\b(?:mera dost|dost)\b.*?\b(?:udhar|paisay|paise).*?\b(?:phone hi nahi utha raha|mukargaya|bhag gaya)\b",
+                text_lower
+            )
+            if cheat_m and not verbal_loan_m and not re.search(r"\b(?:locks her out|friend's husband|husband|wife|rumor|rumour|rumors|rumours)\b", text_lower):
+                pos = cheat_m.start()
+                detected.append((pos, LegalIssue(
+                    issue_index=0,
+                    issue_title="Cheating & Dishonest Inducement of Property (PPC 420)",
+                    raw_text=text,
+                    subject_matter="criminal fraud cheating borrowed money recovery",
+                    parties="Complainant (Victim) vs Borrower / Accused (Wrongdoer)",
+                    aggrieved_party="Complainant",
+                    wrongdoer="Accused",
+                    action_taken="Accused took money/funds under dishonest inducement and refused to return/absconded",
+                    relief_sought="Registration of FIR and criminal trial under Section 420 Pakistan Penal Code",
+                    search_query="mera dost mujhse paisay udhar le kar gaya tha ab wo phone hi nahi utha raha fraud cheating Section 420 Pakistan Penal Code PPC",
+                    statute_hints=["PPC-420"],
+                    category_hint="Criminal Law / Offenses Against Property"
+                )))
 
         # ----------------------------------------------------------------------
         # Grievance 22: Police Refusal of FIR
@@ -1147,14 +1291,104 @@ class LegalReasoningEngine:
             )))
 
         # ----------------------------------------------------------------------
-        # Grievance 25: Consumer Product Defects & Warranty Dispute
+        # Grievance 24b: Defective Property Title & Fraudulent Sale of Unowned Plot
         # ----------------------------------------------------------------------
+        defective_title_m = re.search(
+            r"\b(?:bought|purchased)\b.*?\b(?:house|plot|property|land|flat)\b.*?\b(?:didn'?t\s*(?:actually\s*)?own|not\s*(?:the\s*)?owner|defective\s*title|fake\s*title|partial\s*owner|full\s*plot|didn'?t\s*have\s*title)\b|"
+            r"\b(?:seller\s*didn'?t\s*(?:actually\s*)?own)\b",
+            text_lower
+        )
+        if defective_title_m:
+            pos = defective_title_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="Defective Property Title & Fraudulent Sale of Unowned Plot",
+                raw_text=text,
+                subject_matter="defective property title seller unowned plot fraudulent misrepresentation Contract Act Specific Relief Act",
+                parties="Buyer / Purchaser (Plaintiff) vs Seller / Vendor (Defendant)",
+                aggrieved_party="Buyer / Purchaser",
+                wrongdoer="Seller / Vendor",
+                action_taken="Seller sold house/plot without lawful ownership or title to the full plot",
+                relief_sought=(
+                    "Under Pakistani law, immovable property transactions are governed by the Transfer of Property Act 1882, Specific Relief Act 1877, and Contract Act 1872 "
+                    "(NOT the Consumer Protection Act, which applies only to movable consumer goods). Under the fundamental legal principle 'nemo dat quod non habet' "
+                    "(no person can transfer a better title than they possess), a seller cannot convey lawful title to land they do not own. "
+                    "Remedies include: (1) Under Sections 19 and 73 of the Contract Act 1872, the buyer may rescind the contract on grounds of fraudulent misrepresentation "
+                    "and file a Civil Suit for recovery of the purchase consideration, registration fees, and damages in the local Civil Court; "
+                    "(2) File a suit for cancellation of the sale deed and declaration under Sections 39 and 42 of the Specific Relief Act 1877; and "
+                    "(3) If the seller induced payment knowing they lacked title, lodge a criminal FIR / complaint for cheating and fraudulent inducement under Section 420 of the Pakistan Penal Code."
+                ),
+                search_query="bought house seller didn't own full plot defective title Section 73 Contract Act 1872 Section 42 Specific Relief Act",
+                statute_hints=["CONTRACT-SEC-73-74", "SRA-SEC-42"],
+                category_hint="Civil Law / Property Title & Contractual Fraud"
+            )))
+
+        # ----------------------------------------------------------------------
+        # Grievance 25: Consumer Product Defects & Warranty Dispute vs Commercial Machinery
+        # ----------------------------------------------------------------------
+        factory_machinery_m = re.search(
+            r"\b(?:factory\s*machinery|machinery\s*for\s*(?:my\s*)?factory|industrial\s*(?:machinery|equipment|plant)|commercial\s*(?:machinery|equipment))\b.*?\b(?:defective|faulty|warranty|broke|refund|repair)\b|"
+            r"\b(?:bought\s*machinery\s*for\s*(?:my\s*)?factory)\b",
+            text_lower
+        )
+        supplier_m = re.search(
+            r"\b(?:supplier|resale|shop\s*buying|commercial\s*(?:goods|deal|purchase)|wholesale|b2b)\b.*?\b(?:damaged\s*goods|defective\s*goods|faulty\s*(?:goods|products)|damaged\s*shipment|delivered\s*damaged|delivered\s*defective)\b|"
+            r"\b(?:my\s*supplier\s*delivered\s*damaged\s*goods)\b",
+            text_lower
+        )
         consumer_m = re.search(
             r"\b(?:laptop|mobile|phone|appliance|product|goods|item|purchased|bought|shopkeeper|seller|market|hafeez\s*centre)\b.*?\b(?:defective|faulty|broke\s*down|broken|not\s*working|repair|refund|warranty|guarantee|refus\w*\s+to\s+(?:repair|refund))\b|"
             r"\b(?:consumer\s*court|defective\s*product)\b",
             text_lower
         )
-        if consumer_m and not lockout_m and not deposit_m:
+        if factory_machinery_m:
+            pos = factory_machinery_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="Breach of Warranty & Commercial Factory Machinery Contract Dispute",
+                raw_text=text,
+                subject_matter="commercial factory machinery defective breach of warranty Sale of Goods Act Contract Act 1872",
+                parties="Factory Owner / Commercial Buyer (Plaintiff) vs Machinery Seller (Defendant)",
+                aggrieved_party="Factory Owner / Commercial Buyer",
+                wrongdoer="Machinery Seller",
+                action_taken="Seller delivered defective factory machinery and refused to honor warranty repairs or replacement",
+                relief_sought=(
+                    "Under Pakistani law: (1) Consumer Protection Act Exclusion: Goods and machinery purchased for commercial manufacturing or industrial use in a factory "
+                    "are expressly excluded from the Consumer Protection Act under Section 2(c) (which defines a 'consumer' as excluding purchases for commercial purposes). "
+                    "The Consumer Court does NOT have jurisdiction over industrial factory machinery. "
+                    "(2) Sale of Goods Act 1930 & Contract Act 1872: The transaction is governed by Sections 16, 59 & 60 of the Sale of Goods Act 1930 and Section 73 of the Contract Act 1872. "
+                    "Under Section 59 of the Sale of Goods Act 1930, where there is a breach of warranty by the seller, the buyer can sue for damages for breach of warranty "
+                    "and claim diminution or refund of the purchase price. "
+                    "(3) Legal remedies: Serve a formal legal notice demanding immediate repair, replacement, or refund under warranty terms; if unfulfilled, "
+                    "file a civil suit for recovery of damages and price in the competent Civil Court."
+                ),
+                search_query="bought machinery for factory defective seller won't honor warranty Section 73 Contract Act 1872 Sale of Goods Act",
+                statute_hints=["CONTRACT-SEC-73-74"],
+                category_hint="Commercial Law / Sale of Goods & Industrial Warranties"
+            )))
+        elif supplier_m:
+            pos = supplier_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="Breach of Commercial Supply Contract & Delivery of Damaged Goods",
+                raw_text=text,
+                subject_matter="commercial sale of goods supplier delivery of damaged goods Contract Act Sale of Goods Act",
+                parties="Commercial Buyer / Retailer (Plaintiff) vs Supplier (Defendant)",
+                aggrieved_party="Commercial Buyer / Retailer",
+                wrongdoer="Supplier",
+                action_taken="Supplier delivered damaged or defective goods purchased for commercial resale",
+                relief_sought=(
+                    "Under Pakistani law, goods purchased for commercial resale or business purposes are expressly excluded "
+                    "from the Consumer Protection Act under Section 2(c) (e.g. Punjab Consumer Protection Act 2005). "
+                    "The transaction is governed by the Sale of Goods Act 1930 and Section 73 of the Contract Act 1872. "
+                    "Under Sections 15, 16 & 59 of the Sale of Goods Act 1930, the buyer has the legal right to reject damaged goods, "
+                    "demand immediate replacement, or recover damages and price in the local Civil Court."
+                ),
+                search_query="supplier delivered damaged goods commercial resale breach of contract Section 73 Contract Act 1872 Sale of Goods Act",
+                statute_hints=["CONTRACT-SEC-73-74"],
+                category_hint="Commercial Law / Sale of Goods & Supply Contracts"
+            )))
+        elif consumer_m and not lockout_m and not deposit_m and not re.search(r"\b(?:factory|industrial|commercial|resale|supplier)\b", text_lower):
             pos = consumer_m.start()
             detected.append((pos, LegalIssue(
                 issue_index=0,
@@ -1172,14 +1406,43 @@ class LegalReasoningEngine:
             )))
 
         # ----------------------------------------------------------------------
-        # Grievance 26: Theft and Stolen Property / Cash (PPC 379 & 380)
+        # Grievance 26: Theft (PPC 379 & 380) vs False Accusation of Theft by Employer
         # ----------------------------------------------------------------------
+        false_theft_m = re.search(
+            r"\b(?:falsely\s*accused|false\s*accusation|framed|wrongfully\s*accused)\b.*?\b(?:theft|chori|stealing|stole)\b|"
+            r"\b(?:accused\s*of\s*theft\s*by\s*(?:my\s*)?employer|falsely\s*accused\s*of\s*theft)\b",
+            text_lower
+        )
         theft_m = re.search(
             r"\b(?:stole|stolen|steal|stealing|theft|chori)\b.*?\b(?:cash|money|rupees|drawer|bedroom|house|cupboard|almirah|valuables|wallet)\b|"
             r"\b(?:cousin|someone|thief|servant|maid)\b.*?\b(?:stole|stolen|chori\s*ki)\b",
             text_lower
         )
-        if theft_m and not robbery_m:
+        if false_theft_m:
+            pos = false_theft_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="False Accusation of Theft & Wrongful Termination by Employer",
+                raw_text=text,
+                subject_matter="falsely accused of theft by employer wrongful termination without investigation Pre-Arrest Bail Section 498 CrPC",
+                parties="Employee (Aggrieved Citizen) vs Employer (Accuser / Wrongdoer)",
+                aggrieved_party="Employee",
+                wrongdoer="Employer",
+                action_taken="Employer falsely accused employee of theft and terminated employment without investigation or inquiry",
+                relief_sought=(
+                    "Under Pakistani law: (1) Protection against apprehension of arrest: If your employer threatens to lodge or lodges a false FIR for theft (Section 380 PPC), "
+                    "you should immediately petition the Sessions Court for Pre-Arrest Bail under Section 498 of the Code of Criminal Procedure (CrPC) to protect your constitutional liberty against arrest. "
+                    "(2) Remedy against false criminal charge: Leveling a fabricated criminal allegation is a punishable offense under Section 182 PPC (false information to public servant) "
+                    "and Section 211 PPC (false charge of offense made with intent to injure). "
+                    "(3) Wrongful termination remedies: Under the Industrial and Commercial Employment (Standing Orders) Ordinance 1968 and Industrial Relations Act, "
+                    "an employee cannot be dismissed for alleged misconduct without a written charge sheet, independent domestic inquiry, and fair opportunity of defense. "
+                    "You can serve a formal grievance notice within 60/90 days and petition the Labour Court for reinstatement, full back benefits, and settlement dues under the Payment of Wages Act 1936."
+                ),
+                search_query="falsely accused of theft by employer fired without inquiry Pre-Arrest Bail Section 498 CrPC Section 182 211 PPC Payment of Wages Act",
+                statute_hints=["CRPC-498", "PWA-SEC-15"],
+                category_hint="Criminal Procedure & Labour Law / False Accusation & Wrongful Dismissal"
+            )))
+        elif theft_m and not robbery_m:
             pos = theft_m.start()
             detected.append((pos, LegalIssue(
                 issue_index=0,
@@ -1256,6 +1519,157 @@ class LegalReasoningEngine:
                 search_query="family shop co-owner adverse possession 3 years Limitation Act 1908 Section 42 Specific Relief Act",
                 statute_hints=["LIMITATION-ACT-1908", "SRA-SEC-42"],
                 category_hint="Civil Law / Property Rights & Co-Ownership"
+            )))
+
+        # ----------------------------------------------------------------------
+        # Grievance 28b: Joint-Heir Exclusion & Partition of Inherited Land
+        # ----------------------------------------------------------------------
+        joint_heir_m = re.search(
+            r"\b(?:brother|brothers|relative|relatives|joint-heir|joint\s*heir|co-heir|co-sharer|co-owner)\b.*?\b(?:denying|denied|excluding|excluded|won'?t\s*let|refusing)\b.*?\b(?:use|possession|share|access)\b.*?\b(?:inherited|inheritance|father'?s?\s*land|ancestral\s*land|family\s*land)\b|"
+            r"\b(?:joint-heir|joint\s*heir|co-heir|co-sharer)\b.*?\b(?:denied\s*use|inherited\s*(?:agricultural\s*)?land|10\s*years|\d+\s*years|by\s*my\s*brothers|excluded)\b|"
+            r"\b(?:den\w+\s*(?:me\s*)?use\s*of\s*(?:our\s*|my\s*)?inherited\s*(?:family\s*|agricultural\s*)?land)\b",
+            text_lower
+        )
+        if joint_heir_m:
+            pos = joint_heir_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="Joint-Heir Exclusion & Partition of Inherited Land",
+                raw_text=text,
+                subject_matter="joint-heir exclusion inherited agricultural land partition adverse possession limitation",
+                parties="Excluded Joint-Heir (Plaintiff) vs Brothers / Co-Sharers (Defendants)",
+                aggrieved_party="Excluded Joint-Heir",
+                wrongdoer="Brothers / Co-Sharers",
+                action_taken="Brothers denying co-heir use and possession of inherited agricultural land for 10 years",
+                relief_sought=(
+                    "Under Pakistani property and inheritance law, possession of one co-sharer is legally deemed possession on behalf of all co-sharers ('possession of one co-sharer is possession of all'). "
+                    "The exclusion of a joint-heir from inherited land for 10 years does not extinguish title, as adverse possession cannot run against a co-owner absent clear proof of open ouster. "
+                    "The aggrieved joint-heir has the legal right to file a Suit for Declaration of Title and Joint Possession under Section 42 of the Specific Relief Act 1877, "
+                    "initiate partition proceedings under the Partition Act 1893 / Land Revenue Act 1967, and claim mesne profits (share of 10 years of agricultural produce) in the Civil Court."
+                ),
+                search_query="joint heir denied use of inherited agricultural land declaration of title partition Section 42 Specific Relief Act Limitation Act",
+                statute_hints=["SRA-SEC-42", "LIMITATION-ACT-1908", "SRA-SEC-8-9"],
+                category_hint="Civil Law / Property Rights & Co-Ownership"
+            )))
+
+        # ----------------------------------------------------------------------
+        # Grievance 28c: Breach of Property Sale Agreement & Buyer Refusing to Vacate
+        # ----------------------------------------------------------------------
+        buyer_vacate_m = re.search(
+            r"\b(?:buyer|purchaser)\b.*?\b(?:agreement|house|property|plot)\b.*?\b(?:paid\s*\d+%|refusing\s*to\s*pay|refusing\s*to\s*vacate|not\s*paying|not\s*vacating)\b|"
+            r"\b(?:buyer\s*refusing\s*to\s*vacate\s*after\s*non-payment)\b",
+            text_lower
+        )
+        if buyer_vacate_m:
+            pos = buyer_vacate_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="Breach of Property Sale Agreement & Recovery of Possession",
+                raw_text=text,
+                subject_matter="property sale agreement buyer default non payment refusal to vacate rescission possession",
+                parties="Property Seller / Owner (Plaintiff) vs Defaulting Buyer (Defendant)",
+                aggrieved_party="Property Seller / Owner",
+                wrongdoer="Defaulting Buyer",
+                action_taken="Buyer paid only partial token amount, defaulted on remaining balance, and refused to vacate property",
+                relief_sought=(
+                    "Under Sections 39, 54 & 73 of the Contract Act 1872, where a party to a contract refuses to perform their promise in its entirety (failing to pay the purchase balance), "
+                    "the seller is legally entitled to rescind the contract and forfeit or adjust earnest money according to contract terms. "
+                    "To recover physical possession from the defaulting buyer refusing to vacate, the owner can institute a civil suit for recovery of possession of immovable property "
+                    "under Sections 8 & 9 of the Specific Relief Act 1877 along with a claim for damages / mesne profits for unauthorized occupation in the local Civil Court."
+                ),
+                search_query="buyer property agreement non payment refusing to vacate breach of contract Section 73 Contract Act recovery of possession Section 8 9 Specific Relief Act",
+                statute_hints=["CONTRACT-SEC-73-74", "SRA-SEC-8-9"],
+                category_hint="Civil Law / Property & Contract Breach"
+            )))
+
+        # ----------------------------------------------------------------------
+        # Grievance 28d: Child Custody & Parental Visitation Rights
+        # ----------------------------------------------------------------------
+        custody_m = re.search(
+            r"\b(?:visitation|visitation\s*rights|custody\s*of\s*(?:my\s*)?(?:son|daughter|child|kids)|denying\s*(?:me\s*)?visitation|won'?t\s*let\s*me\s*see\s*(?:my\s*)?kids|see\s*my\s*(?:son|daughter|child|kids)|meet\s*(?:my\s*)?(?:son|daughter|child|kids)|child\s*visitation\s*dispute|custody\s*dispute)\b",
+            text_lower
+        )
+        if custody_m and not insult_m and not bool(re.search(r"\b(?:kidnapp\w*|abduct\w*|snatch\w*|363|361)\b", text_lower)):
+            pos = custody_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="Child Custody & Parental Visitation Rights",
+                raw_text=text,
+                subject_matter="child custody visitation rights Guardian and Wards Act Family Court",
+                parties="Parent Seeking Custody/Visitation (Petitioner) vs Custodial Ex-Spouse (Respondent)",
+                aggrieved_party="Parent Seeking Access",
+                wrongdoer="Custodial Ex-Spouse",
+                action_taken="Ex-spouse refusing to allow parent custody or visitation rights to see minor child",
+                relief_sought=(
+                    "Under Sections 17 & 25 of the Guardian and Wards Act 1890 and Section 5 Schedule of the Family Courts Act 1964, custody and visitation are determined exclusively by the 'Welfare of the Minor'. "
+                    "A non-custodial parent has an unconditional legal right to maintain a parental relationship with the child through a court-supervised visitation schedule (e.g. fortnightly meetings, weekends, and school vacations). "
+                    "Remedies include: (1) File a custody petition under Section 25 Guardian and Wards Act before the Family Court / Guardian Judge; "
+                    "(2) File an urgent application for an interim visitation schedule under Section 12 Guardian and Wards Act on the first date of hearing."
+                ),
+                search_query="child custody visitation rights ex wife refuses to let meet son Family Court Section 25 Guardian and Wards Act Section 5 Family Courts Act",
+                statute_hints=["GWA-SEC-17-25", "FCA-SEC-5"],
+                category_hint="Family Law / Custody & Guardianship"
+            )))
+
+        # ----------------------------------------------------------------------
+        # Grievance 28e: Declaration of Legal Inheritance Share & Protection Against Deprivation
+        # ----------------------------------------------------------------------
+        inheritance_share_m = re.search(
+            r"\b(?:inheritance\s*share|inheritance\s*rights|share\s*as\s*a\s*daughter|share\s*as\s*a\s*sister|distributing.*without\s*giving.*inheritance|share\s*in.*estate|legal\s*share\s*in.*estate|inheritance\s*share\s*questions)\b",
+            text_lower
+        )
+        if inheritance_share_m and not limitation_m:
+            pos = inheritance_share_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="Declaration of Legal Inheritance Share & Protection Against Deprivation",
+                raw_text=text,
+                subject_matter="inheritance legal share daughter succession declaration of title deprivation PPC 498-A",
+                parties="Female Legal Heir / Daughter (Plaintiff) vs Relatives / Co-Heirs (Defendants)",
+                aggrieved_party="Female Legal Heir",
+                wrongdoer="Relatives / Co-Heirs",
+                action_taken="Deceased parent passed away leaving estate; co-heirs distributing or withholding legal inheritance share from daughter/sister",
+                relief_sought=(
+                    "Under Pakistani inheritance law, the Muslim Personal Law (Shariat) Application Act 1962, and Section 42 of the Specific Relief Act 1877, inheritance rights vest automatically upon the death of the ancestor. "
+                    "Daughters and sisters are entitled to predetermined, fixed Quranic shares in all immovable and movable properties. "
+                    "Furthermore, depriving any female heir of her lawful inheritance is a serious cognizable crime under Section 498-A of the Pakistan Penal Code punishable with imprisonment up to 10 years and a fine of 1,000,000 rupees. "
+                    "Remedies include: (1) File a Civil Suit for Declaration of Title, Injunction, and Partition under Section 42 Specific Relief Act 1877 read with CPC Order XXXIX; "
+                    "(2) Submit an application before the Tehsildar / Revenue Authorities to withhold or correct any illegal mutation (Intiqal); and "
+                    "(3) Lodge a complaint under Section 498-A PPC if relatives attempt to fraudulently disinherit the female heir."
+                ),
+                search_query="inheritance share daughter deceased father land property declaration Section 42 Specific Relief Act Section 498-A PPC",
+                statute_hints=["SRA-SEC-42", "PPC-498A-498B"],
+                category_hint="Civil Law / Succession & Inheritance Rights"
+            )))
+
+        # ----------------------------------------------------------------------
+        # Grievance 28f: Guarantor Liability & Rights Under Contract of Guarantee
+        # ----------------------------------------------------------------------
+        guarantor_m = re.search(
+            r"\b(?:guarantor|co-signer|co\s*signer|signed\s*as\s*a\s*guarantor|guarantor\s*for.*loan|guarantee.*loan|bank.*demanding.*guarantor)\b",
+            text_lower
+        )
+        if guarantor_m:
+            pos = guarantor_m.start()
+            detected.append((pos, LegalIssue(
+                issue_index=0,
+                issue_title="Guarantor Liability & Surety Rights Under Contract of Guarantee",
+                raw_text=text,
+                subject_matter="guarantor co-signer liability contract of guarantee discharge of surety Contract Act 1872",
+                parties="Guarantor / Surety (User) vs Bank / Creditor (Lender)",
+                aggrieved_party="Guarantor / Surety",
+                wrongdoer="Bank / Defaulting Principal Debtor",
+                action_taken="Bank demanding loan payment from guarantor after principal borrower defaulted",
+                relief_sought=(
+                    "Under Section 128 of the Contract Act 1872, the liability of a surety (guarantor) is co-extensive with that of the principal debtor unless provided otherwise by contract. "
+                    "However, under Sections 133 to 139 of the Contract Act 1872, a surety is legally discharged if the creditor makes any unauthorized variance to contract terms without consent, "
+                    "releases or gives time to the principal debtor without concurrence, or impairs the guarantor's eventual remedy against the debtor. "
+                    "If the financial institution initiates recovery proceedings under the Financial Institutions (Recovery of Finances) Ordinance 2001 (FIO), "
+                    "the guarantor must file an Application for Leave to Defend under Section 10 FIO within 30 days of summons before the Banking Court."
+                ),
+                search_query="signed as guarantor co signer bank demanding loan payment liability of surety Section 128 Contract Act 1872 Financial Institutions Ordinance",
+                statute_hints=["CONTRACT-SEC-73-74", "CONTRACT-SEC-10-19"],
+                category_hint="Commercial Law / Banking & Suretyship"
             )))
 
         # ----------------------------------------------------------------------
@@ -1871,33 +2285,57 @@ class LegalReasoningEngine:
             )))
 
         # ----------------------------------------------------------------------
-        # Grievance 49: Cross-Border Freelance Unpaid Invoice Regulatory Gap
+        # Grievance 49: Freelance Unpaid Invoice (Cross-Border Gap vs Domestic Contract)
         # ----------------------------------------------------------------------
         freelance_m = re.search(
-            r"\b(?:freelance|upwork|remotely|united\s*kingdom|uk\s*client|foreign\s*company)\b.*?\b(?:unpaid|invoice|2,500|milestone|labour\s*court)\b|"
-            r"\b(?:freelance\s*ui/ux\s*designer)\b",
+            r"\b(?:freelance|freelancer|upwork|fiverr|remotely|united\s*kingdom|uk\s*client|foreign\s*company)\b.*?\b(?:unpaid|invoice|invoices|milestone|labour\s*court|refusing\s*to\s*pay|not\s*paying)\b|"
+            r"\b(?:freelance\s*ui/ux\s*designer|freelance\s*work)\b",
             text_lower
         )
         if freelance_m:
             pos = freelance_m.start()
-            detected.append((pos, LegalIssue(
-                issue_index=0,
-                issue_title="Cross Border Freelance Wage Recovery and Labour Court Jurisdictional Gap",
-                raw_text=text,
-                subject_matter="cross border freelance wage recovery and labour court jurisdictional gap gig economy",
-                parties="Freelancer vs Foreign UK Client",
-                aggrieved_party="Freelancer",
-                wrongdoer="Foreign UK Client",
-                action_taken="Foreign UK client refused to pay final $2,500 invoice after delivery on Upwork",
-                relief_sought=(
-                    "Under Pakistani law: (1) Pakistani Labour Courts and Payment of Wages Authorities have no extraterritorial authority over foreign overseas corporate entities without an office in Pakistan. "
-                    "(2) Pakistani statutory law lacks a summary enforcement tribunal for independent cross-border gig workers. "
-                    "(3) Remedies are platform arbitration (Upwork Dispute Resolution) or cross-border civil litigation under international private contract law."
-                ),
-                search_query="cross border freelance wage recovery and labour court jurisdictional gap gig economy",
-                statute_hints=[],
-                category_hint="Commercial Law / Cross-Border Freelance & Gig Economy"
-            )))
+            is_foreign = bool(re.search(
+                r"\b(?:foreign|overseas|cross-border|international|uk|united\s*kingdom|us|usa|united\s*states|dubai|uae|canada|europe|upwork|fiverr|freelancer\.com)\b",
+                text_lower
+            ))
+            if is_foreign:
+                detected.append((pos, LegalIssue(
+                    issue_index=0,
+                    issue_title="Cross Border Freelance Wage Recovery and Labour Court Jurisdictional Gap",
+                    raw_text=text,
+                    subject_matter="cross border freelance wage recovery and labour court jurisdictional gap gig economy",
+                    parties="Freelancer (Aggrieved) vs Foreign Client",
+                    aggrieved_party="Freelancer",
+                    wrongdoer="Foreign Client",
+                    action_taken="Foreign client refused to pay invoice for remote freelance services",
+                    relief_sought=(
+                        "Under Pakistani law: (1) Pakistani Labour Courts and Payment of Wages Authorities have no extraterritorial authority over foreign overseas corporate entities without an office in Pakistan. "
+                        "(2) Pakistani statutory law lacks a summary enforcement tribunal for independent cross-border gig workers. "
+                        "(3) Remedies are platform dispute resolution (such as Upwork/platform dispute resolution or arbitration) or cross-border civil litigation under international private contract law."
+                    ),
+                    search_query="cross border freelance wage recovery and labour court jurisdictional gap gig economy",
+                    statute_hints=[],
+                    category_hint="Commercial Law / Cross-Border Freelance & Gig Economy"
+                )))
+            else:
+                detected.append((pos, LegalIssue(
+                    issue_index=0,
+                    issue_title="Recovery of Unpaid Freelance Invoices & Breach of Contract",
+                    raw_text=text,
+                    subject_matter="freelance service contractor unpaid invoice breach of contract Section 73 Contract Act 1872",
+                    parties="Freelancer / Service Provider (Plaintiff) vs Client / Company (Defendant)",
+                    aggrieved_party="Freelancer",
+                    wrongdoer="Client / Company",
+                    action_taken="Client company refused to pay final invoice for completed freelance work",
+                    relief_sought=(
+                        "Under Pakistani law (Section 73 of the Contract Act 1872), an independent contractor or freelancer is legally entitled to compensation and full payment for services rendered upon breach of contract. "
+                        "Because independent freelancers provide services under a contract for service (rather than a statutory employment relationship under labour laws), Labour Courts do not have jurisdiction. "
+                        "The proper legal remedy is to dispatch a formal legal notice demanding payment, followed by filing a civil suit for recovery of money or a summary suit under Order XXXVII of the Code of Civil Procedure 1908 in the local Civil Court."
+                    ),
+                    search_query="freelance independent contractor unpaid invoice breach of contract Section 73 Contract Act 1872 suit for recovery",
+                    statute_hints=["CONTRACT-SEC-73-74"],
+                    category_hint="Civil Law / Commercial Contracts & Debt Recovery"
+                )))
 
         # ----------------------------------------------------------------------
         # Grievance 50: AI-Generated Artwork Copyright Regulatory Gap
