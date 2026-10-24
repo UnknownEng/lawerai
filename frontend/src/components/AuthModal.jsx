@@ -44,7 +44,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess }) {
             </div>
             <div>
               <h3 className="font-bold text-base">
-                {isRegister ? 'Create Secure Account' : 'Sign In to Qanoon Sahayak'}
+                {isRegister ? 'Create Secure Account' : 'Sign In to LawerAI'}
               </h3>
               <p className="text-xs text-legal-300">Save case intake history privately</p>
             </div>

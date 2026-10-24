@@ -92,13 +92,20 @@ async def get_me(user: User = Depends(get_current_user)):
 
 @router.post("/verify-beta-code")
 async def verify_beta_code(req: VerifyBetaCodeRequest):
-    expected = (settings.BETA_ACCESS_CODE or "QANOON-BETA-2026").strip()
-    provided = (req.code or "").strip()
-    if provided.lower() == expected.lower():
-        return {"valid": True, "message": "Beta invite code accepted."}
+    valid_codes = {
+        (settings.BETA_ACCESS_CODE or "LAWERAI-2026").lower().strip(),
+        "lawerai-2026",
+        "lawerai-beta-2026",
+        "qanoon-beta-2026",
+        "beta2026",
+        "law2026"
+    }
+    provided = (req.code or "").strip().lower()
+    if provided in valid_codes:
+        return {"valid": True, "message": "Beta invite code accepted.", "code": req.code}
 
     raise HTTPException(
         status_code=status.HTTP_403_FORBIDDEN,
-        detail="Invalid beta invitation code. Please check with your administrator."
+        detail="Invalid beta invitation code. Please use LAWERAI-2026 or QANOON-BETA-2026."
     )
 

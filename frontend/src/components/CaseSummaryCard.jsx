@@ -1,11 +1,29 @@
 import React from 'react';
-import { FileText, Download, CheckCircle2, AlertCircle, MapPin, Calendar, Users, Scale, FileCheck, ExternalLink, Printer, X } from 'lucide-react';
+import {
+  FileText,
+  Download,
+  CheckCircle2,
+  AlertCircle,
+  MapPin,
+  Calendar,
+  Users,
+  Scale,
+  FileCheck,
+  ExternalLink,
+  Printer,
+  X,
+  Bookmark,
+  Sparkles,
+  Clock
+} from 'lucide-react';
 import { api } from '../api';
 
 export default function CaseSummaryCard({
   sessionId,
   summary,
   onSelectStatute,
+  onSelectPrecedent,
+  onOpenDrafter,
   language,
   onClose
 }) {
@@ -13,6 +31,7 @@ export default function CaseSummaryCard({
 
   const isUrdu = language === 'ur';
   const laws = summary.applicable_laws || [];
+  const precedents = summary.precedents || [];
   const steps = summary.next_steps || [];
   const evidence = summary.evidence_checklist || [];
   const docs = summary.documents_mentioned || [];
@@ -41,9 +60,9 @@ export default function CaseSummaryCard({
           </div>
           <div>
             <h3 className="font-semibold text-xs text-slate-800 uppercase tracking-wider">
-              {isUrdu ? "کیس سمری و انٹیک کارڈ" : "Live Case Summary"}
+              {isUrdu ? "کیس سمری و انٹیک کارڈ" : "Live Case Dossier"}
             </h3>
-            <span className="text-[10px] text-slate-400">Updates dynamically during chat</span>
+            <span className="text-[10px] text-slate-400">Pakistani Jurisprudence Summary</span>
           </div>
         </div>
 
@@ -60,6 +79,7 @@ export default function CaseSummaryCard({
 
           {onClose && (
             <button
+              type="button"
               onClick={onClose}
               className="lg:hidden p-1 text-slate-400 hover:text-slate-700 hover:bg-slate-200 rounded transition"
               title="Close Case Summary"
@@ -72,13 +92,31 @@ export default function CaseSummaryCard({
 
       {/* Body content */}
       <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4 text-xs">
+        {/* Quick Action: Instant Legal Drafter Banner */}
+        <button
+          type="button"
+          onClick={() => onOpenDrafter && onOpenDrafter()}
+          className="w-full flex items-center justify-between p-3 rounded-xl bg-gradient-to-r from-emerald-800 to-legal-900 text-white font-bold shadow-xs hover:from-emerald-700 hover:to-legal-800 transition active:scale-[0.99] text-left cursor-pointer"
+        >
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-emerald-300 animate-pulse flex-shrink-0" />
+            <div>
+              <span className="block text-xs">Draft Court Petition / Notice</span>
+              <span className="block text-[10px] text-emerald-300 font-normal">
+                Auto-generate ready-to-file legal draft
+              </span>
+            </div>
+          </div>
+          <ExternalLink className="w-4 h-4 text-emerald-300" />
+        </button>
+
         {/* Issue Identification */}
         <div className="bg-slate-50 p-3 rounded-lg border border-slate-200/80">
           <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">
-            Primary Issue
+            Primary Legal Issue
           </div>
           <div className="font-semibold text-slate-900 text-sm">
-            {summary.issue_type || 'Analyzing conversation...'}
+            {summary.issue_type || summary.case_category || 'Analyzing conversation...'}
           </div>
         </div>
 
@@ -88,7 +126,7 @@ export default function CaseSummaryCard({
             <MapPin className="w-3.5 h-3.5 mt-0.5 text-slate-400 flex-shrink-0" />
             <div>
               <span className="font-medium text-slate-500">Jurisdiction: </span>
-              <span className="text-slate-800 font-semibold">{summary.location_province || 'Pending clarification'}</span>
+              <span className="text-slate-800 font-semibold">{summary.location_province || 'Pakistan (Provincial / Federal)'}</span>
             </div>
           </div>
 
@@ -96,15 +134,17 @@ export default function CaseSummaryCard({
             <Users className="w-3.5 h-3.5 mt-0.5 text-slate-400 flex-shrink-0" />
             <div>
               <span className="font-medium text-slate-500">Parties: </span>
-              <span className="text-slate-800">{summary.parties || 'Pending clarification'}</span>
+              <span className="text-slate-800">{summary.parties || 'Disclosed during intake'}</span>
             </div>
           </div>
 
           <div className="flex items-start gap-2.5 text-slate-600">
-            <Calendar className="w-3.5 h-3.5 mt-0.5 text-slate-400 flex-shrink-0" />
+            <Clock className="w-3.5 h-3.5 mt-0.5 text-slate-400 flex-shrink-0" />
             <div>
-              <span className="font-medium text-slate-500">Timeline: </span>
-              <span className="text-slate-800">{summary.dates || 'Pending clarification'}</span>
+              <span className="font-medium text-slate-500">Limitation: </span>
+              <span className="text-slate-800 font-semibold text-emerald-800">
+                {summary.limitation || 'Check Limitation Act 1908 schedule'}
+              </span>
             </div>
           </div>
         </div>
@@ -114,7 +154,7 @@ export default function CaseSummaryCard({
           <div className="flex items-center justify-between">
             <h4 className="font-semibold text-slate-700 text-xs flex items-center gap-1.5">
               <Scale className="w-3.5 h-3.5 text-legal-700" />
-              <span>Applicable Pakistani Laws ({laws.length})</span>
+              <span>Applicable Statutory Corpus ({laws.length})</span>
             </h4>
           </div>
 
@@ -132,16 +172,16 @@ export default function CaseSummaryCard({
                 >
                   <div className="flex items-center justify-between">
                     <span className="font-bold text-legal-900 text-xs">
-                      {law.act_code} Sec. {law.section_number}
+                      {law.act_code || law.act} Sec. {law.section_number || law.section}
                     </span>
                     <ExternalLink className="w-3 h-3 text-legal-600 opacity-60 group-hover:opacity-100" />
                   </div>
                   <div className="text-[11px] text-legal-800 font-medium truncate mt-0.5">
-                    {law.section_title}
+                    {law.section_title || law.title}
                   </div>
-                  {law.forum_court && (
+                  {(law.forum_court || law.court) && (
                     <div className="text-[10px] text-legal-600 mt-1 truncate">
-                      Forum: {law.forum_court}
+                      Forum: {law.forum_court || law.court}
                     </div>
                   )}
                 </div>
@@ -149,6 +189,37 @@ export default function CaseSummaryCard({
             </div>
           )}
         </div>
+
+        {/* Superior Court Precedents (SCMR / PLD) */}
+        {precedents.length > 0 && (
+          <div className="flex flex-col gap-2">
+            <h4 className="font-semibold text-slate-700 text-xs flex items-center gap-1.5">
+              <Bookmark className="w-3.5 h-3.5 text-emerald-700" />
+              <span>Reported Precedents ({precedents.length})</span>
+            </h4>
+            <div className="flex flex-col gap-2">
+              {precedents.map((p, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => onSelectPrecedent && onSelectPrecedent(p)}
+                  className="p-2.5 rounded-lg border border-emerald-200 bg-emerald-50/50 hover:bg-emerald-100/60 text-left transition cursor-pointer"
+                >
+                  <div className="flex items-center justify-between font-bold text-emerald-950 text-xs">
+                    <span>{p.citation}</span>
+                    <ExternalLink className="w-3 h-3 text-emerald-600" />
+                  </div>
+                  <div className="text-[11px] text-emerald-900 font-medium truncate mt-0.5">
+                    {p.title}
+                  </div>
+                  <p className="text-[10px] text-emerald-800 line-clamp-2 mt-1">
+                    {p.ratio}
+                  </p>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Evidence & Documents */}
         <div className="flex flex-col gap-2">
@@ -191,7 +262,7 @@ export default function CaseSummaryCard({
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold text-slate-700 text-xs flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-legal-700" />
-              <span>Suggested Action Plan</span>
+              <span>Action Steps & Roadmap</span>
             </h4>
             <div className="flex flex-col gap-2">
               {steps.map((st, i) => (
@@ -208,6 +279,7 @@ export default function CaseSummaryCard({
       {/* Footer / Export Actions */}
       <div className="p-3 border-t border-slate-100 bg-slate-50 flex flex-col gap-2 flex-shrink-0">
         <button
+          type="button"
           onClick={handlePrintDossier}
           disabled={!sessionId}
           className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-legal-800 hover:bg-legal-700 text-white font-medium text-xs shadow-xs transition active:scale-[0.99] disabled:opacity-50 cursor-pointer"
@@ -217,6 +289,7 @@ export default function CaseSummaryCard({
         </button>
 
         <button
+          type="button"
           onClick={handleDownloadJson}
           disabled={!sessionId}
           className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-700 font-medium text-xs border border-slate-200 shadow-2xs transition active:scale-[0.99] disabled:opacity-50 cursor-pointer"

@@ -1,0 +1,16 @@
+{
+  "name": "LawerAI",
+  "short_name": "LawerAI",
+  "description": "Pakistani Legal Intelligence & Case Intake Platform by Maverick Tech Ventures",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#064e3b",
+  "theme_color": "#064e3b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

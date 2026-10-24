@@ -82,7 +82,7 @@ class Settings(BaseSettings):
     )
 
     # Beta Access Gate
-    BETA_ACCESS_CODE: str = os.getenv("BETA_ACCESS_CODE", "QANOON-BETA-2026")
+    BETA_ACCESS_CODE: str = os.getenv("BETA_ACCESS_CODE", "LAWERAI-2026")
     REQUIRE_BETA_CODE: bool = os.getenv("REQUIRE_BETA_CODE", "false").lower() in ("true", "1", "yes")
 
     # Rate Limiting

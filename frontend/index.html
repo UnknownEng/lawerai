@@ -1,13 +1,140 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231b4332' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z'/><path d='m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z'/><path d='M7 21h10'/><path d='M12 3v18'/><path d='M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2'/></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Qanoon Sahayak (قانون معاون) — Pakistani Legal Information & Intake Assistant</title>
-    <meta name="description" content="AI-powered legal information assistant for Pakistani law (PPC, CrPC, CPC, Family Courts, Rent Laws, Constitution). Grounded statutory citations, intake interviews, and evidence checklists." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Title & SEO Meta -->
+    <title>LawerAI — Pakistani Legal Intelligence & Case Intake Platform</title>
+    <meta name="description" content="LawerAI by Maverick Tech Ventures is an authoritative AI legal intelligence and case intake platform for Pakistani law. Instant statutory citations, rights reviews, and lawyer aid." />
+    <meta name="keywords" content="LawerAI, Maverick Tech Ventures, Pakistani law, PPC, CrPC, CPC, Family Courts Act, Legal Aid Pakistan, Supreme Court Pakistan, Section 489-F, Police 15" />
+    <meta name="author" content="Maverick Tech Ventures" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    
+    <!-- Search Console Verification -->
+    <meta name="google-site-verification" content="lawerai-gsc-verification-code-2026" />
+    <meta name="msvalidate.01" content="lawerai-bing-verification-code-2026" />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://lawerai.vercel.app/" />
+    
+    <!-- Favicon & PWA Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#064e3b" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lawerai.vercel.app/" />
+    <meta property="og:title" content="LawerAI — Pakistani Legal Intelligence & Case Intake Platform" />
+    <meta property="og:description" content="A project by Maverick Tech Ventures. AI-powered statutory analysis, interactive case intake, and verified advocate directories across Pakistan." />
+    <meta property="og:image" content="https://lawerai.vercel.app/favicon.svg" />
+    <meta property="og:site_name" content="LawerAI" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://lawerai.vercel.app/" />
+    <meta name="twitter:title" content="LawerAI — Pakistani Legal Intelligence Platform" />
+    <meta name="twitter:description" content="A project by Maverick Tech Ventures. AI legal intelligence, case dossiers, and statutory analysis for Pakistani law." />
+    <meta name="twitter:image" content="https://lawerai.vercel.app/favicon.svg" />
+
+    <!-- Structured Data: Organization & WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "LawerAI",
+      "alternateName": "Qanoon Sahayak",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Maverick Tech Ventures"
+      },
+      "url": "https://lawerai.vercel.app/",
+      "logo": "https://lawerai.vercel.app/favicon.svg",
+      "description": "High-performance AI legal intelligence and client case intake system developed by Maverick Tech Ventures, grounded in Pakistani statutory jurisprudence.",
+      "telephone": "+923273202419",
+      "email": "ahmedmansoorrind1210@gmail.com",
+      "areaServed": "Pakistan",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Legal Intelligence Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Statutory Law Library & Case Intake"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lawerai.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Statutory Corpus",
+          "item": "https://lawerai.vercel.app/statutes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bar Directory",
+          "item": "https://lawerai.vercel.app/directory"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What legal remedy is available for a bounced or dishonoured cheque in Pakistan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Section 489-F of the Pakistan Penal Code (PPC 1860), dishonestly issuing a cheque that bounces due to insufficient funds is a cognizable criminal offence punishable with imprisonment up to 3 years or fine, alongside summary civil suit recovery under Order 37 of the Code of Civil Procedure (CPC 1908)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can a citizen do if the police station SHO refuses to register an FIR in Pakistan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the police SHO refuses to register a cognizable offence FIR under Section 154 CrPC, the aggrieved party may file a petition under Section 22-A & 22-B CrPC before the Ex-Officio Justice of Peace (Sessions Judge) seeking a judicial direction ordering the police to register the FIR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does LawerAI handle client privacy during case intake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LawerAI by Maverick Tech Ventures encrypts case dossiers and personal identifying data using AES-256 encryption. Legal intake summaries are generated strictly for user reference and advocate handover without selling data."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
-  <body class="bg-slate-100 text-slate-800">
+  <body class="bg-slate-100 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

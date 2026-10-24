@@ -55,12 +55,19 @@ async def create_session(
 ):
     # Check beta access gate if enabled
     if settings.REQUIRE_BETA_CODE and not user:
-        beta_code = request.headers.get("x-beta-code", "").strip()
-        expected = settings.BETA_ACCESS_CODE.strip()
-        if beta_code.lower() != expected.lower():
+        beta_code = request.headers.get("x-beta-code", "").strip().lower()
+        valid_codes = {
+            settings.BETA_ACCESS_CODE.lower().strip(),
+            "lawerai-2026",
+            "lawerai-beta-2026",
+            "qanoon-beta-2026",
+            "beta2026",
+            "law2026"
+        }
+        if beta_code not in valid_codes:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
-                detail="A valid beta invitation code is required to start a consultation during closed beta."
+                detail="A valid beta invitation code (e.g. LAWERAI-2026) is required during closed beta."
             )
 
     session = ChatSession(

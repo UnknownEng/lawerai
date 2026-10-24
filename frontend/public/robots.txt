@@ -1,0 +1,20 @@
+# Robots.txt for LawerAI (by Maverick Tech Ventures)
+# Explicitly allowing Googlebot, Bingbot, and legitimate search engine indexers
+
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /auth/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /auth/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /auth/
+
+# XML Sitemap
+Sitemap: https://lawerai.vercel.app/sitemap.xml
